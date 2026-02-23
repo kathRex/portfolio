@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Kart 8 Deluxe Ontology Data</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+
+<body>
+    <!-- Header & Links -->
+    <header>
+        <h1>Mario Kart 8 Deluxe Ontology</h1>
+        <nav>
+            <a href="index.html" class="nav-main-page">
+                <i class="fas fa-calculator"></i>
+                <span>Calculator & Drivers</span>
+            </a>
+            <a href="builds.html" class="nav-playstyles">
+                <i class="fas fa-gamepad"></i>
+                <span>Playstyle Builds</span>
+            </a>
+            <a href="cups_tracks.html" class="nav-cups-tracks">
+                <i class="fas fa-trophy"></i>
+                <span>Cups & Tracks</span>
+            </a>
+        </nav>
+    </header>
+
+
+
+    <!-- Combination Calculator -->
+    <div class="container">
+        <div class="section">
+            <h2>Combination Calculator</h2>
+            <p id="calculatorStatus">Select components to calculate combined stats.</p>
+            <div class="calculator-controls">
+                <div>
+                    <label for="driverSelect">Driver:</label>
+                    <select id="driverSelect" onchange="calculateCombinedStats()"></select>
+                </div>
+                <div>
+                    <label for="bodySelect">Body:</label>
+                    <select id="bodySelect" onchange="calculateCombinedStats()"></select>
+                </div>
+                <div>
+                    <label for="tireSelect">Tire:</label>
+                    <select id="tireSelect" onchange="calculateCombinedStats()"></select>
+                </div>
+                <div>
+                    <label for="gliderSelect">Glider:</label>
+                    <select id="gliderSelect" onchange="calculateCombinedStats()"></select>
+                </div>
+                <div>
+                    <label for="trackSelect">Track (for Grip Calculation):</label>
+                    <select id="trackSelect" onchange="calculateCombinedStats()">
+                        <option value="">No Specific Track</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Output of the Calculation (Stat Diagram) -->
+            <div class="calculated-stats" id="combinedStatsOutput">
+                <div class="stat-row">
+                    <span class="stat-label">Total Ground Speed:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-groundSpeed"></div>
+                        <span class="stat-value" id="totalGroundSpeed">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total Water Speed:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-waterSpeed"></div>
+                        <span class="stat-value" id="totalWaterSpeed">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total Air Speed:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-airSpeed"></div>
+                        <span class="stat-value" id="totalAirSpeed">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total Anti-Gravity Speed:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-antiGravitySpeed"></div>
+                        <span class="stat-value" id="totalAntiGravitySpeed">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total Acceleration:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-acceleration"></div>
+                        <span class="stat-value" id="totalAcceleration">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total Weight:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-weight"></div>
+                        <span class="stat-value" id="totalWeight">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total Ground Handling:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-groundHandling"></div>
+                        <span class="stat-value" id="totalGroundHandling">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total Water Handling:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-waterHandling"></div>
+                        <span class="stat-value" id="totalWaterHandling">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total Air Handling:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-airHandling"></div>
+                        <span class="stat-value" id="totalAirHandling">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total Anti-Gravity Handling:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-antiGravityHandling"></div>
+                        <span class="stat-value" id="totalAntiGravityHandling">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total On Road Traction:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-onRoadTraction"></div>
+                        <span class="stat-value" id="totalOnRoadTraction">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total Off Road Traction:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-offRoadTraction"></div>
+                        <span class="stat-value" id="totalOffRoadTraction">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total Mini Turbo:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-miniTurbo"></div>
+                        <span class="stat-value" id="totalMiniTurbo">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Total Invincibility:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-invincibility"></div>
+                        <span class="stat-value" id="totalInvincibility">--</span>
+                    </div>
+                </div>
+
+                <div class="stat-row hidden" id="gripOnSlipperyTerrainDisplay">
+                    <span class="stat-label">Grip On Slippery Terrain:</span>
+                    <div class="stat-bar-container">
+                        <div class="stat-bar" id="bar-gripOnSlipperyTerrain"></div>
+                        <span class="stat-value" id="totalGripOnSlipperyTerrain">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <p id="calculatorError" class="error"></p>
+        </div>
+
+
+        <!-- Parameter Filter Calculation -->
+        <div class="section">
+            <h2>Parameter Filter</h2>
+            <p id="parameterFilterStatus">Select a stat to find the best combination.</p>
+            <div class="parameter-filter-controls">
+                <div>
+                    <label for="statSelect">Select Stat:</label>
+                    <select id="statSelect" onchange="findBestCombination()"></select>
+                </div>
+            </div>
+            <div class="best-combination-output" id="bestCombinationOutput">
+                <h3>Best Combination for <span id="selectedStatName">--</span></h3>
+                <p><strong>Driver:</strong> <span id="bestDriver">--</span></p>
+                <p><strong>Body:</strong> <span id="bestBody">--</span></p>
+                <p><strong>Tire:</strong> <span id="bestTire">--</span></p>
+                <p><strong>Glider:</strong> <span id="bestGlider">--</span></p>
+                <p><strong>Total Stat Value:</strong> <span id="bestStatValue">--</span></p>
+            </div>
+            <p id="parameterFilterError" class="error"></p>
+        </div>
+
+
+        <!-- Table with all driver stats -->
+        <div class="section">
+            <h2>Driver Stats</h2>
+            <p id="driverStatsStatus">Loading driver stats...</p>
+
+            <div class="table-wrapper">
+                <table id="driverStatsTable">
+                </table>
+            </div>
+
+            <p id="driverStatsError" class="error"></p>
+        </div>
+
+        <!-- Table with all body stats -->
+        <div class="section">
+            <h2>Body Stats</h2>
+            <p id="bodyStatsStatus">Loading body stats...</p>
+            <div class="table-wrapper">
+                <table id="bodyStatsTable"></table>
+            </div>
+            <p id="bodyStatsError" class="error"></p>
+        </div>
+
+        <!-- Table with all tire stats -->
+        <div class="section">
+            <h2>Tire Stats</h2>
+            <p id="tireStatsStatus">Loading tire stats...</p>
+            <div class="table-wrapper">
+                <table id="tireStatsTable"></table>
+            </div>
+            <p id="tireStatsError" class="error"></p>
+        </div>
+
+        <!-- table with all glider stats -->
+        <div class="section">
+            <h2>Glider Stats</h2>
+            <p id="gliderStatsStatus">Loading glider stats...</p>
+            <div class="table-wrapper">
+                <table id="gliderStatsTable"></table>
+            </div>
+            <p id="gliderStatsError" class="error"></p>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

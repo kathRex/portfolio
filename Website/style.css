@@ -1,0 +1,664 @@
+/* --- Mario Kart Themed CSS --- */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* --- Allgemeine Stile --- */
+body {
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d82f3;
+    color: #333333;
+    line-height: 1.6;
+    background-image: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png');
+    padding-top: 220px; 
+}
+
+/* --- Header Basis-Stile (Startansicht) --- */
+header {
+    
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #0d82f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+   
+}
+
+h1 {
+    background-color: #e62312;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 2.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 5px solid #d41f10;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+}
+
+nav {
+    position: absolute;
+    top: 130px; 
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 12px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); 
+}
+
+nav a {
+    text-decoration: none;
+    color: #e62312;
+    font-weight: bold;
+    padding: 8px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative; 
+    z-index: 1;
+}
+
+nav a:hover, nav a:focus {
+    background-color: #ffd700;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* --- Scrolled State --- */
+
+
+header.scrolled h1 { 
+    opacity: 0;
+    transform: translateY(-100%);
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+
+header.scrolled nav { 
+  
+    position: fixed; 
+    top: 90px;
+    left: 20px;
+    transform: translateX(0); 
+    
+    width: 250px; 
+    padding: 30px 35px; 
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+
+    border-radius: 65% 35% 35% 65% / 55% 65% 35% 45%; 
+    background-color: #ffffff;
+    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55); 
+    z-index: 999; 
+}
+
+header.scrolled nav::before, 
+header.scrolled nav::after { 
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    z-index: -1; 
+    border-radius: 50%; 
+    transition: all 0.7s ease-in-out, opacity 0.7s ease, visibility 0.7s ease; 
+    display: block; 
+    opacity: 1; 
+    visibility: visible; 
+}
+
+/* Linker Puff */
+header.scrolled nav::before { 
+    width: 110px; 
+    height: 110px; 
+    top: -45px; 
+    left: 30px; 
+}
+
+/* Rechter Puff */
+header.scrolled nav::after {
+    width: 150px; 
+    height: 150px; 
+    top: -55px; 
+    right: 20px; 
+}
+
+/* Die Links im schwebenden Menü   */
+header.scrolled nav a { 
+    display: flex; 
+    align-items: center;
+    text-decoration: none;
+    color: #333333; 
+    font-weight: bold;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Icon in Links  */
+header.scrolled nav a i { 
+    font-size: 1.2em; 
+    margin-right: 10px; 
+    transition: margin-right 0.3s ease, font-size 0.3s ease;
+}
+
+/* Text in Links  */
+header.scrolled nav a span {
+    display: inline; 
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover-Effekt im schwebenden Menü */
+header.scrolled nav a:hover, 
+header.scrolled nav a:focus { 
+    background-color: #ffd700;
+    color: #000000;
+    transform: translateX(5px) translateY(0);
+}
+
+
+/* --- Responsive Anpassungen mit Media Queries --- */
+
+/* 2. MITTELGROSSE BILDSCHIRME: Wolke kleiner, nur Icons  */
+@media (max-width: 992px) {
+    header.scrolled nav { 
+        top: 60px; 
+        left: 15px; 
+        width: 100px; 
+        padding: 15px; 
+        text-align: center; 
+        border-radius: 55% 45% 45% 55% / 50% 50% 50% 50%; 
+    }
+
+    /* Puffs der Wolke anpassen für kleinere Wolke */
+    header.scrolled nav::before { 
+        width: 70px;
+        height: 70px;
+        top: -30px;
+        left: 10px;
+    }
+
+    header.scrolled nav::after { 
+        width: 90px;
+        height: 90px;
+        top: -40px;
+        right: 5px;
+    }
+
+    /* Links anpassen: nur Icons sichtbar */
+    header.scrolled nav a { 
+        padding: 10px 5px; 
+        justify-content: center; 
+        margin: 5px 0;
+    }
+
+    /* Icon in Links (kleinere Wolke) */
+    header.scrolled nav a i { 
+        font-size: 1.6em; 
+        margin-right: 0; 
+    }
+
+    /* Text in Links ausblenden (kleinere Wolke) */
+    header.scrolled nav a span { 
+        display: none; 
+        opacity: 0;
+    }
+}
+
+/* 3. KLEINE BILDSCHIRME: Rennstrecke am linken Rand (VERBESSERTE VERSION) */
+/* Definiert die Animation für den Fahreffekt */
+@keyframes driveEffect {
+    from { background-position: center 0, center; }
+    to { background-position: center -70px, center; }
+}
+
+/* 3. KLEINE BILDSCHIRME: Finale Rennstrecke (Mischung) */
+@media (max-width: 576px) {
+    body {
+        padding-top: 20px; 
+        padding-left: 90px; 
+        transition: padding 0.7s ease; 
+    }
+
+    header {
+        position: relative; 
+        height: auto;
+        padding-bottom: 0;
+        background-color: transparent; 
+    }
+    
+    header.scrolled h1 {
+        opacity: 0;
+        transform: translateY(-100%);
+        height: 0;
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+
+    /* Navigation als animierte Rennstrecke mit Randsteinen */
+    header.scrolled nav { 
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 70px;
+        height: 100vh; 
+        padding: 20px 0;
+        
+        background-color: #333;
+        background-image: 
+            repeating-linear-gradient(to bottom, 
+                                      #ccc, #ccc 15px, 
+                                      transparent 15px, transparent 35px),
+            linear-gradient(#555, #333);
+        background-size: 
+            8px 35px,
+            100% 100%;
+        background-position: center top, center;
+        background-repeat: repeat-y, no-repeat;
+        
+        
+        animation: driveEffect 1.5s linear infinite;
+
+       
+        box-shadow: 
+            inset 4px 0 0 #e62312,  
+            inset 2px 0 0 #ffd700,  
+            inset -4px 0 0 #e62312, 
+            inset -2px 0 0 #ffd700, 
+            3px 0 12px rgba(0,0,0,0.5); 
+
+        border-radius: 0; 
+        text-align: center;
+        overflow-y: auto; 
+        border-left: none;
+        border-right: none;
+    }
+
+    header.scrolled nav::before, 
+    header.scrolled nav::after { 
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    header.scrolled nav a { 
+        flex-direction: column; 
+        padding: 10px 0; 
+        margin: 15px 0; 
+        color: #ffffff; 
+        background-color: transparent; 
+        border-radius: 0; 
+        transition: transform 0.3s ease;
+    }
+
+    header.scrolled nav a i { 
+        font-size: 2em; 
+        margin: 0 0 5px 0; 
+        display: block; 
+    }
+
+    header.scrolled nav a span { 
+        display: inline-block; 
+        font-size: 0.7em; 
+        opacity: 1;
+        color: #ffd700; 
+        font-weight: bold;
+        
+        text-shadow: 0 0 4px #000, 0 0 6px #000;
+    }
+
+    header.scrolled nav a:hover, 
+    header.scrolled nav a:focus { 
+        background-color: transparent; 
+        color: #fff; 
+        transform: scale(1.1); 
+    }
+}
+/* --- Layout-Container --- */
+.container {
+    max-width: 60%;
+    margin: 0 auto 30px auto; 
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 8px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.section {
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 10px 12px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #007bff;
+    font-weight: bold;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+tr:nth-child(even) td {
+    background-color: #f8f9fa;
+}
+
+.cup-selector {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px dashed #007bff;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+}
+
+.cup-selector label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #0056b3;
+    font-size: 1.2em;
+}
+
+.cup-selector select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    font-size: 1.1em;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.tracks-display {
+    border: 2px solid #28a745;
+    background-color: #f0fff0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+.tracks-display h3 {
+    color: #155724;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #a3d0a3;
+    padding-bottom: 8px;
+}
+
+.tracks-display ul {
+    list-style-type: '🏆';
+    padding-left: 30px;
+    margin: 0;
+}
+
+.tracks-display li {
+    margin-bottom: 8px;
+    padding-left: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.error {
+    color: #721c24;
+    font-weight: bold;
+    margin-top: 10px;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    background-color: #f8d7da;
+    border-radius: 5px;
+}
+
+p#cupsTracksStatus, p#driverStatsStatus, p#calculatorStatus {
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+/* Diese Regel sorgt dafür, dass die Box standardmäßig unsichtbar ist und animiert werden kann */
+.best-combination-output {
+    background-color: #fffbe6;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: all 0.5s ease-in-out;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-width: 0;
+}
+
+.best-combination-output.visible {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-width: 2px;
+}
+
+.best-combination-output h3 {
+    color: #c59d00;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    text-align: center;
+    border-bottom: 1px solid #ffeeb3;
+    padding-bottom: 10px;
+}
+
+.best-combination-output p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 1.1em;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.best-combination-output p:hover {
+    background-color: #fff8d6;
+}
+
+.best-combination-output strong {
+    color: #333;
+    width: 180px;
+    flex-shrink: 0;
+    font-weight: 700;
+}
+
+.best-combination-output span {
+    color: #0056b3;
+    font-weight: 400;
+}
+
+.calculator-controls, .parameter-filter-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.calculator-controls > div, .parameter-filter-controls > div {
+    display: flex;
+    align-items: center;
+}
+
+.calculator-controls label, .parameter-filter-controls label {
+    font-size: 1.2em;
+    font-weight: 700;
+    width: 180px;
+    flex-shrink: 0;
+    color: #333;
+}
+
+.calculator-controls select, .parameter-filter-controls select {
+    width: 100%;
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.calculated-stats {
+    background-color: #f0f8ff;
+    border: 2px solid #007bff;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: all 0.5s ease-in-out;
+}
+
+.calculated-stats.visible {
+    opacity: 1;
+    max-height: 700px;
+    transform: translateY(0);
+}
+
+.calculated-stats p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 1.1em;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.calculated-stats strong {
+    color: #333;
+    font-weight: 700;
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.calculated-stats span {
+    color: #0056b3;
+    font-weight: 400;
+}
+
+
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.stat-label {
+    width: 240px; 
+    flex-shrink: 0;
+    font-weight: 700;
+    color: #333;
+    padding-right: 10px;
+}
+
+.stat-bar-container {
+    flex-grow: 1; 
+    height: 28px; 
+    background-color: #e9ecef; 
+    border-radius: 5px;
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
+.stat-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b6b 0%, #ffd93d 50%, #6bcb77 100%);
+    border-radius: 5px;
+    box-shadow: inset 0 -2px 2px rgba(0,0,0,0.15);
+    transition: width 0.4s ease-in-out;
+    width: 0%; 
+}
+
+.stat-value {
+    position: absolute;
+    right: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+}
+
+/*Elemente verstecken */
+.hidden {
+    display: none !important;
+}

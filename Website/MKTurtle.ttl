@@ -1,0 +1,4068 @@
+@prefix : <http://mariokart8deluxe.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://mariokart8deluxe.owl#> .
+
+<http://mariokart8deluxe.owl> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://mariokart8deluxe.owl#hasOriginPlatform
+:hasOriginPlatform rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Track ;
+                   rdfs:range :GamePlatform ;
+                   rdfs:comment "Connects a 'Track' instance to the 'GamePlatform' instance from which it originally appeared in the Mario Kart series. This property specifies the console or game version where the track debuted." .
+
+
+###  http://mariokart8deluxe.owl#hasSlipperiness
+:hasSlipperiness rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Track ;
+                 rdfs:range :SlipperyTerrain ;
+                 rdfs:comment "Links a 'Track' instance to a specific 'SlipperyTerrain' profile (e.g., 'LightSlip', 'MediumSlip', 'HeavySlip'). This indicates the degree of slipperiness for relevant terrain sections on that track, which in turn determines the slippery values based on Off-Road Traction." .
+
+
+###  http://mariokart8deluxe.owl#hasTrack
+:hasTrack rdf:type owl:ObjectProperty ;
+          rdfs:domain :Cup ;
+          rdfs:range :Track ;
+          rdfs:comment "Connects a game entity (e.g., a 'Cup' or a 'Driver') to a 'Track' instance. This property specifies that the entity is associated with or contains a particular track." .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://mariokart8deluxe.owl#hasAcceleration
+:hasAcceleration rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :GameEntity ;
+                 rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasAirHandling
+:hasAirHandling rdf:type owl:DatatypeProperty ;
+                rdfs:domain :GameEntity ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasAirSpeed
+:hasAirSpeed rdf:type owl:DatatypeProperty ;
+             rdfs:domain :GameEntity ;
+             rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasAntiGravityHandling
+:hasAntiGravityHandling rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :GameEntity ;
+                        rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasAntiGravitySpeed
+:hasAntiGravitySpeed rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :GameEntity ;
+                     rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasGroundHandling
+:hasGroundHandling rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :GameEntity ;
+                   rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasGroundSpeed
+:hasGroundSpeed rdf:type owl:DatatypeProperty ;
+                rdfs:domain :GameEntity ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasInvincibility
+:hasInvincibility rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :GameEntity ;
+                  rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasMiniTurbo
+:hasMiniTurbo rdf:type owl:DatatypeProperty ;
+              rdfs:domain :GameEntity ;
+              rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasOffRoadTraction
+:hasOffRoadTraction rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :GameEntity ;
+                    rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasOnRoadTraction
+:hasOnRoadTraction rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :GameEntity ;
+                   rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel0
+:hasSlipLevel0 rdf:type owl:DatatypeProperty ;
+               rdfs:domain :SlipperyTerrain ;
+               rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel1
+:hasSlipLevel1 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :SlipperyTerrain ;
+               rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel10
+:hasSlipLevel10 rdf:type owl:DatatypeProperty ;
+                rdfs:domain :SlipperyTerrain ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel11
+:hasSlipLevel11 rdf:type owl:DatatypeProperty ;
+                rdfs:domain :SlipperyTerrain ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel12
+:hasSlipLevel12 rdf:type owl:DatatypeProperty ;
+                rdfs:domain :SlipperyTerrain ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel13
+:hasSlipLevel13 rdf:type owl:DatatypeProperty ;
+                rdfs:domain :SlipperyTerrain ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel14
+:hasSlipLevel14 rdf:type owl:DatatypeProperty ;
+                rdfs:domain :SlipperyTerrain ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel15
+:hasSlipLevel15 rdf:type owl:DatatypeProperty ;
+                rdfs:domain :SlipperyTerrain ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel16
+:hasSlipLevel16 rdf:type owl:DatatypeProperty ;
+                rdfs:domain :SlipperyTerrain ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel17
+:hasSlipLevel17 rdf:type owl:DatatypeProperty ;
+                rdfs:domain :SlipperyTerrain ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel18
+:hasSlipLevel18 rdf:type owl:DatatypeProperty ;
+                rdfs:domain :SlipperyTerrain ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel19
+:hasSlipLevel19 rdf:type owl:DatatypeProperty ;
+                rdfs:domain :SlipperyTerrain ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel2
+:hasSlipLevel2 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :SlipperyTerrain ;
+               rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel20
+:hasSlipLevel20 rdf:type owl:DatatypeProperty ;
+                rdfs:domain :SlipperyTerrain ;
+                rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel3
+:hasSlipLevel3 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :SlipperyTerrain ;
+               rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel4
+:hasSlipLevel4 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :SlipperyTerrain ;
+               rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel5
+:hasSlipLevel5 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :SlipperyTerrain ;
+               rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel6
+:hasSlipLevel6 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :SlipperyTerrain ;
+               rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel7
+:hasSlipLevel7 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :SlipperyTerrain ;
+               rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel8
+:hasSlipLevel8 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :SlipperyTerrain ;
+               rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasSlipLevel9
+:hasSlipLevel9 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :SlipperyTerrain ;
+               rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasWaterHandling
+:hasWaterHandling rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :GameEntity ;
+                  rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasWaterSpeed
+:hasWaterSpeed rdf:type owl:DatatypeProperty ;
+               rdfs:domain :GameEntity ;
+               rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#hasWeight
+:hasWeight rdf:type owl:DatatypeProperty ;
+           rdfs:domain :GameEntity ;
+           rdfs:range xsd:decimal .
+
+
+###  http://mariokart8deluxe.owl#isDLC
+:isDLC rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Driver ;
+       rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://mariokart8deluxe.owl#Body
+:Body rdf:type owl:Class ;
+      rdfs:subClassOf :Component ;
+      rdfs:comment "The Class \"Body\" contains all kart-chassis which are avalable in Mario Kart 8 Deluxe and which can be used to configurate your kart" .
+
+
+###  http://mariokart8deluxe.owl#Component
+:Component rdf:type owl:Class ;
+           rdfs:subClassOf :GameEntity ;
+           rdfs:comment "Represents customizable kart parts such as bodies, tires, and gliders that influence performance attributes." .
+
+
+###  http://mariokart8deluxe.owl#Cup
+:Cup rdf:type owl:Class ;
+     rdfs:subClassOf :GameEntity ;
+     rdfs:comment "Represents a competition unit in Mario Kart, consisting of four racing tracks grouped together." .
+
+
+###  http://mariokart8deluxe.owl#Driver
+:Driver rdf:type owl:Class ;
+        rdfs:subClassOf :GameEntity ;
+        rdfs:comment "Represents a specific playable driver with defined stats that affect gameplay." .
+
+
+###  http://mariokart8deluxe.owl#GameEntity
+:GameEntity rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing ;
+            rdfs:comment "Top-level class for all relevant game elements in Mario Kart 8 Deluxe, such as characters, components, cups, and tracks." .
+
+
+###  http://mariokart8deluxe.owl#GamePlatform
+:GamePlatform rdf:type owl:Class ;
+              rdfs:comment "Represents the various gaming platforms or console generations from which Mario Kart tracks originate. Instances of this class are the specific platform. Tracks are linked to their original platform via an object property." .
+
+
+###  http://mariokart8deluxe.owl#Glider
+:Glider rdf:type owl:Class ;
+        rdfs:subClassOf :Component ;
+        rdfs:comment "The Class \"Glider\" contains all gliders which are avalable in Mario Kart 8 Deluxe and which can be used to configurate your kart" .
+
+
+###  http://mariokart8deluxe.owl#SlipperyTerrain
+:SlipperyTerrain rdf:type owl:Class ;
+                 rdfs:subClassOf :GameEntity ;
+                 rdfs:comment "The class encapsulates the slip rate values for different degrees of slipperiness on specific terrain types, based on a vehicle's Off-Road Traction level. Instances of this class (e.g., 'LightSlip', 'MediumSlip', 'HeavySlip') hold the lookup table data for a particular slipperiness degree across all 21 traction levels. Tracks are linked to these profiles via an object property." .
+
+
+###  http://mariokart8deluxe.owl#Tire
+:Tire rdf:type owl:Class ;
+      rdfs:subClassOf :Component ;
+      rdfs:comment "The Class \"Trie\" contains all tires which are avalable in Mario Kart 8 Deluxe and which can be used to configurate your kart" .
+
+
+###  http://mariokart8deluxe.owl#Track
+:Track rdf:type owl:Class ;
+       rdfs:subClassOf :GameEntity ;
+       rdfs:comment "Represents an individual racing course that is part of a Cup." .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://mariokart8deluxe.owl#Acorn_Cup
+:Acorn_Cup rdf:type owl:NamedIndividual ,
+                    :Cup ;
+           :hasTrack :DK_Mountain ,
+                     :Daisy_Circuit ,
+                     :Piranha_Plant_Cove ,
+                     :Rome_Avanti ;
+           rdfs:label "Acorn Cup" .
+
+
+###  http://mariokart8deluxe.owl#Amsterdam_Drift
+:Amsterdam_Drift rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :Mobile ;
+                 :hasSlipperiness :MediumSlip ;
+                 owl:incompatibleWith "Amsterdam Drift" .
+
+
+###  http://mariokart8deluxe.owl#Ancient_Tires
+:Ancient_Tires rdf:type owl:NamedIndividual ,
+                        :Tire ;
+               :hasAcceleration 2.0 ;
+               :hasAirHandling 1.0 ;
+               :hasAirSpeed 1.0 ;
+               :hasAntiGravityHandling 0.0 ;
+               :hasAntiGravitySpeed 2.0 ;
+               :hasGroundHandling 0.0 ;
+               :hasGroundSpeed 3.0 ;
+               :hasInvincibility 5.0 ;
+               :hasMiniTurbo 3.0 ;
+               :hasOffRoadTraction 7.0 ;
+               :hasOnRoadTraction 3.0 ;
+               :hasWaterHandling 1.0 ;
+               :hasWaterSpeed 2.0 ;
+               :hasWeight 4.0 ;
+               rdfs:label "Ancient Tires" .
+
+
+###  http://mariokart8deluxe.owl#Animal_Crossing
+:Animal_Crossing rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :Switch ;
+                 :hasSlipperiness :HeavySlip ;
+                 rdfs:label "Animal Crossing" .
+
+
+###  http://mariokart8deluxe.owl#Athens_Dash
+:Athens_Dash rdf:type owl:NamedIndividual ,
+                      :Track ;
+             :hasOriginPlatform :Mobile ;
+             rdfs:label "Athens Dash" .
+
+
+###  http://mariokart8deluxe.owl#Azure_Roller
+:Azure_Roller rdf:type owl:NamedIndividual ,
+                       :Tire ;
+              :hasAcceleration 6.0 ;
+              :hasAirHandling 4.0 ;
+              :hasAirSpeed 3.0 ;
+              :hasAntiGravityHandling 4.0 ;
+              :hasAntiGravitySpeed 0.0 ;
+              :hasGroundHandling 4.0 ;
+              :hasGroundSpeed 0.0 ;
+              :hasInvincibility 0.0 ;
+              :hasMiniTurbo 6.0 ;
+              :hasOffRoadTraction 4.0 ;
+              :hasOnRoadTraction 0.0 ;
+              :hasWaterHandling 4.0 ;
+              :hasWaterSpeed 3.0 ;
+              :hasWeight 0.0 ;
+              rdfs:label "Azure Roller" .
+
+
+###  http://mariokart8deluxe.owl#B_Dasher
+:B_Dasher rdf:type owl:NamedIndividual ,
+                   :Body ;
+          :hasAcceleration 1.0 ;
+          :hasAirHandling 0.0 ;
+          :hasAirSpeed 2.0 ;
+          :hasAntiGravityHandling 2.0 ;
+          :hasAntiGravitySpeed 4.0 ;
+          :hasGroundHandling 1.0 ;
+          :hasGroundSpeed 5.0 ;
+          :hasInvincibility 6.0 ;
+          :hasMiniTurbo 3.0 ;
+          :hasOffRoadTraction 1.0 ;
+          :hasOnRoadTraction 3.0 ;
+          :hasWaterHandling 1.0 ;
+          :hasWaterSpeed 1.0 ;
+          :hasWeight 3.0 ;
+          rdfs:label "B Dasher" .
+
+
+###  http://mariokart8deluxe.owl#Baby_Daisy
+:Baby_Daisy rdf:type owl:NamedIndividual ,
+                     :Driver ;
+            :hasAcceleration 4.0 ;
+            :hasAirHandling 10.0 ;
+            :hasAirSpeed 1.0 ;
+            :hasAntiGravityHandling 10.0 ;
+            :hasAntiGravitySpeed 1.0 ;
+            :hasGroundHandling 10.0 ;
+            :hasGroundSpeed 1.0 ;
+            :hasInvincibility 6.0 ;
+            :hasMiniTurbo 5.0 ;
+            :hasOffRoadTraction 5.0 ;
+            :hasOnRoadTraction 3.0 ;
+            :hasWaterHandling 10.0 ;
+            :hasWaterSpeed 1.0 ;
+            :hasWeight 0.0 ;
+            :isDLC "false"^^xsd:boolean ;
+            rdfs:label "Baby Daisy" .
+
+
+###  http://mariokart8deluxe.owl#Baby_Luigi
+:Baby_Luigi rdf:type owl:NamedIndividual ,
+                     :Driver ;
+            :hasAcceleration 5.0 ;
+            :hasAirHandling 8.0 ;
+            :hasAirSpeed 2.0 ;
+            :hasAntiGravityHandling 8.0 ;
+            :hasAntiGravitySpeed 2.0 ;
+            :hasGroundHandling 8.0 ;
+            :hasGroundSpeed 2.0 ;
+            :hasInvincibility 5.0 ;
+            :hasMiniTurbo 5.0 ;
+            :hasOffRoadTraction 4.0 ;
+            :hasOnRoadTraction 2.0 ;
+            :hasWaterHandling 8.0 ;
+            :hasWaterSpeed 2.0 ;
+            :hasWeight 1.0 ;
+            :isDLC "false"^^xsd:boolean ;
+            rdfs:label "Baby Luigi" .
+
+
+###  http://mariokart8deluxe.owl#Baby_Mario
+:Baby_Mario rdf:type owl:NamedIndividual ,
+                     :Driver ;
+            :hasAcceleration 5.0 ;
+            :hasAirHandling 8.0 ;
+            :hasAirSpeed 2.0 ;
+            :hasAntiGravityHandling 8.0 ;
+            :hasAntiGravitySpeed 2.0 ;
+            :hasGroundHandling 8.0 ;
+            :hasGroundSpeed 2.0 ;
+            :hasInvincibility 5.0 ;
+            :hasMiniTurbo 5.0 ;
+            :hasOffRoadTraction 4.0 ;
+            :hasOnRoadTraction 2.0 ;
+            :hasWaterHandling 8.0 ;
+            :hasWaterSpeed 2.0 ;
+            :hasWeight 1.0 ;
+            :isDLC "false"^^xsd:boolean ;
+            rdfs:label "Baby Mario" .
+
+
+###  http://mariokart8deluxe.owl#Baby_Park
+:Baby_Park rdf:type owl:NamedIndividual ,
+                    :Track ;
+           :hasOriginPlatform :GCN ;
+           rdfs:label "Baby Park" .
+
+
+###  http://mariokart8deluxe.owl#Baby_Peach
+:Baby_Peach rdf:type owl:NamedIndividual ,
+                     :Driver ;
+            :hasAcceleration 4.0 ;
+            :hasAirHandling 10.0 ;
+            :hasAirSpeed 1.0 ;
+            :hasAntiGravityHandling 10.0 ;
+            :hasAntiGravitySpeed 1.0 ;
+            :hasGroundHandling 10.0 ;
+            :hasGroundSpeed 1.0 ;
+            :hasInvincibility 6.0 ;
+            :hasMiniTurbo 5.0 ;
+            :hasOffRoadTraction 5.0 ;
+            :hasOnRoadTraction 3.0 ;
+            :hasWaterHandling 10.0 ;
+            :hasWaterSpeed 1.0 ;
+            :hasWeight 0.0 ;
+            :isDLC "false"^^xsd:boolean ;
+            rdfs:label "Baby Peach" .
+
+
+###  http://mariokart8deluxe.owl#Baby_Rosalina
+:Baby_Rosalina rdf:type owl:NamedIndividual ,
+                        :Driver ;
+               :hasAcceleration 5.0 ;
+               :hasAirHandling 9.0 ;
+               :hasAirSpeed 1.0 ;
+               :hasAntiGravityHandling 9.0 ;
+               :hasAntiGravitySpeed 1.0 ;
+               :hasGroundHandling 9.0 ;
+               :hasGroundSpeed 1.0 ;
+               :hasInvincibility 6.0 ;
+               :hasMiniTurbo 5.0 ;
+               :hasOffRoadTraction 3.0 ;
+               :hasOnRoadTraction 4.0 ;
+               :hasWaterHandling 9.0 ;
+               :hasWaterSpeed 1.0 ;
+               :hasWeight 0.0 ;
+               :isDLC "false"^^xsd:boolean ;
+               rdfs:label "Baby Rosalina" .
+
+
+###  http://mariokart8deluxe.owl#Badwagon
+:Badwagon rdf:type owl:NamedIndividual ,
+                   :Body ;
+          :hasAcceleration 0.0 ;
+          :hasAirHandling 0.0 ;
+          :hasAirSpeed 1.0 ;
+          :hasAntiGravityHandling 1.0 ;
+          :hasAntiGravitySpeed 3.0 ;
+          :hasGroundHandling 0.0 ;
+          :hasGroundSpeed 5.0 ;
+          :hasInvincibility 7.0 ;
+          :hasMiniTurbo 3.0 ;
+          :hasOffRoadTraction 5.0 ;
+          :hasOnRoadTraction 2.0 ;
+          :hasWaterHandling 1.0 ;
+          :hasWaterSpeed 2.0 ;
+          :hasWeight 4.0 ;
+          rdfs:label "Badwagon" .
+
+
+###  http://mariokart8deluxe.owl#Banana_Cup
+:Banana_Cup rdf:type owl:NamedIndividual ,
+                     :Cup ;
+            :hasTrack :DK_Jungle ,
+                      :Donut_Plains_3 ,
+                      :Dry_Dry_Desert ,
+                      :Royal_Raceway ;
+            rdfs:label "Banana Cup" .
+
+
+###  http://mariokart8deluxe.owl#Bangkok_Rush
+:Bangkok_Rush rdf:type owl:NamedIndividual ,
+                       :Track ;
+              :hasOriginPlatform :Mobile ;
+              rdfs:label "Bangkok Rush" .
+
+
+###  http://mariokart8deluxe.owl#Bell_Cup
+:Bell_Cup rdf:type owl:NamedIndividual ,
+                   :Cup ;
+          :hasTrack :Big_Blue ,
+                    :Neo_Bowser_City ,
+                    :Ribbon_Road ,
+                    :Super_Bell_Subway ;
+          rdfs:label "Bell Cup" .
+
+
+###  http://mariokart8deluxe.owl#Berlin_Byways
+:Berlin_Byways rdf:type owl:NamedIndividual ,
+                        :Track ;
+               :hasOriginPlatform :Mobile ;
+               rdfs:label "Berlin Byways" .
+
+
+###  http://mariokart8deluxe.owl#Biddybuggy
+:Biddybuggy rdf:type owl:NamedIndividual ,
+                     :Body ;
+            :hasAcceleration 7.0 ;
+            :hasAirHandling 4.0 ;
+            :hasAirSpeed 1.0 ;
+            :hasAntiGravityHandling 5.0 ;
+            :hasAntiGravitySpeed 2.0 ;
+            :hasGroundHandling 5.0 ;
+            :hasGroundSpeed 0.0 ;
+            :hasInvincibility 0.0 ;
+            :hasMiniTurbo 7.0 ;
+            :hasOffRoadTraction 4.0 ;
+            :hasOnRoadTraction 1.0 ;
+            :hasWaterHandling 4.0 ;
+            :hasWaterSpeed 1.0 ;
+            :hasWeight 0.0 ;
+            rdfs:label "Biddybuggy" .
+
+
+###  http://mariokart8deluxe.owl#Big_Blue
+:Big_Blue rdf:type owl:NamedIndividual ,
+                   :Track ;
+          :hasOriginPlatform :Switch ;
+          rdfs:label "Big Blue" .
+
+
+###  http://mariokart8deluxe.owl#Birdo
+:Birdo rdf:type owl:NamedIndividual ,
+                :Driver ;
+       :hasAcceleration 3.0 ;
+       :hasAirHandling 5.0 ;
+       :hasAirSpeed 6.0 ;
+       :hasAntiGravityHandling 5.0 ;
+       :hasAntiGravitySpeed 6.0 ;
+       :hasGroundHandling 5.0 ;
+       :hasGroundSpeed 6.0 ;
+       :hasInvincibility 1.0 ;
+       :hasMiniTurbo 4.0 ;
+       :hasOffRoadTraction 3.0 ;
+       :hasOnRoadTraction 3.0 ;
+       :hasWaterHandling 5.0 ;
+       :hasWaterSpeed 6.0 ;
+       :hasWeight 4.0 ;
+       :isDLC "true"^^xsd:boolean ;
+       rdfs:label "Birdo" .
+
+
+###  http://mariokart8deluxe.owl#Blue_Falcon
+:Blue_Falcon rdf:type owl:NamedIndividual ,
+                      :Body ;
+             :hasAcceleration 3.0 ;
+             :hasAirHandling 1.0 ;
+             :hasAirSpeed 3.0 ;
+             :hasAntiGravityHandling 5.0 ;
+             :hasAntiGravitySpeed 4.0 ;
+             :hasGroundHandling 2.0 ;
+             :hasGroundSpeed 4.0 ;
+             :hasInvincibility 4.0 ;
+             :hasMiniTurbo 4.0 ;
+             :hasOffRoadTraction 3.0 ;
+             :hasOnRoadTraction 1.0 ;
+             :hasWaterHandling 3.0 ;
+             :hasWaterSpeed 2.0 ;
+             :hasWeight 0.0 ;
+             rdfs:label "Blue Falcon" .
+
+
+###  http://mariokart8deluxe.owl#Blue_Standard_Tires
+:Blue_Standard_Tires rdf:type owl:NamedIndividual ,
+                              :Tire ;
+                     :hasAcceleration 4.0 ;
+                     :hasAirHandling 3.0 ;
+                     :hasAirSpeed 3.0 ;
+                     :hasAntiGravityHandling 3.0 ;
+                     :hasAntiGravitySpeed 2.0 ;
+                     :hasGroundHandling 3.0 ;
+                     :hasGroundSpeed 2.0 ;
+                     :hasInvincibility 4.0 ;
+                     :hasMiniTurbo 4.0 ;
+                     :hasOffRoadTraction 5.0 ;
+                     :hasOnRoadTraction 2.0 ;
+                     :hasWaterHandling 3.0 ;
+                     :hasWaterSpeed 3.0 ;
+                     :hasWeight 2.0 ;
+                     rdfs:label "Blue Standard Tires" .
+
+
+###  http://mariokart8deluxe.owl#Bone-Dry_Dunes
+:Bone-Dry_Dunes rdf:type owl:NamedIndividual ,
+                         :Track ;
+                :hasOriginPlatform :Switch ;
+                :hasSlipperiness :LightSlip ;
+                rdfs:label "Bone-Dry Dunes" .
+
+
+###  http://mariokart8deluxe.owl#Bone_Rattler
+:Bone_Rattler rdf:type owl:NamedIndividual ,
+                       :Body ;
+              :hasAcceleration 1.0 ;
+              :hasAirHandling 1.0 ;
+              :hasAirSpeed 0.0 ;
+              :hasAntiGravityHandling 1.0 ;
+              :hasAntiGravitySpeed 2.0 ;
+              :hasGroundHandling 1.0 ;
+              :hasGroundSpeed 4.0 ;
+              :hasInvincibility 5.0 ;
+              :hasMiniTurbo 3.0 ;
+              :hasOffRoadTraction 3.0 ;
+              :hasOnRoadTraction 1.0 ;
+              :hasWaterHandling 5.0 ;
+              :hasWaterSpeed 5.0 ;
+              :hasWeight 4.0 ;
+              rdfs:label "Bone Rattler" .
+
+
+###  http://mariokart8deluxe.owl#Boo_Lake
+:Boo_Lake rdf:type owl:NamedIndividual ,
+                   :Track ;
+          :hasOriginPlatform :GBA ;
+          rdfs:label "Boo Lake" .
+
+
+###  http://mariokart8deluxe.owl#Boomerang_Cup
+:Boomerang_Cup rdf:type owl:NamedIndividual ,
+                        :Cup ;
+               :hasTrack :Bangkok_Rush ,
+                         :Mario_Circuit ,
+                         :Singapore_Speedway ,
+                         :Waluigi_Stadium ;
+               rdfs:label "Boomerang Cup" .
+
+
+###  http://mariokart8deluxe.owl#Bowser_Castle_3
+:Bowser_Castle_3 rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :SNES ;
+                 rdfs:label "Bowser Castle 3" .
+
+
+###  http://mariokart8deluxe.owl#Bowser_Kite
+:Bowser_Kite rdf:type owl:NamedIndividual ,
+                      :Glider ;
+             :hasAcceleration 2.0 ;
+             :hasAirHandling 2.0 ;
+             :hasAirSpeed 1.0 ;
+             :hasAntiGravityHandling 0.0 ;
+             :hasAntiGravitySpeed 1.0 ;
+             :hasGroundHandling 1.0 ;
+             :hasGroundSpeed 0.0 ;
+             :hasInvincibility 0.0 ;
+             :hasMiniTurbo 2.0 ;
+             :hasOffRoadTraction 0.0 ;
+             :hasOnRoadTraction 2.0 ;
+             :hasWaterHandling 1.0 ;
+             :hasWaterSpeed 0.0 ;
+             :hasWeight 1.0 ;
+             rdfs:label "Bowser Kite" .
+
+
+###  http://mariokart8deluxe.owl#Browser
+:Browser rdf:type owl:NamedIndividual ,
+                  :Driver ;
+         :hasAcceleration 0.0 ;
+         :hasAirHandling 0.0 ;
+         :hasAirSpeed 10.0 ;
+         :hasAntiGravityHandling 0.0 ;
+         :hasAntiGravitySpeed 10.0 ;
+         :hasGroundHandling 0.0 ;
+         :hasGroundSpeed 10.0 ;
+         :hasInvincibility 6.0 ;
+         :hasMiniTurbo 0.0 ;
+         :hasOffRoadTraction 0.0 ;
+         :hasOnRoadTraction 6.0 ;
+         :hasWaterHandling 0.0 ;
+         :hasWaterSpeed 10.0 ;
+         :hasWeight 10.0 ;
+         :isDLC "false"^^xsd:boolean ;
+         rdfs:label "Browser" .
+
+
+###  http://mariokart8deluxe.owl#Browser_Jr
+:Browser_Jr rdf:type owl:NamedIndividual ,
+                     :Driver ;
+            :hasAcceleration 4.0 ;
+            :hasAirHandling 8.0 ;
+            :hasAirSpeed 3.0 ;
+            :hasAntiGravityHandling 8.0 ;
+            :hasAntiGravitySpeed 3.0 ;
+            :hasGroundHandling 8.0 ;
+            :hasGroundSpeed 3.0 ;
+            :hasInvincibility 4.0 ;
+            :hasMiniTurbo 4.0 ;
+            :hasOffRoadTraction 5.0 ;
+            :hasOnRoadTraction 1.0 ;
+            :hasWaterHandling 8.0 ;
+            :hasWaterSpeed 3.0 ;
+            :hasWeight 2.0 ;
+            :isDLC "false"^^xsd:boolean ;
+            rdfs:label "Browser Jr." .
+
+
+###  http://mariokart8deluxe.owl#Button
+:Button rdf:type owl:NamedIndividual ,
+                 :Tire ;
+        :hasAcceleration 5.0 ;
+        :hasAirHandling 2.0 ;
+        :hasAirSpeed 2.0 ;
+        :hasAntiGravityHandling 4.0 ;
+        :hasAntiGravitySpeed 2.0 ;
+        :hasGroundHandling 3.0 ;
+        :hasGroundSpeed 1.0 ;
+        :hasInvincibility 3.0 ;
+        :hasMiniTurbo 5.0 ;
+        :hasOffRoadTraction 3.0 ;
+        :hasOnRoadTraction 1.0 ;
+        :hasWaterHandling 3.0 ;
+        :hasWaterSpeed 2.0 ;
+        :hasWeight 0.0 ;
+        rdfs:label "Button" .
+
+
+###  http://mariokart8deluxe.owl#Cat_Cruiser
+:Cat_Cruiser rdf:type owl:NamedIndividual ,
+                      :Body ;
+             :hasAcceleration 5.0 ;
+             :hasAirHandling 4.0 ;
+             :hasAirSpeed 4.0 ;
+             :hasAntiGravityHandling 3.0 ;
+             :hasAntiGravitySpeed 3.0 ;
+             :hasGroundHandling 4.0 ;
+             :hasGroundSpeed 2.0 ;
+             :hasInvincibility 3.0 ;
+             :hasMiniTurbo 6.0 ;
+             :hasOffRoadTraction 3.0 ;
+             :hasOnRoadTraction 4.0 ;
+             :hasWaterHandling 2.0 ;
+             :hasWaterSpeed 2.0 ;
+             :hasWeight 2.0 ;
+             rdfs:label "Cat Cruiser" .
+
+
+###  http://mariokart8deluxe.owl#Cat_Mario
+:Cat_Mario rdf:type owl:NamedIndividual ,
+                    :Driver ;
+           :hasAcceleration 4.0 ;
+           :hasAirHandling 6.0 ;
+           :hasAirSpeed 5.0 ;
+           :hasAntiGravityHandling 6.0 ;
+           :hasAntiGravitySpeed 5.0 ;
+           :hasGroundHandling 6.0 ;
+           :hasGroundSpeed 5.0 ;
+           :hasInvincibility 3.0 ;
+           :hasMiniTurbo 4.0 ;
+           :hasOffRoadTraction 3.0 ;
+           :hasOnRoadTraction 2.0 ;
+           :hasWaterHandling 6.0 ;
+           :hasWaterSpeed 5.0 ;
+           :hasWeight 3.0 ;
+           :isDLC "false"^^xsd:boolean ;
+           rdfs:label "Cat Mario" .
+
+
+###  http://mariokart8deluxe.owl#Cat_Peach
+:Cat_Peach rdf:type owl:NamedIndividual ,
+                    :Driver ;
+           :hasAcceleration 4.0 ;
+           :hasAirHandling 6.0 ;
+           :hasAirSpeed 5.0 ;
+           :hasAntiGravityHandling 6.0 ;
+           :hasAntiGravitySpeed 5.0 ;
+           :hasGroundHandling 6.0 ;
+           :hasGroundSpeed 5.0 ;
+           :hasInvincibility 3.0 ;
+           :hasMiniTurbo 4.0 ;
+           :hasOffRoadTraction 3.0 ;
+           :hasOnRoadTraction 2.0 ;
+           :hasWaterHandling 6.0 ;
+           :hasWaterSpeed 5.0 ;
+           :hasWeight 3.0 ;
+           :isDLC "false"^^xsd:boolean ;
+           rdfs:label "Cat Peach" .
+
+
+###  http://mariokart8deluxe.owl#Cheep_Cheep_Beach
+:Cheep_Cheep_Beach rdf:type owl:NamedIndividual ,
+                            :Track ;
+                   :hasOriginPlatform :DS ;
+                   :hasSlipperiness :LightSlip ;
+                   rdfs:label "Cheep Cheep Beach" .
+
+
+###  http://mariokart8deluxe.owl#Cheese_Land
+:Cheese_Land rdf:type owl:NamedIndividual ,
+                      :Track ;
+             :hasOriginPlatform :GBA ;
+             :hasSlipperiness :LightSlip ;
+             rdfs:label "Cheese Land" .
+
+
+###  http://mariokart8deluxe.owl#Cherry_Cup
+:Cherry_Cup rdf:type owl:NamedIndividual ,
+                     :Cup ;
+            :hasTrack :Koopa_Cape ,
+                      :Los_Angeles_Laps ,
+                      :Sunset_Wilds ,
+                      :Vancouver_Velocity ;
+            rdfs:label "Cherry Cup" .
+
+
+###  http://mariokart8deluxe.owl#Choco_Mountain
+:Choco_Mountain rdf:type owl:NamedIndividual ,
+                         :Track ;
+                :hasOriginPlatform :N64 ;
+                rdfs:label "Choco Mountain" .
+
+
+###  http://mariokart8deluxe.owl#Circuit_Special
+:Circuit_Special rdf:type owl:NamedIndividual ,
+                          :Body ;
+                 :hasAcceleration 1.0 ;
+                 :hasAirHandling 0.0 ;
+                 :hasAirSpeed 2.0 ;
+                 :hasAntiGravityHandling 2.0 ;
+                 :hasAntiGravitySpeed 4.0 ;
+                 :hasGroundHandling 1.0 ;
+                 :hasGroundSpeed 5.0 ;
+                 :hasInvincibility 6.0 ;
+                 :hasMiniTurbo 3.0 ;
+                 :hasOffRoadTraction 1.0 ;
+                 :hasOnRoadTraction 3.0 ;
+                 :hasWaterHandling 1.0 ;
+                 :hasWaterSpeed 1.0 ;
+                 :hasWeight 3.0 ;
+                 rdfs:label "Circuit Special" .
+
+
+###  http://mariokart8deluxe.owl#City_Tripper
+:City_Tripper rdf:type owl:NamedIndividual ,
+                       :Body ;
+              :hasAcceleration 6.0 ;
+              :hasAirHandling 2.0 ;
+              :hasAirSpeed 1.0 ;
+              :hasAntiGravityHandling 4.0 ;
+              :hasAntiGravitySpeed 1.0 ;
+              :hasGroundHandling 5.0 ;
+              :hasGroundSpeed 2.0 ;
+              :hasInvincibility 2.0 ;
+              :hasMiniTurbo 6.0 ;
+              :hasOffRoadTraction 4.0 ;
+              :hasOnRoadTraction 3.0 ;
+              :hasWaterHandling 4.0 ;
+              :hasWaterSpeed 3.0 ;
+              :hasWeight 1.0 ;
+              rdfs:label "City Tripper" .
+
+
+###  http://mariokart8deluxe.owl#Cloud_Glider
+:Cloud_Glider rdf:type owl:NamedIndividual ,
+                       :Glider ;
+              :hasAcceleration 2.0 ;
+              :hasAirHandling 2.0 ;
+              :hasAirSpeed 1.0 ;
+              :hasAntiGravityHandling 1.0 ;
+              :hasAntiGravitySpeed 1.0 ;
+              :hasGroundHandling 1.0 ;
+              :hasGroundSpeed 0.0 ;
+              :hasInvincibility 0.0 ;
+              :hasMiniTurbo 2.0 ;
+              :hasOffRoadTraction 1.0 ;
+              :hasOnRoadTraction 1.0 ;
+              :hasWaterHandling 0.0 ;
+              :hasWaterSpeed 1.0 ;
+              :hasWeight 0.0 ;
+              rdfs:label "Cloud Glider" .
+
+
+###  http://mariokart8deluxe.owl#Cloudtop_Cruise
+:Cloudtop_Cruise rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :Switch ;
+                 rdfs:label "Cloudtop Cruise" .
+
+
+###  http://mariokart8deluxe.owl#Coconut_Mall
+:Coconut_Mall rdf:type owl:NamedIndividual ,
+                       :Track ;
+              :hasOriginPlatform :Wii ;
+              rdfs:label "Coconut Mall" .
+
+
+###  http://mariokart8deluxe.owl#Comet
+:Comet rdf:type owl:NamedIndividual ,
+                :Body ;
+       :hasAcceleration 5.0 ;
+       :hasAirHandling 4.0 ;
+       :hasAirSpeed 4.0 ;
+       :hasAntiGravityHandling 3.0 ;
+       :hasAntiGravitySpeed 3.0 ;
+       :hasGroundHandling 4.0 ;
+       :hasGroundSpeed 2.0 ;
+       :hasInvincibility 3.0 ;
+       :hasMiniTurbo 6.0 ;
+       :hasOffRoadTraction 3.0 ;
+       :hasOnRoadTraction 4.0 ;
+       :hasWaterHandling 2.0 ;
+       :hasWaterSpeed 2.0 ;
+       :hasWeight 2.0 ;
+       rdfs:label "Comet" .
+
+
+###  http://mariokart8deluxe.owl#Crimson_Slim_Tires
+:Crimson_Slim_Tires rdf:type owl:NamedIndividual ,
+                             :Tire ;
+                    :hasAcceleration 2.0 ;
+                    :hasAirHandling 4.0 ;
+                    :hasAirSpeed 2.0 ;
+                    :hasAntiGravityHandling 3.0 ;
+                    :hasAntiGravitySpeed 4.0 ;
+                    :hasGroundHandling 4.0 ;
+                    :hasGroundSpeed 3.0 ;
+                    :hasInvincibility 5.0 ;
+                    :hasMiniTurbo 3.0 ;
+                    :hasOffRoadTraction 1.0 ;
+                    :hasOnRoadTraction 4.0 ;
+                    :hasWaterHandling 4.0 ;
+                    :hasWaterSpeed 2.0 ;
+                    :hasWeight 2.0 ;
+                    rdfs:label "Crimson Slim Tires" .
+
+
+###  http://mariokart8deluxe.owl#Crossing_Cup
+:Crossing_Cup rdf:type owl:NamedIndividual ,
+                       :Cup ;
+              :hasTrack :Animal_Crossing ,
+                        :Baby_Park ,
+                        :Cheese_Land ,
+                        :Wild_Woods ;
+              rdfs:label "Crossing Cup" .
+
+
+###  http://mariokart8deluxe.owl#Cushion
+:Cushion rdf:type owl:NamedIndividual ,
+                  :Tire ;
+         :hasAcceleration 4.0 ;
+         :hasAirHandling 3.0 ;
+         :hasAirSpeed 4.0 ;
+         :hasAntiGravityHandling 2.0 ;
+         :hasAntiGravitySpeed 1.0 ;
+         :hasGroundHandling 2.0 ;
+         :hasGroundSpeed 1.0 ;
+         :hasInvincibility 6.0 ;
+         :hasMiniTurbo 5.0 ;
+         :hasOffRoadTraction 6.0 ;
+         :hasOnRoadTraction 2.0 ;
+         :hasWaterHandling 1.0 ;
+         :hasWaterSpeed 1.0 ;
+         :hasWeight 1.0 ;
+         rdfs:label "Cushion" .
+
+
+###  http://mariokart8deluxe.owl#Cyber_Slick_Tires
+:Cyber_Slick_Tires rdf:type owl:NamedIndividual ,
+                            :Tire ;
+                   :hasAcceleration 1.0 ;
+                   :hasAirHandling 1.0 ;
+                   :hasAirSpeed 0.0 ;
+                   :hasAntiGravityHandling 2.0 ;
+                   :hasAntiGravitySpeed 4.0 ;
+                   :hasGroundHandling 2.0 ;
+                   :hasGroundSpeed 4.0 ;
+                   :hasInvincibility 5.0 ;
+                   :hasMiniTurbo 2.0 ;
+                   :hasOffRoadTraction 0.0 ;
+                   :hasOnRoadTraction 4.0 ;
+                   :hasWaterHandling 0.0 ;
+                   :hasWaterSpeed 0.0 ;
+                   :hasWeight 3.0 ;
+                   rdfs:label "Cyber Slick Tires" .
+
+
+###  http://mariokart8deluxe.owl#DK_Jungle
+:DK_Jungle rdf:type owl:NamedIndividual ,
+                    :Track ;
+           :hasOriginPlatform <http://mariokart8deluxe.owl#3DS> ;
+           rdfs:label "DK Jungle" .
+
+
+###  http://mariokart8deluxe.owl#DK_Mountain
+:DK_Mountain rdf:type owl:NamedIndividual ,
+                      :Track ;
+             :hasOriginPlatform :GCN ;
+             rdfs:label "DK Mountain" .
+
+
+###  http://mariokart8deluxe.owl#DK_Summit
+:DK_Summit rdf:type owl:NamedIndividual ,
+                    :Track ;
+           :hasOriginPlatform :Wii ;
+           :hasSlipperiness :MediumSlip ;
+           rdfs:label "DK Summit" .
+
+
+###  http://mariokart8deluxe.owl#DS
+:DS rdf:type owl:NamedIndividual ,
+             :GamePlatform ;
+    rdfs:comment "Nintendo DS, DS Light" .
+
+
+###  http://mariokart8deluxe.owl#Daisy
+:Daisy rdf:type owl:NamedIndividual ,
+                :Driver ;
+       :hasAcceleration 3.0 ;
+       :hasAirHandling 5.0 ;
+       :hasAirSpeed 6.0 ;
+       :hasAntiGravityHandling 5.0 ;
+       :hasAntiGravitySpeed 6.0 ;
+       :hasGroundHandling 5.0 ;
+       :hasGroundSpeed 6.0 ;
+       :hasInvincibility 1.0 ;
+       :hasMiniTurbo 4.0 ;
+       :hasOffRoadTraction 3.0 ;
+       :hasOnRoadTraction 3.0 ;
+       :hasWaterHandling 5.0 ;
+       :hasWaterSpeed 6.0 ;
+       :hasWeight 4.0 ;
+       :isDLC "false"^^xsd:boolean ;
+       rdfs:label "Daisy" .
+
+
+###  http://mariokart8deluxe.owl#Daisy_Circuit
+:Daisy_Circuit rdf:type owl:NamedIndividual ,
+                        :Track ;
+               :hasOriginPlatform :Wii ;
+               rdfs:label "Daisy Circuit" .
+
+
+###  http://mariokart8deluxe.owl#Daisy_Cruiser
+:Daisy_Cruiser rdf:type owl:NamedIndividual ,
+                        :Track ;
+               :hasOriginPlatform :GCN ;
+               rdfs:label "Daisy Cruiser" .
+
+
+###  http://mariokart8deluxe.owl#Diddy_Kong
+:Diddy_Kong rdf:type owl:NamedIndividual ,
+                     :Driver ;
+            :hasAcceleration 4.0 ;
+            :hasAirHandling 6.0 ;
+            :hasAirSpeed 5.0 ;
+            :hasAntiGravityHandling 6.0 ;
+            :hasAntiGravitySpeed 5.0 ;
+            :hasGroundHandling 6.0 ;
+            :hasGroundSpeed 5.0 ;
+            :hasInvincibility 3.0 ;
+            :hasMiniTurbo 4.0 ;
+            :hasOffRoadTraction 3.0 ;
+            :hasOnRoadTraction 2.0 ;
+            :hasWaterHandling 6.0 ;
+            :hasWaterSpeed 5.0 ;
+            :hasWeight 3.0 ;
+            :isDLC "true"^^xsd:boolean ;
+            rdfs:label "Diddy Kong" .
+
+
+###  http://mariokart8deluxe.owl#Dolphin_Shoals
+:Dolphin_Shoals rdf:type owl:NamedIndividual ,
+                         :Track ;
+                :hasOriginPlatform :Switch ;
+                :hasSlipperiness :MediumSlip ;
+                rdfs:label "Dolphin Shoals" .
+
+
+###  http://mariokart8deluxe.owl#Donkey_Kong
+:Donkey_Kong rdf:type owl:NamedIndividual ,
+                      :Driver ;
+             :hasAcceleration 1.0 ;
+             :hasAirHandling 2.0 ;
+             :hasAirSpeed 9.0 ;
+             :hasAntiGravityHandling 2.0 ;
+             :hasAntiGravitySpeed 9.0 ;
+             :hasGroundHandling 2.0 ;
+             :hasGroundSpeed 9.0 ;
+             :hasInvincibility 4.0 ;
+             :hasMiniTurbo 1.0 ;
+             :hasOffRoadTraction 0.0 ;
+             :hasOnRoadTraction 10.0 ;
+             :hasWaterHandling 2.0 ;
+             :hasWaterSpeed 9.0 ;
+             :hasWeight 8.0 ;
+             :isDLC "false"^^xsd:boolean ;
+             rdfs:label "Donkey Kong" .
+
+
+###  http://mariokart8deluxe.owl#Donut_Plains_3
+:Donut_Plains_3 rdf:type owl:NamedIndividual ,
+                         :Track ;
+                :hasOriginPlatform :SNES ;
+                :hasSlipperiness :MediumSlip ;
+                rdfs:label "Donut Plains 3" .
+
+
+###  http://mariokart8deluxe.owl#Dragon_Driftway
+:Dragon_Driftway rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :Switch ;
+                 rdfs:label "Dragon Driftway" .
+
+
+###  http://mariokart8deluxe.owl#Dry_Bones
+:Dry_Bones rdf:type owl:NamedIndividual ,
+                    :Driver ;
+           :hasAcceleration 5.0 ;
+           :hasAirHandling 8.0 ;
+           :hasAirSpeed 2.0 ;
+           :hasAntiGravityHandling 8.0 ;
+           :hasAntiGravitySpeed 2.0 ;
+           :hasGroundHandling 8.0 ;
+           :hasGroundSpeed 2.0 ;
+           :hasInvincibility 5.0 ;
+           :hasMiniTurbo 5.0 ;
+           :hasOffRoadTraction 4.0 ;
+           :hasOnRoadTraction 2.0 ;
+           :hasWaterHandling 8.0 ;
+           :hasWaterSpeed 2.0 ;
+           :hasWeight 1.0 ;
+           :isDLC "false"^^xsd:boolean ;
+           rdfs:label "Dry Bones" .
+
+
+###  http://mariokart8deluxe.owl#Dry_Browser
+:Dry_Browser rdf:type owl:NamedIndividual ,
+                      :Driver ;
+             :hasAcceleration 0.0 ;
+             :hasAirHandling 1.0 ;
+             :hasAirSpeed 10.0 ;
+             :hasAntiGravityHandling 1.0 ;
+             :hasAntiGravitySpeed 10.0 ;
+             :hasGroundHandling 1.0 ;
+             :hasGroundSpeed 10.0 ;
+             :hasInvincibility 5.0 ;
+             :hasMiniTurbo 0.0 ;
+             :hasOffRoadTraction 1.0 ;
+             :hasOnRoadTraction 5.0 ;
+             :hasWaterHandling 1.0 ;
+             :hasWaterSpeed 10.0 ;
+             :hasWeight 9.0 ;
+             :isDLC "false"^^xsd:boolean ;
+             rdfs:label "Dry Browser" .
+
+
+###  http://mariokart8deluxe.owl#Dry_Dry_Desert
+:Dry_Dry_Desert rdf:type owl:NamedIndividual ,
+                         :Track ;
+                :hasOriginPlatform :GCN ;
+                :hasSlipperiness :MediumSlip ;
+                rdfs:label "Dry Dry Desert" .
+
+
+###  http://mariokart8deluxe.owl#Egg_Cup
+:Egg_Cup rdf:type owl:NamedIndividual ,
+                  :Cup ;
+         :hasTrack :Dragon_Driftway ,
+                   :Excitebike_Arena ,
+                   :Mute_City ,
+                   :Yoshi_Circuit ;
+         rdfs:label "Egg Cup" .
+
+
+###  http://mariokart8deluxe.owl#Electrodrome
+:Electrodrome rdf:type owl:NamedIndividual ,
+                       :Track ;
+              :hasOriginPlatform :Switch ;
+              rdfs:label "Electrodrome" .
+
+
+###  http://mariokart8deluxe.owl#Excitebike_Arena
+:Excitebike_Arena rdf:type owl:NamedIndividual ,
+                           :Track ;
+                  :hasOriginPlatform :Switch ;
+                  rdfs:label "Excitebike Arena" .
+
+
+###  http://mariokart8deluxe.owl#Feather_Cup
+:Feather_Cup rdf:type owl:NamedIndividual ,
+                      :Cup ;
+             :hasTrack :Athens_Dash ,
+                       :Daisy_Cruiser ,
+                       :Moonview_Highway ,
+                       :Squeaky_Clean_Sprint ;
+             rdfs:label "Feather Cup" .
+
+
+###  http://mariokart8deluxe.owl#Female_Inkling
+:Female_Inkling rdf:type owl:NamedIndividual ,
+                         :Driver ;
+                :hasAcceleration 4.0 ;
+                :hasAirHandling 6.0 ;
+                :hasAirSpeed 5.0 ;
+                :hasAntiGravityHandling 6.0 ;
+                :hasAntiGravitySpeed 5.0 ;
+                :hasGroundHandling 6.0 ;
+                :hasGroundSpeed 5.0 ;
+                :hasInvincibility 3.0 ;
+                :hasMiniTurbo 4.0 ;
+                :hasOffRoadTraction 3.0 ;
+                :hasOnRoadTraction 2.0 ;
+                :hasWaterHandling 6.0 ;
+                :hasWaterSpeed 5.0 ;
+                :hasWeight 3.0 ;
+                :isDLC "false"^^xsd:boolean ;
+                rdfs:label "Female Inkling" .
+
+
+###  http://mariokart8deluxe.owl#Female_Villager
+:Female_Villager rdf:type owl:NamedIndividual ,
+                          :Driver ;
+                 :hasAcceleration 4.0 ;
+                 :hasAirHandling 6.0 ;
+                 :hasAirSpeed 5.0 ;
+                 :hasAntiGravityHandling 6.0 ;
+                 :hasAntiGravitySpeed 5.0 ;
+                 :hasGroundHandling 6.0 ;
+                 :hasGroundSpeed 5.0 ;
+                 :hasInvincibility 3.0 ;
+                 :hasMiniTurbo 4.0 ;
+                 :hasOffRoadTraction 3.0 ;
+                 :hasOnRoadTraction 2.0 ;
+                 :hasWaterHandling 6.0 ;
+                 :hasWaterSpeed 5.0 ;
+                 :hasWeight 3.0 ;
+                 :isDLC "false"^^xsd:boolean ;
+                 rdfs:label "Female Villager" .
+
+
+###  http://mariokart8deluxe.owl#Flame_Rider
+:Flame_Rider rdf:type owl:NamedIndividual ,
+                      :Body ;
+             :hasAcceleration 5.0 ;
+             :hasAirHandling 3.0 ;
+             :hasAirSpeed 3.0 ;
+             :hasAntiGravityHandling 4.0 ;
+             :hasAntiGravitySpeed 4.0 ;
+             :hasGroundHandling 4.0 ;
+             :hasGroundSpeed 2.0 ;
+             :hasInvincibility 4.0 ;
+             :hasMiniTurbo 5.0 ;
+             :hasOffRoadTraction 5.0 ;
+             :hasOnRoadTraction 3.0 ;
+             :hasWaterHandling 3.0 ;
+             :hasWaterSpeed 2.0 ;
+             :hasWeight 1.0 ;
+             rdfs:label "Flame Rider" .
+
+
+###  http://mariokart8deluxe.owl#Flower_Cup
+:Flower_Cup rdf:type owl:NamedIndividual ,
+                     :Cup ;
+            :hasTrack :Mario_Circuit ,
+                      :Shy_Guy_Falls ,
+                      :Toad_Harbor ,
+                      :Twisted_Mansion ;
+            rdfs:label "Flower Cup" .
+
+
+###  http://mariokart8deluxe.owl#Flower_Glider
+:Flower_Glider rdf:type owl:NamedIndividual ,
+                        :Glider ;
+               :hasAcceleration 2.0 ;
+               :hasAirHandling 2.0 ;
+               :hasAirSpeed 1.0 ;
+               :hasAntiGravityHandling 1.0 ;
+               :hasAntiGravitySpeed 1.0 ;
+               :hasGroundHandling 1.0 ;
+               :hasGroundSpeed 0.0 ;
+               :hasInvincibility 0.0 ;
+               :hasMiniTurbo 2.0 ;
+               :hasOffRoadTraction 1.0 ;
+               :hasOnRoadTraction 1.0 ;
+               :hasWaterHandling 0.0 ;
+               :hasWaterSpeed 1.0 ;
+               :hasWeight 0.0 ;
+               rdfs:label "Flower Glider" .
+
+
+###  http://mariokart8deluxe.owl#Fruit_Cup
+:Fruit_Cup rdf:type owl:NamedIndividual ,
+                    :Cup ;
+           :hasTrack :Amsterdam_Drift ,
+                     :DK_Summit ,
+                     :Riverside_Park ,
+                     <http://mariokart8deluxe.owl#Yoshi's_Island> ;
+           rdfs:label "Fruit Cup" .
+
+
+###  http://mariokart8deluxe.owl#Funky_Kong
+:Funky_Kong rdf:type owl:NamedIndividual ,
+                     :Driver ;
+            :hasAcceleration 0.0 ;
+            :hasAirHandling 1.0 ;
+            :hasAirSpeed 10.0 ;
+            :hasAntiGravityHandling 1.0 ;
+            :hasAntiGravitySpeed 10.0 ;
+            :hasGroundHandling 1.0 ;
+            :hasGroundSpeed 10.0 ;
+            :hasInvincibility 5.0 ;
+            :hasMiniTurbo 0.0 ;
+            :hasOffRoadTraction 1.0 ;
+            :hasOnRoadTraction 5.0 ;
+            :hasWaterHandling 1.0 ;
+            :hasWaterSpeed 10.0 ;
+            :hasWeight 9.0 ;
+            :isDLC "false"^^xsd:boolean ,
+                   "true"^^xsd:boolean ;
+            rdfs:label "Funky Kong" .
+
+
+###  http://mariokart8deluxe.owl#GBA
+:GBA rdf:type owl:NamedIndividual ,
+              :GamePlatform ;
+     rdfs:comment "Game Boy Advance" .
+
+
+###  http://mariokart8deluxe.owl#GCN
+:GCN rdf:type owl:NamedIndividual ,
+              :GamePlatform ;
+     rdfs:comment "Nintendo GameCube" .
+
+
+###  http://mariokart8deluxe.owl#GLA
+:GLA rdf:type owl:NamedIndividual ,
+              :Body ;
+     :hasAcceleration 0.0 ;
+     :hasAirHandling 0.0 ;
+     :hasAirSpeed 1.0 ;
+     :hasAntiGravityHandling 1.0 ;
+     :hasAntiGravitySpeed 3.0 ;
+     :hasGroundHandling 0.0 ;
+     :hasGroundSpeed 5.0 ;
+     :hasInvincibility 7.0 ;
+     :hasMiniTurbo 3.0 ;
+     :hasOffRoadTraction 5.0 ;
+     :hasOnRoadTraction 2.0 ;
+     :hasWaterHandling 1.0 ;
+     :hasWaterSpeed 2.0 ;
+     :hasWeight 4.0 ;
+     rdfs:label "GLA" .
+
+
+###  http://mariokart8deluxe.owl#GLA_Tires
+:GLA_Tires rdf:type owl:NamedIndividual ,
+                    :Tire ;
+           :hasAcceleration 4.0 ;
+           :hasAirHandling 3.0 ;
+           :hasAirSpeed 3.0 ;
+           :hasAntiGravityHandling 3.0 ;
+           :hasAntiGravitySpeed 2.0 ;
+           :hasGroundHandling 3.0 ;
+           :hasGroundSpeed 2.0 ;
+           :hasInvincibility 5.0 ;
+           :hasMiniTurbo 4.0 ;
+           :hasOffRoadTraction 5.0 ;
+           :hasOnRoadTraction 2.0 ;
+           :hasWaterHandling 3.0 ;
+           :hasWaterSpeed 3.0 ;
+           :hasWeight 2.0 ;
+           rdfs:label "GLA Tires" .
+
+
+###  http://mariokart8deluxe.owl#Gold_Glider
+:Gold_Glider rdf:type owl:NamedIndividual ,
+                      :Glider ;
+             :hasAcceleration 1.0 ;
+             :hasAirHandling 1.0 ;
+             :hasAirSpeed 2.0 ;
+             :hasAntiGravityHandling 0.0 ;
+             :hasAntiGravitySpeed 1.0 ;
+             :hasGroundHandling 1.0 ;
+             :hasGroundSpeed 1.0 ;
+             :hasInvincibility 1.0 ;
+             :hasMiniTurbo 1.0 ;
+             :hasOffRoadTraction 0.0 ;
+             :hasOnRoadTraction 2.0 ;
+             :hasWaterHandling 1.0 ;
+             :hasWaterSpeed 0.0 ;
+             :hasWeight 2.0 ;
+             rdfs:label "Gold Glider" .
+
+
+###  http://mariokart8deluxe.owl#Gold_Mario
+:Gold_Mario rdf:type owl:NamedIndividual ,
+                     :Driver ;
+            :hasAcceleration 1.0 ;
+            :hasAirHandling 3.0 ;
+            :hasAirSpeed 8.0 ;
+            :hasAntiGravityHandling 3.0 ;
+            :hasAntiGravitySpeed 8.0 ;
+            :hasGroundHandling 3.0 ;
+            :hasGroundSpeed 8.0 ;
+            :hasInvincibility 3.0 ;
+            :hasMiniTurbo 1.0 ;
+            :hasOffRoadTraction 1.0 ;
+            :hasOnRoadTraction 8.0 ;
+            :hasWaterHandling 3.0 ;
+            :hasWaterSpeed 8.0 ;
+            :hasWeight 10.0 ;
+            :isDLC "false"^^xsd:boolean ;
+            rdfs:label "Gold Mario" .
+
+
+###  http://mariokart8deluxe.owl#Gold_Standard
+:Gold_Standard rdf:type owl:NamedIndividual ,
+                        :Body ;
+               :hasAcceleration 2.0 ;
+               :hasAirHandling 2.0 ;
+               :hasAirSpeed 3.0 ;
+               :hasAntiGravityHandling 3.0 ;
+               :hasAntiGravitySpeed 3.0 ;
+               :hasGroundHandling 3.0 ;
+               :hasGroundSpeed 4.0 ;
+               :hasInvincibility 4.0 ;
+               :hasMiniTurbo 4.0 ;
+               :hasOffRoadTraction 0.0 ;
+               :hasOnRoadTraction 1.0 ;
+               :hasWaterHandling 2.0 ;
+               :hasWaterSpeed 2.0 ;
+               :hasWeight 2.0 ;
+               rdfs:label "Gold Standard" .
+
+
+###  http://mariokart8deluxe.owl#Gold_Tires
+:Gold_Tires rdf:type owl:NamedIndividual ,
+                     :Tire ;
+            :hasAcceleration 0.0 ;
+            :hasAirHandling 0.0 ;
+            :hasAirSpeed 2.0 ;
+            :hasAntiGravityHandling 1.0 ;
+            :hasAntiGravitySpeed 1.0 ;
+            :hasGroundHandling 2.0 ;
+            :hasGroundSpeed 4.0 ;
+            :hasInvincibility 5.0 ;
+            :hasMiniTurbo 2.0 ;
+            :hasOffRoadTraction 2.0 ;
+            :hasOnRoadTraction 1.0 ;
+            :hasWaterHandling 2.0 ;
+            :hasWaterSpeed 3.0 ;
+            :hasWeight 4.0 ;
+            rdfs:label "Gold Tires" .
+
+
+###  http://mariokart8deluxe.owl#Golden_Dash_Cup
+:Golden_Dash_Cup rdf:type owl:NamedIndividual ,
+                          :Cup ;
+                 :hasTrack :Choco_Mountain ,
+                           :Coconut_Mall ,
+                           :Paris_Promenade ,
+                           :Toad_Circuit ;
+                 rdfs:label "Golden Dash Cup" .
+
+
+###  http://mariokart8deluxe.owl#Grumble_Volcano
+:Grumble_Volcano rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :Wii ;
+                 rdfs:label "Grumble Volcano" .
+
+
+###  http://mariokart8deluxe.owl#HeavySlip
+:HeavySlip rdf:type owl:NamedIndividual ,
+                    :SlipperyTerrain ;
+           :hasSlipLevel0 0.935 ;
+           :hasSlipLevel1 0.935 ;
+           :hasSlipLevel10 0.926 ;
+           :hasSlipLevel11 0.925 ;
+           :hasSlipLevel12 0.923 ;
+           :hasSlipLevel13 0.921 ;
+           :hasSlipLevel14 0.919 ;
+           :hasSlipLevel15 0.917 ;
+           :hasSlipLevel16 0.915 ;
+           :hasSlipLevel17 0.905 ;
+           :hasSlipLevel18 0.895 ;
+           :hasSlipLevel19 0.885 ;
+           :hasSlipLevel2 0.934 ;
+           :hasSlipLevel20 0.875 ;
+           :hasSlipLevel3 0.933 ;
+           :hasSlipLevel4 0.932 ;
+           :hasSlipLevel5 0.931 ;
+           :hasSlipLevel6 0.93 ;
+           :hasSlipLevel7 0.929 ;
+           :hasSlipLevel8 0.928 ;
+           :hasSlipLevel9 0.927 ;
+           rdfs:comment "Represents the profile of 'Heavy' slipperiness for a terrain of a track. This individual holds the specific values for each Off-Road Traction level (0-20) that apply to heavily slippery surfaces." .
+
+
+###  http://mariokart8deluxe.owl#Hots_Monster_Tires
+:Hots_Monster_Tires rdf:type owl:NamedIndividual ,
+                             :Tire ;
+                    :hasAcceleration 2.0 ;
+                    :hasAirHandling 1.0 ;
+                    :hasAirSpeed 1.0 ;
+                    :hasAntiGravityHandling 0.0 ;
+                    :hasAntiGravitySpeed 2.0 ;
+                    :hasGroundHandling 0.0 ;
+                    :hasGroundSpeed 3.0 ;
+                    :hasInvincibility 6.0 ;
+                    :hasMiniTurbo 3.0 ;
+                    :hasOffRoadTraction 7.0 ;
+                    :hasOnRoadTraction 3.0 ;
+                    :hasWaterHandling 1.0 ;
+                    :hasWaterSpeed 2.0 ;
+                    :hasWeight 4.0 ;
+                    rdfs:label "Hots Monster Tires" .
+
+
+###  http://mariokart8deluxe.owl#Hylian_Kite
+:Hylian_Kite rdf:type owl:NamedIndividual ,
+                      :Glider ;
+             :hasAcceleration 1.0 ;
+             :hasAirHandling 1.0 ;
+             :hasAirSpeed 2.0 ;
+             :hasAntiGravityHandling 1.0 ;
+             :hasAntiGravitySpeed 0.0 ;
+             :hasGroundHandling 1.0 ;
+             :hasGroundSpeed 1.0 ;
+             :hasInvincibility 1.0 ;
+             :hasMiniTurbo 1.0 ;
+             :hasOffRoadTraction 1.0 ;
+             :hasOnRoadTraction 1.0 ;
+             :hasWaterHandling 0.0 ;
+             :hasWaterSpeed 1.0 ;
+             :hasWeight 1.0 ;
+             rdfs:label "Hylian Kite" .
+
+
+###  http://mariokart8deluxe.owl#Hyrule_Circuit
+:Hyrule_Circuit rdf:type owl:NamedIndividual ,
+                         :Track ;
+                :hasOriginPlatform :Switch ;
+                rdfs:label "Hyrule Circuit" .
+
+
+###  http://mariokart8deluxe.owl#Ice_Ice_Outpost
+:Ice_Ice_Outpost rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :Switch ;
+                 :hasSlipperiness :LightSlip ;
+                 rdfs:label "Ice Ice Outpost" .
+
+
+###  http://mariokart8deluxe.owl#Iggy_Koopa
+:Iggy_Koopa rdf:type owl:NamedIndividual ,
+                     :Driver ;
+            :hasAcceleration 2.0 ;
+            :hasAirHandling 5.0 ;
+            :hasAirSpeed 7.0 ;
+            :hasAntiGravityHandling 5.0 ;
+            :hasAntiGravitySpeed 7.0 ;
+            :hasGroundHandling 5.0 ;
+            :hasGroundSpeed 7.0 ;
+            :hasInvincibility 3.0 ;
+            :hasMiniTurbo 3.0 ;
+            :hasOffRoadTraction 1.0 ;
+            :hasOnRoadTraction 5.0 ;
+            :hasWaterHandling 5.0 ;
+            :hasWaterSpeed 7.0 ;
+            :hasWeight 6.0 ;
+            :isDLC "false"^^xsd:boolean ;
+            rdfs:label "Iggy Koopa" .
+
+
+###  http://mariokart8deluxe.owl#Inkstrider
+:Inkstrider rdf:type owl:NamedIndividual ,
+                     :Body ;
+            :hasAcceleration 3.0 ;
+            :hasAirHandling 2.0 ;
+            :hasAirSpeed 4.0 ;
+            :hasAntiGravityHandling 4.0 ;
+            :hasAntiGravitySpeed 5.0 ;
+            :hasGroundHandling 2.0 ;
+            :hasGroundSpeed 3.0 ;
+            :hasInvincibility 1.0 ;
+            :hasMiniTurbo 5.0 ;
+            :hasOffRoadTraction 4.0 ;
+            :hasOnRoadTraction 2.0 ;
+            :hasWaterHandling 2.0 ;
+            :hasWaterSpeed 3.0 ;
+            :hasWeight 3.0 ;
+            rdfs:label "Inkstrider" .
+
+
+###  http://mariokart8deluxe.owl#Isabelle
+:Isabelle rdf:type owl:NamedIndividual ,
+                   :Driver ;
+          :hasAcceleration 5.0 ;
+          :hasAirHandling 7.0 ;
+          :hasAirSpeed 3.0 ;
+          :hasAntiGravityHandling 7.0 ;
+          :hasAntiGravitySpeed 3.0 ;
+          :hasGroundHandling 7.0 ;
+          :hasGroundSpeed 3.0 ;
+          :hasInvincibility 3.0 ;
+          :hasMiniTurbo 4.0 ;
+          :hasOffRoadTraction 2.0 ;
+          :hasOnRoadTraction 4.0 ;
+          :hasWaterHandling 7.0 ;
+          :hasWaterSpeed 3.0 ;
+          :hasWeight 2.0 ;
+          :isDLC "false"^^xsd:boolean ;
+          rdfs:label "Isabelle" .
+
+
+###  http://mariokart8deluxe.owl#Jet_Bike
+:Jet_Bike rdf:type owl:NamedIndividual ,
+                   :Body ;
+          :hasAcceleration 2.0 ;
+          :hasAirHandling 3.0 ;
+          :hasAirSpeed 3.0 ;
+          :hasAntiGravityHandling 2.0 ;
+          :hasAntiGravitySpeed 3.0 ;
+          :hasGroundHandling 3.0 ;
+          :hasGroundSpeed 4.0 ;
+          :hasInvincibility 3.0 ;
+          :hasMiniTurbo 4.0 ;
+          :hasOffRoadTraction 2.0 ;
+          :hasOnRoadTraction 1.0 ;
+          :hasWaterHandling 3.0 ;
+          :hasWaterSpeed 3.0 ;
+          :hasWeight 1.0 ;
+          rdfs:label "Jet Bike" .
+
+
+###  http://mariokart8deluxe.owl#Kalimari_Desert
+:Kalimari_Desert rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :N64 ;
+                 :hasSlipperiness :MediumSlip ;
+                 rdfs:label "Kalimari Desert" .
+
+
+###  http://mariokart8deluxe.owl#Kamek
+:Kamek rdf:type owl:NamedIndividual ,
+                :Driver ;
+       :hasAcceleration 2.0 ;
+       :hasAirHandling 5.0 ;
+       :hasAirSpeed 7.0 ;
+       :hasAntiGravityHandling 5.0 ;
+       :hasAntiGravitySpeed 7.0 ;
+       :hasGroundHandling 5.0 ;
+       :hasGroundSpeed 7.0 ;
+       :hasInvincibility 3.0 ;
+       :hasMiniTurbo 3.0 ;
+       :hasOffRoadTraction 1.0 ;
+       :hasOnRoadTraction 5.0 ;
+       :hasWaterHandling 5.0 ;
+       :hasWaterSpeed 7.0 ;
+       :hasWeight 6.0 ;
+       :isDLC "true"^^xsd:boolean ;
+       rdfs:label "Kamek" .
+
+
+###  http://mariokart8deluxe.owl#King_Boo
+:King_Boo rdf:type owl:NamedIndividual ,
+                   :Driver ;
+          :hasAcceleration 1.0 ;
+          :hasAirHandling 3.0 ;
+          :hasAirSpeed 8.0 ;
+          :hasAntiGravityHandling 3.0 ;
+          :hasAntiGravitySpeed 8.0 ;
+          :hasGroundHandling 3.0 ;
+          :hasGroundSpeed 8.0 ;
+          :hasInvincibility 4.0 ;
+          :hasMiniTurbo 2.0 ;
+          :hasOffRoadTraction 3.0 ;
+          :hasOnRoadTraction 9.0 ;
+          :hasWaterHandling 3.0 ;
+          :hasWaterSpeed 8.0 ;
+          :hasWeight 7.0 ;
+          :isDLC "false"^^xsd:boolean ;
+          rdfs:label "King Boo" .
+
+
+###  http://mariokart8deluxe.owl#Koopa_Cape
+:Koopa_Cape rdf:type owl:NamedIndividual ,
+                     :Track ;
+            :hasOriginPlatform :Wii ;
+            :hasSlipperiness :MediumSlip ;
+            rdfs:label "Koopa Cape" .
+
+
+###  http://mariokart8deluxe.owl#Koopa_Clown
+:Koopa_Clown rdf:type owl:NamedIndividual ,
+                      :Body ;
+             :hasAcceleration 2.0 ;
+             :hasAirHandling 3.0 ;
+             :hasAirSpeed 3.0 ;
+             :hasAntiGravityHandling 3.0 ;
+             :hasAntiGravitySpeed 3.0 ;
+             :hasGroundHandling 4.0 ;
+             :hasGroundSpeed 3.0 ;
+             :hasInvincibility 3.0 ;
+             :hasMiniTurbo 5.0 ;
+             :hasOffRoadTraction 7.0 ;
+             :hasOnRoadTraction 4.0 ;
+             :hasWaterHandling 4.0 ;
+             :hasWaterSpeed 4.0 ;
+             :hasWeight 3.0 ;
+             rdfs:label "Koopa Clown" .
+
+
+###  http://mariokart8deluxe.owl#Koopa_Troopa
+:Koopa_Troopa rdf:type owl:NamedIndividual ,
+                       :Driver ;
+              :hasAcceleration 4.0 ;
+              :hasAirHandling 8.0 ;
+              :hasAirSpeed 3.0 ;
+              :hasAntiGravityHandling 8.0 ;
+              :hasAntiGravitySpeed 3.0 ;
+              :hasGroundHandling 8.0 ;
+              :hasGroundSpeed 3.0 ;
+              :hasInvincibility 4.0 ;
+              :hasMiniTurbo 4.0 ;
+              :hasOffRoadTraction 5.0 ;
+              :hasOnRoadTraction 1.0 ;
+              :hasWaterHandling 8.0 ;
+              :hasWaterSpeed 3.0 ;
+              :hasWeight 2.0 ;
+              :isDLC "false"^^xsd:boolean ;
+              rdfs:label "Koopa Troopa" .
+
+
+###  http://mariokart8deluxe.owl#Lakitu
+:Lakitu rdf:type owl:NamedIndividual ,
+                 :Driver ;
+        :hasAcceleration 4.0 ;
+        :hasAirHandling 8.0 ;
+        :hasAirSpeed 3.0 ;
+        :hasAntiGravityHandling 8.0 ;
+        :hasAntiGravitySpeed 3.0 ;
+        :hasGroundHandling 8.0 ;
+        :hasGroundSpeed 3.0 ;
+        :hasInvincibility 4.0 ;
+        :hasMiniTurbo 4.0 ;
+        :hasOffRoadTraction 5.0 ;
+        :hasOnRoadTraction 1.0 ;
+        :hasWaterHandling 8.0 ;
+        :hasWaterSpeed 3.0 ;
+        :hasWeight 2.0 ;
+        :isDLC "false"^^xsd:boolean ;
+        rdfs:label "Lakitu" .
+
+
+###  http://mariokart8deluxe.owl#Landship
+:Landship rdf:type owl:NamedIndividual ,
+                   :Body ;
+          :hasAcceleration 6.0 ;
+          :hasAirHandling 3.0 ;
+          :hasAirSpeed 2.0 ;
+          :hasAntiGravityHandling 2.0 ;
+          :hasAntiGravitySpeed 0.0 ;
+          :hasGroundHandling 4.0 ;
+          :hasGroundSpeed 2.0 ;
+          :hasInvincibility 2.0 ;
+          :hasMiniTurbo 6.0 ;
+          :hasOffRoadTraction 6.0 ;
+          :hasOnRoadTraction 0.0 ;
+          :hasWaterHandling 5.0 ;
+          :hasWaterSpeed 5.0 ;
+          :hasWeight 0.0 ;
+          rdfs:label "Landship" .
+
+
+###  http://mariokart8deluxe.owl#Larry
+:Larry rdf:type owl:NamedIndividual ,
+                :Driver ;
+       :hasAcceleration 4.0 ;
+       :hasAirHandling 7.0 ;
+       :hasAirSpeed 4.0 ;
+       :hasAntiGravityHandling 7.0 ;
+       :hasAntiGravitySpeed 4.0 ;
+       :hasGroundHandling 7.0 ;
+       :hasGroundSpeed 4.0 ;
+       :hasInvincibility 3.0 ;
+       :hasMiniTurbo 4.0 ;
+       :hasOffRoadTraction 4.0 ;
+       :hasOnRoadTraction 3.0 ;
+       :hasWaterHandling 7.0 ;
+       :hasWaterSpeed 4.0 ;
+       :hasWeight 3.0 ;
+       :isDLC "false"^^xsd:boolean ;
+       rdfs:label "Larry" .
+
+
+###  http://mariokart8deluxe.owl#Leaf_Cup
+:Leaf_Cup rdf:type owl:NamedIndividual ,
+                   :Cup ;
+          :hasTrack :Music_Park ,
+                    :Sherbet_Land ,
+                    :Wario_Stadium ,
+                    :Yoshi_Valley ;
+          rdfs:label "Leaf Cup" .
+
+
+###  http://mariokart8deluxe.owl#Leaf_Tires
+:Leaf_Tires rdf:type owl:NamedIndividual ,
+                     :Tire ;
+            :hasAcceleration 5.0 ;
+            :hasAirHandling 2.0 ;
+            :hasAirSpeed 2.0 ;
+            :hasAntiGravityHandling 4.0 ;
+            :hasAntiGravitySpeed 2.0 ;
+            :hasGroundHandling 3.0 ;
+            :hasGroundSpeed 1.0 ;
+            :hasInvincibility 3.0 ;
+            :hasMiniTurbo 5.0 ;
+            :hasOffRoadTraction 3.0 ;
+            :hasOnRoadTraction 1.0 ;
+            :hasWaterHandling 3.0 ;
+            :hasWaterSpeed 2.0 ;
+            :hasWeight 0.0 ;
+            rdfs:label "Leaf Tires" .
+
+
+###  http://mariokart8deluxe.owl#Lemmy_Koopa
+:Lemmy_Koopa rdf:type owl:NamedIndividual ,
+                      :Driver ;
+             :hasAcceleration 5.0 ;
+             :hasAirHandling 9.0 ;
+             :hasAirSpeed 1.0 ;
+             :hasAntiGravityHandling 9.0 ;
+             :hasAntiGravitySpeed 1.0 ;
+             :hasGroundHandling 9.0 ;
+             :hasGroundSpeed 1.0 ;
+             :hasInvincibility 6.0 ;
+             :hasMiniTurbo 5.0 ;
+             :hasOffRoadTraction 3.0 ;
+             :hasOnRoadTraction 4.0 ;
+             :hasWaterHandling 9.0 ;
+             :hasWaterSpeed 1.0 ;
+             :hasWeight 0.0 ;
+             :isDLC "false"^^xsd:boolean ;
+             rdfs:label "Lemmy Koopa" .
+
+
+###  http://mariokart8deluxe.owl#LightSlip
+:LightSlip rdf:type owl:NamedIndividual ,
+                    :SlipperyTerrain ;
+           :hasSlipLevel0 0.915 ;
+           :hasSlipLevel1 0.915 ;
+           :hasSlipLevel10 0.906 ;
+           :hasSlipLevel11 0.905 ;
+           :hasSlipLevel12 0.903 ;
+           :hasSlipLevel13 0.901 ;
+           :hasSlipLevel14 0.899 ;
+           :hasSlipLevel15 0.897 ;
+           :hasSlipLevel16 0.895 ;
+           :hasSlipLevel17 0.885 ;
+           :hasSlipLevel18 0.875 ;
+           :hasSlipLevel19 0.865 ;
+           :hasSlipLevel2 0.914 ;
+           :hasSlipLevel20 0.855 ;
+           :hasSlipLevel3 0.913 ;
+           :hasSlipLevel4 0.912 ;
+           :hasSlipLevel5 0.911 ;
+           :hasSlipLevel6 0.91 ;
+           :hasSlipLevel7 0.909 ;
+           :hasSlipLevel8 0.908 ;
+           :hasSlipLevel9 0.907 ;
+           rdfs:comment "Represents the profile of 'Light' slipperiness for a terrain of a track. This individual holds the specific values for each Off-Road Traction level (0-20) that apply to light slippery surfaces." .
+
+
+###  http://mariokart8deluxe.owl#Lightning_Cup
+:Lightning_Cup rdf:type owl:NamedIndividual ,
+                        :Cup ;
+               :hasTrack :Grumble_Volcano ,
+                         :Piranha_Plant_Slide ,
+                         :Rainbow_Road ,
+                         :Tick-Tock_Clock ;
+               rdfs:label "Lightning Cup" .
+
+
+###  http://mariokart8deluxe.owl#Link
+:Link rdf:type owl:NamedIndividual ,
+               :Driver ;
+      :hasAcceleration 1.0 ;
+      :hasAirHandling 3.0 ;
+      :hasAirSpeed 8.0 ;
+      :hasAntiGravityHandling 3.0 ;
+      :hasAntiGravitySpeed 8.0 ;
+      :hasGroundHandling 3.0 ;
+      :hasGroundSpeed 8.0 ;
+      :hasInvincibility 4.0 ;
+      :hasMiniTurbo 2.0 ;
+      :hasOffRoadTraction 3.0 ;
+      :hasOnRoadTraction 9.0 ;
+      :hasWaterHandling 3.0 ;
+      :hasWaterSpeed 8.0 ;
+      :hasWeight 7.0 ;
+      :isDLC "false"^^xsd:boolean ;
+      rdfs:label "Link" .
+
+
+###  http://mariokart8deluxe.owl#London_Loop
+:London_Loop rdf:type owl:NamedIndividual ,
+                      :Track ;
+             :hasOriginPlatform :Mobile ;
+             :hasSlipperiness :MediumSlip ;
+             rdfs:label "London Loop" .
+
+
+###  http://mariokart8deluxe.owl#Los_Angeles_Laps
+:Los_Angeles_Laps rdf:type owl:NamedIndividual ,
+                           :Track ;
+                  :hasOriginPlatform :Mobile ;
+                  :hasSlipperiness :MediumSlip ;
+                  rdfs:label "Los Angeles Laps" .
+
+
+###  http://mariokart8deluxe.owl#Lucky_Cat_Cup
+:Lucky_Cat_Cup rdf:type owl:NamedIndividual ,
+                        :Cup ;
+               :hasTrack :Ninja_Hideaway ,
+                         :Shroom_Ridge ,
+                         :Sky_Garden ,
+                         :Tokyo_Blur ;
+               rdfs:label "Lucky Cat Cup" .
+
+
+###  http://mariokart8deluxe.owl#Ludwig
+:Ludwig rdf:type owl:NamedIndividual ,
+                 :Driver ;
+        :hasAcceleration 2.0 ;
+        :hasAirHandling 4.0 ;
+        :hasAirSpeed 7.0 ;
+        :hasAntiGravityHandling 4.0 ;
+        :hasAntiGravitySpeed 7.0 ;
+        :hasGroundHandling 4.0 ;
+        :hasGroundSpeed 7.0 ;
+        :hasInvincibility 3.0 ;
+        :hasMiniTurbo 3.0 ;
+        :hasOffRoadTraction 2.0 ;
+        :hasOnRoadTraction 4.0 ;
+        :hasWaterHandling 4.0 ;
+        :hasWaterSpeed 7.0 ;
+        :hasWeight 6.0 ;
+        :isDLC "false"^^xsd:boolean ;
+        rdfs:label "Ludwig" .
+
+
+###  http://mariokart8deluxe.owl#Luigi
+:Luigi rdf:type owl:NamedIndividual ,
+                :Driver ;
+       :hasAcceleration 2.0 ;
+       :hasAirHandling 5.0 ;
+       :hasAirSpeed 7.0 ;
+       :hasAntiGravityHandling 5.0 ;
+       :hasAntiGravitySpeed 7.0 ;
+       :hasGroundHandling 5.0 ;
+       :hasGroundSpeed 7.0 ;
+       :hasInvincibility 3.0 ;
+       :hasMiniTurbo 3.0 ;
+       :hasOffRoadTraction 1.0 ;
+       :hasOnRoadTraction 5.0 ;
+       :hasWaterHandling 5.0 ;
+       :hasWaterSpeed 7.0 ;
+       :hasWeight 6.0 ;
+       :isDLC "false"^^xsd:boolean ;
+       rdfs:label "Luigi" .
+
+
+###  http://mariokart8deluxe.owl#MKTV_Parafoil
+:MKTV_Parafoil rdf:type owl:NamedIndividual ,
+                        :Glider ;
+               :hasAcceleration 2.0 ;
+               :hasAirHandling 2.0 ;
+               :hasAirSpeed 1.0 ;
+               :hasAntiGravityHandling 0.0 ;
+               :hasAntiGravitySpeed 1.0 ;
+               :hasGroundHandling 1.0 ;
+               :hasGroundSpeed 0.0 ;
+               :hasInvincibility 0.0 ;
+               :hasMiniTurbo 2.0 ;
+               :hasOffRoadTraction 0.0 ;
+               :hasOnRoadTraction 2.0 ;
+               :hasWaterHandling 1.0 ;
+               :hasWaterSpeed 0.0 ;
+               :hasWeight 1.0 ;
+               rdfs:label "MKTV Parafoil" .
+
+
+###  http://mariokart8deluxe.owl#Mach_8
+:Mach_8 rdf:type owl:NamedIndividual ,
+                 :Body ;
+        :hasAcceleration 3.0 ;
+        :hasAirHandling 2.0 ;
+        :hasAirSpeed 4.0 ;
+        :hasAntiGravityHandling 4.0 ;
+        :hasAntiGravitySpeed 5.0 ;
+        :hasGroundHandling 2.0 ;
+        :hasGroundSpeed 3.0 ;
+        :hasInvincibility 3.0 ;
+        :hasMiniTurbo 5.0 ;
+        :hasOffRoadTraction 4.0 ;
+        :hasOnRoadTraction 2.0 ;
+        :hasWaterHandling 2.0 ;
+        :hasWaterSpeed 3.0 ;
+        :hasWeight 3.0 ;
+        rdfs:label "Mach 8" .
+
+
+###  http://mariokart8deluxe.owl#Madrid_Drive
+:Madrid_Drive rdf:type owl:NamedIndividual ,
+                       :Track ;
+              :hasOriginPlatform :Mobile ;
+              rdfs:label "Madrid Drive" .
+
+
+###  http://mariokart8deluxe.owl#Male_Inkling
+:Male_Inkling rdf:type owl:NamedIndividual ,
+                       :Driver ;
+              :hasAcceleration 3.0 ;
+              :hasAirHandling 5.0 ;
+              :hasAirSpeed 6.0 ;
+              :hasAntiGravityHandling 5.0 ;
+              :hasAntiGravitySpeed 6.0 ;
+              :hasGroundHandling 5.0 ;
+              :hasGroundSpeed 6.0 ;
+              :hasInvincibility 1.0 ;
+              :hasMiniTurbo 4.0 ;
+              :hasOffRoadTraction 1.0 ;
+              :hasOnRoadTraction 7.0 ;
+              :hasWaterHandling 5.0 ;
+              :hasWaterSpeed 6.0 ;
+              :hasWeight 5.0 ;
+              :isDLC "false"^^xsd:boolean ;
+              rdfs:label "Male Inkling" .
+
+
+###  http://mariokart8deluxe.owl#Male_Villager
+:Male_Villager rdf:type owl:NamedIndividual ,
+                        :Driver ;
+               :hasAcceleration 3.0 ;
+               :hasAirHandling 5.0 ;
+               :hasAirSpeed 6.0 ;
+               :hasAntiGravityHandling 5.0 ;
+               :hasAntiGravitySpeed 6.0 ;
+               :hasGroundHandling 5.0 ;
+               :hasGroundSpeed 6.0 ;
+               :hasInvincibility 1.0 ;
+               :hasMiniTurbo 4.0 ;
+               :hasOffRoadTraction 1.0 ;
+               :hasOnRoadTraction 7.0 ;
+               :hasWaterHandling 5.0 ;
+               :hasWaterSpeed 6.0 ;
+               :hasWeight 5.0 ;
+               :isDLC "false"^^xsd:boolean ;
+               rdfs:label "Male Villager" .
+
+
+###  http://mariokart8deluxe.owl#Maple_Treeway
+:Maple_Treeway rdf:type owl:NamedIndividual ,
+                        :Track ;
+               :hasOriginPlatform :Wii ;
+               rdfs:label "Maple Treeway" .
+
+
+###  http://mariokart8deluxe.owl#Mario
+:Mario rdf:type owl:NamedIndividual ,
+                :Driver ;
+       :hasAcceleration 2.0 ;
+       :hasAirHandling 4.0 ;
+       :hasAirSpeed 7.0 ;
+       :hasAntiGravityHandling 4.0 ;
+       :hasAntiGravitySpeed 7.0 ;
+       :hasGroundHandling 4.0 ;
+       :hasGroundSpeed 7.0 ;
+       :hasInvincibility 3.0 ;
+       :hasMiniTurbo 3.0 ;
+       :hasOffRoadTraction 2.0 ;
+       :hasOnRoadTraction 4.0 ;
+       :hasWaterHandling 4.0 ;
+       :hasWaterSpeed 7.0 ;
+       :hasWeight 6.0 ;
+       :isDLC "false"^^xsd:boolean ;
+       rdfs:label "Mario" .
+
+
+###  http://mariokart8deluxe.owl#Mario_Circuit
+:Mario_Circuit rdf:type owl:NamedIndividual ,
+                        :Track ;
+               :hasOriginPlatform :DS ,
+                                  :GBA ,
+                                  :Switch ;
+               rdfs:label "Mario Circuit" .
+
+
+###  http://mariokart8deluxe.owl#Mario_Circuit_3
+:Mario_Circuit_3 rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :SNES ;
+                 rdfs:label "Mario Circuit 3" .
+
+
+###  http://mariokart8deluxe.owl#Mario_Kart_Stadium
+:Mario_Kart_Stadium rdf:type owl:NamedIndividual ,
+                             :Track ;
+                    :hasOriginPlatform :Switch ;
+                    rdfs:label "Mario Kart Stadium" .
+
+
+###  http://mariokart8deluxe.owl#Master_Cycle
+:Master_Cycle rdf:type owl:NamedIndividual ,
+                       :Body ;
+              :hasAcceleration 2.0 ;
+              :hasAirHandling 2.0 ;
+              :hasAirSpeed 3.0 ;
+              :hasAntiGravityHandling 3.0 ;
+              :hasAntiGravitySpeed 3.0 ;
+              :hasGroundHandling 3.0 ;
+              :hasGroundSpeed 4.0 ;
+              :hasInvincibility 3.0 ;
+              :hasMiniTurbo 4.0 ;
+              :hasOffRoadTraction 0.0 ;
+              :hasOnRoadTraction 1.0 ;
+              :hasWaterHandling 2.0 ;
+              :hasWaterSpeed 2.0 ;
+              :hasWeight 2.0 ;
+              rdfs:label "Master Cycle" .
+
+
+###  http://mariokart8deluxe.owl#Master_Cycle_Zero
+:Master_Cycle_Zero rdf:type owl:NamedIndividual ,
+                            :Body ;
+                   :hasAcceleration 2.0 ;
+                   :hasAirHandling 3.0 ;
+                   :hasAirSpeed 3.0 ;
+                   :hasAntiGravityHandling 3.0 ;
+                   :hasAntiGravitySpeed 3.0 ;
+                   :hasGroundHandling 4.0 ;
+                   :hasGroundSpeed 3.0 ;
+                   :hasInvincibility 3.0 ;
+                   :hasMiniTurbo 5.0 ;
+                   :hasOffRoadTraction 7.0 ;
+                   :hasOnRoadTraction 4.0 ;
+                   :hasWaterHandling 4.0 ;
+                   :hasWaterSpeed 4.0 ;
+                   :hasWeight 3.0 ;
+                   rdfs:label "Master Cycle Zero" .
+
+
+###  http://mariokart8deluxe.owl#MediumSlip
+:MediumSlip rdf:type owl:NamedIndividual ,
+                     :SlipperyTerrain ;
+            :hasSlipLevel0 0.925 ;
+            :hasSlipLevel1 0.925 ;
+            :hasSlipLevel10 0.916 ;
+            :hasSlipLevel11 0.915 ;
+            :hasSlipLevel12 0.913 ;
+            :hasSlipLevel13 0.911 ;
+            :hasSlipLevel14 0.909 ;
+            :hasSlipLevel15 0.907 ;
+            :hasSlipLevel16 0.905 ;
+            :hasSlipLevel17 0.895 ;
+            :hasSlipLevel18 0.885 ;
+            :hasSlipLevel19 0.875 ;
+            :hasSlipLevel2 0.924 ;
+            :hasSlipLevel20 0.865 ;
+            :hasSlipLevel3 0.923 ;
+            :hasSlipLevel4 0.922 ;
+            :hasSlipLevel5 0.921 ;
+            :hasSlipLevel6 0.92 ;
+            :hasSlipLevel7 0.919 ;
+            :hasSlipLevel8 0.918 ;
+            :hasSlipLevel9 0.917 ;
+            rdfs:comment "Represents the profile of 'Medium' slipperiness for a terrain of a track. This individual holds the specific values for each Off-Road Traction level (0-20) that apply to meadium slippery surfaces." .
+
+
+###  http://mariokart8deluxe.owl#Merry_Mountain
+:Merry_Mountain rdf:type owl:NamedIndividual ,
+                         :Track ;
+                :hasOriginPlatform :Switch ;
+                :hasSlipperiness :MediumSlip ;
+                rdfs:label "Merry Mountain" .
+
+
+###  http://mariokart8deluxe.owl#Metal_Mario
+:Metal_Mario rdf:type owl:NamedIndividual ,
+                      :Driver ;
+             :hasAcceleration 1.0 ;
+             :hasAirHandling 3.0 ;
+             :hasAirSpeed 8.0 ;
+             :hasAntiGravityHandling 3.0 ;
+             :hasAntiGravitySpeed 8.0 ;
+             :hasGroundHandling 3.0 ;
+             :hasGroundSpeed 8.0 ;
+             :hasInvincibility 3.0 ;
+             :hasMiniTurbo 1.0 ;
+             :hasOffRoadTraction 1.0 ;
+             :hasOnRoadTraction 8.0 ;
+             :hasWaterHandling 3.0 ;
+             :hasWaterSpeed 8.0 ;
+             :hasWeight 10.0 ;
+             :isDLC "false"^^xsd:boolean ;
+             rdfs:label "Metal Mario" .
+
+
+###  http://mariokart8deluxe.owl#Metal_Tires
+:Metal_Tires rdf:type owl:NamedIndividual ,
+                      :Tire ;
+             :hasAcceleration 0.0 ;
+             :hasAirHandling 0.0 ;
+             :hasAirSpeed 2.0 ;
+             :hasAntiGravityHandling 1.0 ;
+             :hasAntiGravitySpeed 1.0 ;
+             :hasGroundHandling 2.0 ;
+             :hasGroundSpeed 4.0 ;
+             :hasInvincibility 6.0 ;
+             :hasMiniTurbo 2.0 ;
+             :hasOffRoadTraction 2.0 ;
+             :hasOnRoadTraction 1.0 ;
+             :hasWaterHandling 2.0 ;
+             :hasWaterSpeed 3.0 ;
+             :hasWeight 4.0 ;
+             rdfs:label "Metal Tires" .
+
+
+###  http://mariokart8deluxe.owl#Mii_Large
+:Mii_Large rdf:type owl:NamedIndividual ,
+                    :Driver ;
+           :hasAcceleration 0.0 ;
+           :hasAirHandling 1.0 ;
+           :hasAirSpeed 10.0 ;
+           :hasAntiGravityHandling 1.0 ;
+           :hasAntiGravitySpeed 10.0 ;
+           :hasGroundHandling 1.0 ;
+           :hasGroundSpeed 10.0 ;
+           :hasInvincibility 5.0 ;
+           :hasMiniTurbo 0.0 ;
+           :hasOffRoadTraction 1.0 ;
+           :hasOnRoadTraction 5.0 ;
+           :hasWaterHandling 1.0 ;
+           :hasWaterSpeed 10.0 ;
+           :hasWeight 9.0 ;
+           :isDLC "false"^^xsd:boolean ;
+           rdfs:label "Mii (Large)" .
+
+
+###  http://mariokart8deluxe.owl#Mii_Light
+:Mii_Light rdf:type owl:NamedIndividual ,
+                    :Driver ;
+           :hasAcceleration 5.0 ;
+           :hasAirHandling 8.0 ;
+           :hasAirSpeed 2.0 ;
+           :hasAntiGravityHandling 8.0 ;
+           :hasAntiGravitySpeed 2.0 ;
+           :hasGroundHandling 8.0 ;
+           :hasGroundSpeed 2.0 ;
+           :hasInvincibility 5.0 ;
+           :hasMiniTurbo 5.0 ;
+           :hasOffRoadTraction 4.0 ;
+           :hasOnRoadTraction 2.0 ;
+           :hasWaterHandling 8.0 ;
+           :hasWaterSpeed 2.0 ;
+           :hasWeight 1.0 ;
+           :isDLC "false"^^xsd:boolean ;
+           rdfs:label "Mii (Light)" .
+
+
+###  http://mariokart8deluxe.owl#Mii_Medium
+:Mii_Medium rdf:type owl:NamedIndividual ,
+                     :Driver ;
+            :hasAcceleration 2.0 ;
+            :hasAirHandling 4.0 ;
+            :hasAirSpeed 7.0 ;
+            :hasAntiGravityHandling 4.0 ;
+            :hasAntiGravitySpeed 7.0 ;
+            :hasGroundHandling 4.0 ;
+            :hasGroundSpeed 7.0 ;
+            :hasInvincibility 3.0 ;
+            :hasMiniTurbo 3.0 ;
+            :hasOffRoadTraction 2.0 ;
+            :hasOnRoadTraction 4.0 ;
+            :hasWaterHandling 4.0 ;
+            :hasWaterSpeed 7.0 ;
+            :hasWeight 6.0 ;
+            :isDLC "false"^^xsd:boolean ;
+            rdfs:label "Mii (Medium)" .
+
+
+###  http://mariokart8deluxe.owl#Mobile
+:Mobile rdf:type owl:NamedIndividual ,
+                 :GamePlatform ;
+        rdfs:comment "Mobile Phone App" .
+
+
+###  http://mariokart8deluxe.owl#Monster_Tires
+:Monster_Tires rdf:type owl:NamedIndividual ,
+                        :Tire ;
+               :hasAcceleration 2.0 ;
+               :hasAirHandling 1.0 ;
+               :hasAirSpeed 1.0 ;
+               :hasAntiGravityHandling 0.0 ;
+               :hasAntiGravitySpeed 2.0 ;
+               :hasGroundHandling 0.0 ;
+               :hasGroundSpeed 3.0 ;
+               :hasInvincibility 6.0 ;
+               :hasMiniTurbo 3.0 ;
+               :hasOffRoadTraction 7.0 ;
+               :hasOnRoadTraction 3.0 ;
+               :hasWaterHandling 1.0 ;
+               :hasWaterSpeed 2.0 ;
+               :hasWeight 4.0 ;
+               rdfs:label "Monster Tires" .
+
+
+###  http://mariokart8deluxe.owl#Moo_Moo_Meadows
+:Moo_Moo_Meadows rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :Wii ;
+                 rdfs:label "Moo Moo Meadows" .
+
+
+###  http://mariokart8deluxe.owl#Moon_Cup
+:Moon_Cup rdf:type owl:NamedIndividual ,
+                   :Cup ;
+          :hasTrack :Berlin_Byways ,
+                    :Merry_Mountain ,
+                    :Peach_Gardens ,
+                    :Rainbow_Road ;
+          rdfs:label "Moon Cup" .
+
+
+###  http://mariokart8deluxe.owl#Moonview_Highway
+:Moonview_Highway rdf:type owl:NamedIndividual ,
+                           :Track ;
+                  :hasOriginPlatform :Wii ;
+                  rdfs:label "Moonview Highway" .
+
+
+###  http://mariokart8deluxe.owl#Morton_Koopa
+:Morton_Koopa rdf:type owl:NamedIndividual ,
+                       :Driver ;
+              :hasAcceleration 0.0 ;
+              :hasAirHandling 0.0 ;
+              :hasAirSpeed 10.0 ;
+              :hasAntiGravityHandling 0.0 ;
+              :hasAntiGravitySpeed 10.0 ;
+              :hasGroundHandling 0.0 ;
+              :hasGroundSpeed 10.0 ;
+              :hasInvincibility 6.0 ;
+              :hasMiniTurbo 0.0 ;
+              :hasOffRoadTraction 0.0 ;
+              :hasOnRoadTraction 6.0 ;
+              :hasWaterHandling 0.0 ;
+              :hasWaterSpeed 10.0 ;
+              :hasWeight 10.0 ;
+              :isDLC "false"^^xsd:boolean ;
+              rdfs:label "Morton Koopa" .
+
+
+###  http://mariokart8deluxe.owl#Mount_Wario
+:Mount_Wario rdf:type owl:NamedIndividual ,
+                      :Track ;
+             :hasOriginPlatform :Switch ;
+             :hasSlipperiness :LightSlip ;
+             rdfs:label "Mount Wario" .
+
+
+###  http://mariokart8deluxe.owl#Mr_Scooty
+:Mr_Scooty rdf:type owl:NamedIndividual ,
+                    :Body ;
+           :hasAcceleration 7.0 ;
+           :hasAirHandling 4.0 ;
+           :hasAirSpeed 1.0 ;
+           :hasAntiGravityHandling 5.0 ;
+           :hasAntiGravitySpeed 2.0 ;
+           :hasGroundHandling 5.0 ;
+           :hasGroundSpeed 0.0 ;
+           :hasInvincibility 0.0 ;
+           :hasMiniTurbo 7.0 ;
+           :hasOffRoadTraction 4.0 ;
+           :hasOnRoadTraction 1.0 ;
+           :hasWaterHandling 4.0 ;
+           :hasWaterSpeed 1.0 ;
+           :hasWeight 0.0 ;
+           rdfs:label "Mr. Scooty" .
+
+
+###  http://mariokart8deluxe.owl#Mushroom_Cup
+:Mushroom_Cup rdf:type owl:NamedIndividual ,
+                       :Cup ;
+              :hasTrack :Mario_Kart_Stadium ,
+                        :Sweet_Sweet_Canyon ,
+                        :Thwomp_Ruins ,
+                        :Water_Park ;
+              rdfs:label "Mushroom Cup" .
+
+
+###  http://mariokart8deluxe.owl#Mushroom_Gorge
+:Mushroom_Gorge rdf:type owl:NamedIndividual ,
+                         :Track ;
+                :hasOriginPlatform :Wii ;
+                rdfs:label "Mushroom Gorge" .
+
+
+###  http://mariokart8deluxe.owl#Music_Park
+:Music_Park rdf:type owl:NamedIndividual ,
+                     :Track ;
+            :hasOriginPlatform <http://mariokart8deluxe.owl#3DS> ;
+            rdfs:label "Music Park" .
+
+
+###  http://mariokart8deluxe.owl#Mute_City
+:Mute_City rdf:type owl:NamedIndividual ,
+                    :Track ;
+           :hasOriginPlatform :Switch ;
+           rdfs:label "Mute City" .
+
+
+###  http://mariokart8deluxe.owl#N64
+:N64 rdf:type owl:NamedIndividual ,
+              :GamePlatform ;
+     rdfs:comment "Nintendo 64" .
+
+
+###  http://mariokart8deluxe.owl#Neo_Bowser_City
+:Neo_Bowser_City rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform <http://mariokart8deluxe.owl#3DS> ;
+                 :hasSlipperiness :LightSlip ;
+                 rdfs:label "Neo Bowser City" .
+
+
+###  http://mariokart8deluxe.owl#New_York_Minute
+:New_York_Minute rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :Mobile ;
+                 :hasSlipperiness :MediumSlip ;
+                 rdfs:label "New York Minute" .
+
+
+###  http://mariokart8deluxe.owl#Ninja_Hideaway
+:Ninja_Hideaway rdf:type owl:NamedIndividual ,
+                         :Track ;
+                :hasOriginPlatform :Switch ;
+                :hasSlipperiness :MediumSlip ;
+                rdfs:label "Ninja Hideaway" .
+
+
+###  http://mariokart8deluxe.owl#Off-Road_Tires
+:Off-Road_Tires rdf:type owl:NamedIndividual ,
+                         :Tire ;
+                :hasAcceleration 3.0 ;
+                :hasAirHandling 2.0 ;
+                :hasAirSpeed 1.0 ;
+                :hasAntiGravityHandling 2.0 ;
+                :hasAntiGravitySpeed 2.0 ;
+                :hasGroundHandling 1.0 ;
+                :hasGroundSpeed 3.0 ;
+                :hasInvincibility 6.0 ;
+                :hasMiniTurbo 3.0 ;
+                :hasOffRoadTraction 6.0 ;
+                :hasOnRoadTraction 3.0 ;
+                :hasWaterHandling 1.0 ;
+                :hasWaterSpeed 4.0 ;
+                :hasWeight 3.0 ;
+                rdfs:label "Off-Road Tires" .
+
+
+###  http://mariokart8deluxe.owl#P-Wing
+:P-Wing rdf:type owl:NamedIndividual ,
+                 :Body ;
+        :hasAcceleration 1.0 ;
+        :hasAirHandling 0.0 ;
+        :hasAirSpeed 2.0 ;
+        :hasAntiGravityHandling 2.0 ;
+        :hasAntiGravitySpeed 4.0 ;
+        :hasGroundHandling 1.0 ;
+        :hasGroundSpeed 5.0 ;
+        :hasInvincibility 6.0 ;
+        :hasMiniTurbo 3.0 ;
+        :hasOffRoadTraction 1.0 ;
+        :hasOnRoadTraction 3.0 ;
+        :hasWaterHandling 1.0 ;
+        :hasWaterSpeed 1.0 ;
+        :hasWeight 3.0 ;
+        rdfs:label "P-Wing" .
+
+
+###  http://mariokart8deluxe.owl#Paper_Glider
+:Paper_Glider rdf:type owl:NamedIndividual ,
+                       :Glider ;
+              :hasAcceleration 2.0 ;
+              :hasAirHandling 2.0 ;
+              :hasAirSpeed 1.0 ;
+              :hasAntiGravityHandling 1.0 ;
+              :hasAntiGravitySpeed 1.0 ;
+              :hasGroundHandling 1.0 ;
+              :hasGroundSpeed 0.0 ;
+              :hasInvincibility 0.0 ;
+              :hasMiniTurbo 2.0 ;
+              :hasOffRoadTraction 1.0 ;
+              :hasOnRoadTraction 1.0 ;
+              :hasWaterHandling 0.0 ;
+              :hasWaterSpeed 1.0 ;
+              :hasWeight 0.0 ;
+              rdfs:label "Paper Glider" .
+
+
+###  http://mariokart8deluxe.owl#Parachute
+:Parachute rdf:type owl:NamedIndividual ,
+                    :Glider ;
+           :hasAcceleration 2.0 ;
+           :hasAirHandling 2.0 ;
+           :hasAirSpeed 1.0 ;
+           :hasAntiGravityHandling 1.0 ;
+           :hasAntiGravitySpeed 1.0 ;
+           :hasGroundHandling 1.0 ;
+           :hasGroundSpeed 0.0 ;
+           :hasInvincibility 0.0 ;
+           :hasMiniTurbo 2.0 ;
+           :hasOffRoadTraction 1.0 ;
+           :hasOnRoadTraction 1.0 ;
+           :hasWaterHandling 0.0 ;
+           :hasWaterSpeed 1.0 ;
+           :hasWeight 0.0 ;
+           rdfs:label "Parachute" .
+
+
+###  http://mariokart8deluxe.owl#Parafoil
+:Parafoil rdf:type owl:NamedIndividual ,
+                   :Glider ;
+          :hasAcceleration 2.0 ;
+          :hasAirHandling 2.0 ;
+          :hasAirSpeed 1.0 ;
+          :hasAntiGravityHandling 0.0 ;
+          :hasAntiGravitySpeed 1.0 ;
+          :hasGroundHandling 1.0 ;
+          :hasGroundSpeed 0.0 ;
+          :hasInvincibility 0.0 ;
+          :hasMiniTurbo 2.0 ;
+          :hasOffRoadTraction 0.0 ;
+          :hasOnRoadTraction 2.0 ;
+          :hasWaterHandling 1.0 ;
+          :hasWaterSpeed 0.0 ;
+          :hasWeight 1.0 ;
+          rdfs:label "Parafoil" .
+
+
+###  http://mariokart8deluxe.owl#Paraglider
+:Paraglider rdf:type owl:NamedIndividual ,
+                     :Glider ;
+            :hasAcceleration 1.0 ;
+            :hasAirHandling 1.0 ;
+            :hasAirSpeed 2.0 ;
+            :hasAntiGravityHandling 0.0 ;
+            :hasAntiGravitySpeed 1.0 ;
+            :hasGroundHandling 1.0 ;
+            :hasGroundSpeed 1.0 ;
+            :hasInvincibility 1.0 ;
+            :hasMiniTurbo 1.0 ;
+            :hasOffRoadTraction 0.0 ;
+            :hasOnRoadTraction 2.0 ;
+            :hasWaterHandling 1.0 ;
+            :hasWaterSpeed 0.0 ;
+            :hasWeight 2.0 ;
+            rdfs:label "Paraglider" .
+
+
+###  http://mariokart8deluxe.owl#Paris_Promenade
+:Paris_Promenade rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :Mobile ;
+                 rdfs:label "Paris Promenade" .
+
+
+###  http://mariokart8deluxe.owl#Pauline
+:Pauline rdf:type owl:NamedIndividual ,
+                  :Driver ;
+         :hasAcceleration 1.0 ;
+         :hasAirHandling 3.0 ;
+         :hasAirSpeed 8.0 ;
+         :hasAntiGravityHandling 3.0 ;
+         :hasAntiGravitySpeed 8.0 ;
+         :hasGroundHandling 3.0 ;
+         :hasGroundSpeed 8.0 ;
+         :hasInvincibility 4.0 ;
+         :hasMiniTurbo 2.0 ;
+         :hasOffRoadTraction 3.0 ;
+         :hasOnRoadTraction 9.0 ;
+         :hasWaterHandling 3.0 ;
+         :hasWaterSpeed 8.0 ;
+         :hasWeight 7.0 ;
+         :isDLC "true"^^xsd:boolean ;
+         rdfs:label "Pauline" .
+
+
+###  http://mariokart8deluxe.owl#Peach_Gardens
+:Peach_Gardens rdf:type owl:NamedIndividual ,
+                        :Track ;
+               :hasOriginPlatform :DS ;
+               rdfs:label "Peach Gardens" .
+
+
+###  http://mariokart8deluxe.owl#Peach_Parasol
+:Peach_Parasol rdf:type owl:NamedIndividual ,
+                        :Glider ;
+               :hasAcceleration 2.0 ;
+               :hasAirHandling 2.0 ;
+               :hasAirSpeed 1.0 ;
+               :hasAntiGravityHandling 0.0 ;
+               :hasAntiGravitySpeed 1.0 ;
+               :hasGroundHandling 1.0 ;
+               :hasGroundSpeed 0.0 ;
+               :hasInvincibility 0.0 ;
+               :hasMiniTurbo 2.0 ;
+               :hasOffRoadTraction 0.0 ;
+               :hasOnRoadTraction 2.0 ;
+               :hasWaterHandling 1.0 ;
+               :hasWaterSpeed 0.0 ;
+               :hasWeight 1.0 ;
+               rdfs:label "Peach Parasol" .
+
+
+###  http://mariokart8deluxe.owl#Peachette
+:Peachette rdf:type owl:NamedIndividual ,
+                    :Driver ;
+           :hasAcceleration 3.0 ;
+           :hasAirHandling 5.0 ;
+           :hasAirSpeed 6.0 ;
+           :hasAntiGravityHandling 5.0 ;
+           :hasAntiGravitySpeed 6.0 ;
+           :hasGroundHandling 5.0 ;
+           :hasGroundSpeed 6.0 ;
+           :hasInvincibility 1.0 ;
+           :hasMiniTurbo 4.0 ;
+           :hasOffRoadTraction 3.0 ;
+           :hasOnRoadTraction 3.0 ;
+           :hasWaterHandling 5.0 ;
+           :hasWaterSpeed 6.0 ;
+           :hasWeight 4.0 ;
+           :isDLC "true"^^xsd:boolean ;
+           rdfs:label "Peachette" .
+
+
+###  http://mariokart8deluxe.owl#Petey_Piranha
+:Petey_Piranha rdf:type owl:NamedIndividual ,
+                        :Driver ;
+               :hasAcceleration 1.0 ;
+               :hasAirHandling 3.0 ;
+               :hasAirSpeed 8.0 ;
+               :hasAntiGravityHandling 3.0 ;
+               :hasAntiGravitySpeed 8.0 ;
+               :hasGroundHandling 3.0 ;
+               :hasGroundSpeed 8.0 ;
+               :hasInvincibility 6.0 ;
+               :hasMiniTurbo 1.0 ;
+               :hasOffRoadTraction 1.0 ;
+               :hasOnRoadTraction 8.0 ;
+               :hasWaterHandling 3.0 ;
+               :hasWaterSpeed 8.0 ;
+               :hasWeight 10.0 ;
+               :isDLC "true"^^xsd:boolean ;
+               rdfs:label "Petey Piranha" .
+
+
+###  http://mariokart8deluxe.owl#Pink_Gold_Peach
+:Pink_Gold_Peach rdf:type owl:NamedIndividual ,
+                          :Driver ;
+                 :hasAcceleration 1.0 ;
+                 :hasAirHandling 3.0 ;
+                 :hasAirSpeed 8.0 ;
+                 :hasAntiGravityHandling 3.0 ;
+                 :hasAntiGravitySpeed 8.0 ;
+                 :hasGroundHandling 3.0 ;
+                 :hasGroundSpeed 8.0 ;
+                 :hasInvincibility 3.0 ;
+                 :hasMiniTurbo 1.0 ;
+                 :hasOffRoadTraction 1.0 ;
+                 :hasOnRoadTraction 8.0 ;
+                 :hasWaterHandling 3.0 ;
+                 :hasWaterSpeed 8.0 ;
+                 :hasWeight 10.0 ;
+                 :isDLC "false"^^xsd:boolean ;
+                 rdfs:label "Pink Gold Peach" .
+
+
+###  http://mariokart8deluxe.owl#Pipe_Frame
+:Pipe_Frame rdf:type owl:NamedIndividual ,
+                     :Body ;
+            :hasAcceleration 6.0 ;
+            :hasAirHandling 2.0 ;
+            :hasAirSpeed 1.0 ;
+            :hasAntiGravityHandling 4.0 ;
+            :hasAntiGravitySpeed 1.0 ;
+            :hasGroundHandling 5.0 ;
+            :hasGroundSpeed 2.0 ;
+            :hasInvincibility 3.0 ;
+            :hasMiniTurbo 6.0 ;
+            :hasOffRoadTraction 4.0 ;
+            :hasOnRoadTraction 3.0 ;
+            :hasWaterHandling 4.0 ;
+            :hasWaterSpeed 3.0 ;
+            :hasWeight 1.0 ;
+            rdfs:label "Pipe Frame" .
+
+
+###  http://mariokart8deluxe.owl#Piranha_Plant_Cove
+:Piranha_Plant_Cove rdf:type owl:NamedIndividual ,
+                             :Track ;
+                    :hasOriginPlatform :Switch ;
+                    :hasSlipperiness :MediumSlip ;
+                    rdfs:label "Piranha Plant Cove" .
+
+
+###  http://mariokart8deluxe.owl#Piranha_Plant_Slide
+:Piranha_Plant_Slide rdf:type owl:NamedIndividual ,
+                              :Track ;
+                     :hasOriginPlatform <http://mariokart8deluxe.owl#3DS> ;
+                     rdfs:label "Piranha Plant Slide" .
+
+
+###  http://mariokart8deluxe.owl#Plane_Glider
+:Plane_Glider rdf:type owl:NamedIndividual ,
+                       :Glider ;
+              :hasAcceleration 1.0 ;
+              :hasAirHandling 1.0 ;
+              :hasAirSpeed 2.0 ;
+              :hasAntiGravityHandling 0.0 ;
+              :hasAntiGravitySpeed 1.0 ;
+              :hasGroundHandling 1.0 ;
+              :hasGroundSpeed 1.0 ;
+              :hasInvincibility 1.0 ;
+              :hasMiniTurbo 1.0 ;
+              :hasOffRoadTraction 0.0 ;
+              :hasOnRoadTraction 2.0 ;
+              :hasWaterHandling 1.0 ;
+              :hasWaterSpeed 0.0 ;
+              :hasWeight 2.0 ;
+              rdfs:label "Plane Glider" .
+
+
+###  http://mariokart8deluxe.owl#Princess_Peach
+:Princess_Peach rdf:type owl:NamedIndividual ,
+                         :Driver ;
+                :hasAcceleration 3.0 ;
+                :hasAirHandling 5.0 ;
+                :hasAirSpeed 6.0 ;
+                :hasAntiGravityHandling 5.0 ;
+                :hasAntiGravitySpeed 6.0 ;
+                :hasGroundHandling 5.0 ;
+                :hasGroundSpeed 6.0 ;
+                :hasInvincibility 1.0 ;
+                :hasMiniTurbo 4.0 ;
+                :hasOffRoadTraction 3.0 ;
+                :hasOnRoadTraction 3.0 ;
+                :hasWaterHandling 5.0 ;
+                :hasWaterSpeed 6.0 ;
+                :hasWeight 4.0 ;
+                :isDLC "false"^^xsd:boolean ;
+                rdfs:label "Princess Peach" .
+
+
+###  http://mariokart8deluxe.owl#Propeller_Cup
+:Propeller_Cup rdf:type owl:NamedIndividual ,
+                        :Cup ;
+               :hasTrack :Mushroom_Gorge ,
+                         :Sky-High_Sundae ,
+                         :Snow_Land ,
+                         :Sydney_Sprint ;
+               rdfs:label "Propeller Cup" .
+
+
+###  http://mariokart8deluxe.owl#Rainbow_Road
+:Rainbow_Road rdf:type owl:NamedIndividual ,
+                       :Track ;
+              :hasOriginPlatform :N64 ,
+                                 :SNES ,
+                                 :Switch ,
+                                 :Wii ,
+                                 <http://mariokart8deluxe.owl#3DS> ;
+              rdfs:label "Rainbow Road" .
+
+
+###  http://mariokart8deluxe.owl#Retro_Off-Road_Tires
+:Retro_Off-Road_Tires rdf:type owl:NamedIndividual ,
+                               :Tire ;
+                      :hasAcceleration 3.0 ;
+                      :hasAirHandling 2.0 ;
+                      :hasAirSpeed 1.0 ;
+                      :hasAntiGravityHandling 2.0 ;
+                      :hasAntiGravitySpeed 2.0 ;
+                      :hasGroundHandling 1.0 ;
+                      :hasGroundSpeed 3.0 ;
+                      :hasInvincibility 6.0 ;
+                      :hasMiniTurbo 3.0 ;
+                      :hasOffRoadTraction 6.0 ;
+                      :hasOnRoadTraction 3.0 ;
+                      :hasWaterHandling 1.0 ;
+                      :hasWaterSpeed 4.0 ;
+                      :hasWeight 3.0 ;
+                      rdfs:label "Retro Off-Road Tires" .
+
+
+###  http://mariokart8deluxe.owl#Ribbon_Road
+:Ribbon_Road rdf:type owl:NamedIndividual ,
+                      :Track ;
+             :hasOriginPlatform :GBA ;
+             rdfs:label "Ribbon Road" .
+
+
+###  http://mariokart8deluxe.owl#Riverside_Park
+:Riverside_Park rdf:type owl:NamedIndividual ,
+                         :Track ;
+                :hasOriginPlatform :GBA ;
+                rdfs:label "Riverside Park" .
+
+
+###  http://mariokart8deluxe.owl#Rock_Cup
+:Rock_Cup rdf:type owl:NamedIndividual ,
+                   :Cup ;
+          :hasTrack :Boo_Lake ,
+                    :London_Loop ,
+                    :Maple_Treeway ,
+                    :Rock_Rock_Mountain ;
+          rdfs:label "Rock Cup" .
+
+
+###  http://mariokart8deluxe.owl#Rock_Rock_Mountain
+:Rock_Rock_Mountain rdf:type owl:NamedIndividual ,
+                             :Track ;
+                    :hasOriginPlatform <http://mariokart8deluxe.owl#3DS> ;
+                    rdfs:label "Rock Rock Mountain" .
+
+
+###  http://mariokart8deluxe.owl#Roller
+:Roller rdf:type owl:NamedIndividual ,
+                 :Tire ;
+        :hasAcceleration 6.0 ;
+        :hasAirHandling 4.0 ;
+        :hasAirSpeed 3.0 ;
+        :hasAntiGravityHandling 4.0 ;
+        :hasAntiGravitySpeed 0.0 ;
+        :hasGroundHandling 4.0 ;
+        :hasGroundSpeed 0.0 ;
+        :hasInvincibility 0.0 ;
+        :hasMiniTurbo 6.0 ;
+        :hasOffRoadTraction 4.0 ;
+        :hasOnRoadTraction 0.0 ;
+        :hasWaterHandling 4.0 ;
+        :hasWaterSpeed 3.0 ;
+        :hasWeight 0.0 ;
+        rdfs:label "Roller" .
+
+
+###  http://mariokart8deluxe.owl#Rome_Avanti
+:Rome_Avanti rdf:type owl:NamedIndividual ,
+                      :Track ;
+             :hasOriginPlatform :Mobile ;
+             rdfs:label "Rome Avanti" .
+
+
+###  http://mariokart8deluxe.owl#Rosalina
+:Rosalina rdf:type owl:NamedIndividual ,
+                   :Driver ;
+          :hasAcceleration 1.0 ;
+          :hasAirHandling 3.0 ;
+          :hasAirSpeed 8.0 ;
+          :hasAntiGravityHandling 3.0 ;
+          :hasAntiGravitySpeed 8.0 ;
+          :hasGroundHandling 3.0 ;
+          :hasGroundSpeed 8.0 ;
+          :hasInvincibility 4.0 ;
+          :hasMiniTurbo 2.0 ;
+          :hasOffRoadTraction 3.0 ;
+          :hasOnRoadTraction 9.0 ;
+          :hasWaterHandling 3.0 ;
+          :hasWaterSpeed 8.0 ;
+          :hasWeight 7.0 ;
+          :isDLC "false"^^xsd:boolean ;
+          rdfs:label "Rosalina" .
+
+
+###  http://mariokart8deluxe.owl#Roy_Koopa
+:Roy_Koopa rdf:type owl:NamedIndividual ,
+                    :Driver ;
+           :hasAcceleration 1.0 ;
+           :hasAirHandling 2.0 ;
+           :hasAirSpeed 9.0 ;
+           :hasAntiGravityHandling 2.0 ;
+           :hasAntiGravitySpeed 9.0 ;
+           :hasGroundHandling 2.0 ;
+           :hasGroundSpeed 9.0 ;
+           :hasInvincibility 4.0 ;
+           :hasMiniTurbo 1.0 ;
+           :hasOffRoadTraction 0.0 ;
+           :hasOnRoadTraction 10.0 ;
+           :hasWaterHandling 2.0 ;
+           :hasWaterSpeed 9.0 ;
+           :hasWeight 8.0 ;
+           :isDLC "false"^^xsd:boolean ;
+           rdfs:label "Roy Koopa" .
+
+
+###  http://mariokart8deluxe.owl#Royal_Raceway
+:Royal_Raceway rdf:type owl:NamedIndividual ,
+                        :Track ;
+               :hasOriginPlatform :N64 ;
+               rdfs:label "Royal Raceway" .
+
+
+###  http://mariokart8deluxe.owl#SNES
+:SNES rdf:type owl:NamedIndividual ,
+               :GamePlatform ;
+      rdfs:comment "Super Nintendo Entertainment System" .
+
+
+###  http://mariokart8deluxe.owl#Shell_Cup
+:Shell_Cup rdf:type owl:NamedIndividual ,
+                    :Cup ;
+           :hasTrack :Cheep_Cheep_Beach ,
+                     :Mario_Circuit ,
+                     :Moo_Moo_Meadows ,
+                     <http://mariokart8deluxe.owl#Toad's_Turnpike> ;
+           rdfs:label "Shell Cup" .
+
+
+###  http://mariokart8deluxe.owl#Sherbet_Land
+:Sherbet_Land rdf:type owl:NamedIndividual ,
+                       :Track ;
+              :hasOriginPlatform :GCN ;
+              :hasSlipperiness :HeavySlip ;
+              rdfs:label "Sherbet Land" .
+
+
+###  http://mariokart8deluxe.owl#Shroom_Ridge
+:Shroom_Ridge rdf:type owl:NamedIndividual ,
+                       :Track ;
+              :hasOriginPlatform :DS ;
+              rdfs:label "Shroom Ridge" .
+
+
+###  http://mariokart8deluxe.owl#Shy_Guy
+:Shy_Guy rdf:type owl:NamedIndividual ,
+                  :Driver ;
+         :hasAcceleration 4.0 ;
+         :hasAirHandling 7.0 ;
+         :hasAirSpeed 4.0 ;
+         :hasAntiGravityHandling 7.0 ;
+         :hasAntiGravitySpeed 4.0 ;
+         :hasGroundHandling 7.0 ;
+         :hasGroundSpeed 4.0 ;
+         :hasInvincibility 3.0 ;
+         :hasMiniTurbo 4.0 ;
+         :hasOffRoadTraction 4.0 ;
+         :hasOnRoadTraction 3.0 ;
+         :hasWaterHandling 7.0 ;
+         :hasWaterSpeed 4.0 ;
+         :hasWeight 3.0 ;
+         :isDLC "false"^^xsd:boolean ;
+         rdfs:label "Shy Guy" .
+
+
+###  http://mariokart8deluxe.owl#Shy_Guy_Falls
+:Shy_Guy_Falls rdf:type owl:NamedIndividual ,
+                        :Track ;
+               :hasOriginPlatform :Switch ;
+               :hasSlipperiness :MediumSlip ;
+               rdfs:label "Shy Guy Falls" .
+
+
+###  http://mariokart8deluxe.owl#Singapore_Speedway
+:Singapore_Speedway rdf:type owl:NamedIndividual ,
+                             :Track ;
+                    :hasOriginPlatform :Mobile ;
+                    rdfs:label "Singapore Speedway" .
+
+
+###  http://mariokart8deluxe.owl#Sky-High_Sundae
+:Sky-High_Sundae rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :Switch ;
+                 :hasSlipperiness :MediumSlip ;
+                 rdfs:label "Sky-High Sundae" .
+
+
+###  http://mariokart8deluxe.owl#Sky_Garden
+:Sky_Garden rdf:type owl:NamedIndividual ,
+                     :Track ;
+            :hasOriginPlatform :GBA ;
+            rdfs:label "GBASky Garden" .
+
+
+###  http://mariokart8deluxe.owl#Slick_Tires
+:Slick_Tires rdf:type owl:NamedIndividual ,
+                      :Tire ;
+             :hasAcceleration 1.0 ;
+             :hasAirHandling 1.0 ;
+             :hasAirSpeed 0.0 ;
+             :hasAntiGravityHandling 2.0 ;
+             :hasAntiGravitySpeed 4.0 ;
+             :hasGroundHandling 2.0 ;
+             :hasGroundSpeed 4.0 ;
+             :hasInvincibility 5.0 ;
+             :hasMiniTurbo 2.0 ;
+             :hasOffRoadTraction 0.0 ;
+             :hasOnRoadTraction 4.0 ;
+             :hasWaterHandling 0.0 ;
+             :hasWaterSpeed 0.0 ;
+             :hasWeight 3.0 ;
+             rdfs:label "Slick Tires" .
+
+
+###  http://mariokart8deluxe.owl#Slim_Tires
+:Slim_Tires rdf:type owl:NamedIndividual ,
+                     :Tire ;
+            :hasAcceleration 2.0 ;
+            :hasAirHandling 4.0 ;
+            :hasAirSpeed 2.0 ;
+            :hasAntiGravityHandling 3.0 ;
+            :hasAntiGravitySpeed 4.0 ;
+            :hasGroundHandling 4.0 ;
+            :hasGroundSpeed 3.0 ;
+            :hasInvincibility 5.0 ;
+            :hasMiniTurbo 3.0 ;
+            :hasOffRoadTraction 1.0 ;
+            :hasOnRoadTraction 4.0 ;
+            :hasWaterHandling 4.0 ;
+            :hasWaterSpeed 2.0 ;
+            :hasWeight 2.0 ;
+            rdfs:label "Slim Tires" .
+
+
+###  http://mariokart8deluxe.owl#Sneeker
+:Sneeker rdf:type owl:NamedIndividual ,
+                  :Body ;
+         :hasAcceleration 2.0 ;
+         :hasAirHandling 2.0 ;
+         :hasAirSpeed 3.0 ;
+         :hasAntiGravityHandling 3.0 ;
+         :hasAntiGravitySpeed 3.0 ;
+         :hasGroundHandling 3.0 ;
+         :hasGroundSpeed 4.0 ;
+         :hasInvincibility 5.0 ;
+         :hasMiniTurbo 4.0 ;
+         :hasOffRoadTraction 0.0 ;
+         :hasOnRoadTraction 1.0 ;
+         :hasWaterHandling 2.0 ;
+         :hasWaterSpeed 2.0 ;
+         :hasWeight 2.0 ;
+         rdfs:label "Sneeker" .
+
+
+###  http://mariokart8deluxe.owl#Snow_Land
+:Snow_Land rdf:type owl:NamedIndividual ,
+                    :Track ;
+           :hasOriginPlatform :GBA ;
+           :hasSlipperiness :MediumSlip ;
+           rdfs:label "Snow Land" .
+
+
+###  http://mariokart8deluxe.owl#Special_Cup
+:Special_Cup rdf:type owl:NamedIndividual ,
+                      :Cup ;
+             :hasTrack :Bone-Dry_Dunes ,
+                       :Cloudtop_Cruise ,
+                       :Rainbow_Road ,
+                       <http://mariokart8deluxe.owl#Bowser's_Castle> ;
+             rdfs:label "Special Cup" .
+
+
+###  http://mariokart8deluxe.owl#Spiny_Cup
+:Spiny_Cup rdf:type owl:NamedIndividual ,
+                    :Cup ;
+           :hasTrack :Bowser_Castle_3 ,
+                     :Madrid_Drive ,
+                     :Rainbow_Road ,
+                     <http://mariokart8deluxe.owl#Rosalina's_Ice_World> ;
+           rdfs:label "Spiny Cup" .
+
+
+###  http://mariokart8deluxe.owl#Splat_Buggy
+:Splat_Buggy rdf:type owl:NamedIndividual ,
+                      :Body ;
+             :hasAcceleration 3.0 ;
+             :hasAirHandling 1.0 ;
+             :hasAirSpeed 3.0 ;
+             :hasAntiGravityHandling 5.0 ;
+             :hasAntiGravitySpeed 4.0 ;
+             :hasGroundHandling 2.0 ;
+             :hasGroundSpeed 4.0 ;
+             :hasInvincibility 3.0 ;
+             :hasMiniTurbo 4.0 ;
+             :hasOffRoadTraction 3.0 ;
+             :hasOnRoadTraction 1.0 ;
+             :hasWaterHandling 3.0 ;
+             :hasWaterSpeed 2.0 ;
+             :hasWeight 0.0 ;
+             rdfs:label "Splat Buggy" .
+
+
+###  http://mariokart8deluxe.owl#Sponge
+:Sponge rdf:type owl:NamedIndividual ,
+                 :Tire ;
+        :hasAcceleration 4.0 ;
+        :hasAirHandling 3.0 ;
+        :hasAirSpeed 4.0 ;
+        :hasAntiGravityHandling 2.0 ;
+        :hasAntiGravitySpeed 1.0 ;
+        :hasGroundHandling 2.0 ;
+        :hasGroundSpeed 1.0 ;
+        :hasInvincibility 4.0 ;
+        :hasMiniTurbo 5.0 ;
+        :hasOffRoadTraction 6.0 ;
+        :hasOnRoadTraction 2.0 ;
+        :hasWaterHandling 1.0 ;
+        :hasWaterSpeed 1.0 ;
+        :hasWeight 1.0 ;
+        rdfs:label "Sponge" .
+
+
+###  http://mariokart8deluxe.owl#Sport_Bike
+:Sport_Bike rdf:type owl:NamedIndividual ,
+                     :Body ;
+            :hasAcceleration 2.0 ;
+            :hasAirHandling 3.0 ;
+            :hasAirSpeed 3.0 ;
+            :hasAntiGravityHandling 2.0 ;
+            :hasAntiGravitySpeed 3.0 ;
+            :hasGroundHandling 3.0 ;
+            :hasGroundSpeed 4.0 ;
+            :hasInvincibility 3.0 ;
+            :hasMiniTurbo 4.0 ;
+            :hasOffRoadTraction 2.0 ;
+            :hasOnRoadTraction 1.0 ;
+            :hasWaterHandling 3.0 ;
+            :hasWaterSpeed 3.0 ;
+            :hasWeight 1.0 ;
+            rdfs:label "Sport Bike" .
+
+
+###  http://mariokart8deluxe.owl#Sports_Coupe
+:Sports_Coupe rdf:type owl:NamedIndividual ,
+                       :Body ;
+              :hasAcceleration 3.0 ;
+              :hasAirHandling 2.0 ;
+              :hasAirSpeed 4.0 ;
+              :hasAntiGravityHandling 4.0 ;
+              :hasAntiGravitySpeed 5.0 ;
+              :hasGroundHandling 2.0 ;
+              :hasGroundSpeed 3.0 ;
+              :hasInvincibility 3.0 ;
+              :hasMiniTurbo 5.0 ;
+              :hasOffRoadTraction 4.0 ;
+              :hasOnRoadTraction 2.0 ;
+              :hasWaterHandling 2.0 ;
+              :hasWaterSpeed 3.0 ;
+              :hasWeight 3.0 ;
+              rdfs:label "Sports Coupe" .
+
+
+###  http://mariokart8deluxe.owl#Squeaky_Clean_Sprint
+:Squeaky_Clean_Sprint rdf:type owl:NamedIndividual ,
+                               :Track ;
+                      :hasOriginPlatform :Switch ;
+                      rdfs:label "Squeaky Clean Sprint" .
+
+
+###  http://mariokart8deluxe.owl#Standard_ATV
+:Standard_ATV rdf:type owl:NamedIndividual ,
+                       :Body ;
+              :hasAcceleration 0.0 ;
+              :hasAirHandling 0.0 ;
+              :hasAirSpeed 1.0 ;
+              :hasAntiGravityHandling 1.0 ;
+              :hasAntiGravitySpeed 3.0 ;
+              :hasGroundHandling 0.0 ;
+              :hasGroundSpeed 5.0 ;
+              :hasInvincibility 6.0 ;
+              :hasMiniTurbo 3.0 ;
+              :hasOffRoadTraction 5.0 ;
+              :hasOnRoadTraction 2.0 ;
+              :hasWaterHandling 1.0 ;
+              :hasWaterSpeed 2.0 ;
+              :hasWeight 4.0 ;
+              rdfs:label "Standard ATV" .
+
+
+###  http://mariokart8deluxe.owl#Standard_Bike
+:Standard_Bike rdf:type owl:NamedIndividual ,
+                        :Body ;
+               :hasAcceleration 5.0 ;
+               :hasAirHandling 3.0 ;
+               :hasAirSpeed 3.0 ;
+               :hasAntiGravityHandling 4.0 ;
+               :hasAntiGravitySpeed 4.0 ;
+               :hasGroundHandling 4.0 ;
+               :hasGroundSpeed 2.0 ;
+               :hasInvincibility 4.0 ;
+               :hasMiniTurbo 5.0 ;
+               :hasOffRoadTraction 5.0 ;
+               :hasOnRoadTraction 3.0 ;
+               :hasWaterHandling 3.0 ;
+               :hasWaterSpeed 2.0 ;
+               :hasWeight 1.0 ;
+               rdfs:label "Standard Bike" .
+
+
+###  http://mariokart8deluxe.owl#Standard_Kart
+:Standard_Kart rdf:type owl:NamedIndividual ,
+                        :Body ;
+               :hasAcceleration 4.0 ;
+               :hasAirHandling 3.0 ;
+               :hasAirSpeed 3.0 ;
+               :hasAntiGravityHandling 3.0 ;
+               :hasAntiGravitySpeed 3.0 ;
+               :hasGroundHandling 3.0 ;
+               :hasGroundSpeed 3.0 ;
+               :hasInvincibility 3.0 ;
+               :hasMiniTurbo 5.0 ;
+               :hasOffRoadTraction 3.0 ;
+               :hasOnRoadTraction 3.0 ;
+               :hasWaterHandling 2.0 ;
+               :hasWaterSpeed 3.0 ;
+               :hasWeight 2.0 ;
+               rdfs:label "Standard Kart" .
+
+
+###  http://mariokart8deluxe.owl#Standard_Tires
+:Standard_Tires rdf:type owl:NamedIndividual ,
+                         :Tire ;
+                :hasAcceleration 4.0 ;
+                :hasAirHandling 3.0 ;
+                :hasAirSpeed 3.0 ;
+                :hasAntiGravityHandling 3.0 ;
+                :hasAntiGravitySpeed 2.0 ;
+                :hasGroundHandling 3.0 ;
+                :hasGroundSpeed 2.0 ;
+                :hasInvincibility 4.0 ;
+                :hasMiniTurbo 4.0 ;
+                :hasOffRoadTraction 5.0 ;
+                :hasOnRoadTraction 2.0 ;
+                :hasWaterHandling 3.0 ;
+                :hasWaterSpeed 3.0 ;
+                :hasWeight 2.0 ;
+                rdfs:label "Standard Tires" .
+
+
+###  http://mariokart8deluxe.owl#Star_Cup
+:Star_Cup rdf:type owl:NamedIndividual ,
+                   :Cup ;
+          :hasTrack :Dolphin_Shoals ,
+                    :Electrodrome ,
+                    :Mount_Wario ,
+                    :Sunshine_Airport ;
+          rdfs:label "Star Cup" .
+
+
+###  http://mariokart8deluxe.owl#Steel_Driver
+:Steel_Driver rdf:type owl:NamedIndividual ,
+                       :Body ;
+              :hasAcceleration 1.0 ;
+              :hasAirHandling 1.0 ;
+              :hasAirSpeed 0.0 ;
+              :hasAntiGravityHandling 1.0 ;
+              :hasAntiGravitySpeed 2.0 ;
+              :hasGroundHandling 1.0 ;
+              :hasGroundSpeed 4.0 ;
+              :hasInvincibility 6.0 ;
+              :hasMiniTurbo 3.0 ;
+              :hasOffRoadTraction 3.0 ;
+              :hasOnRoadTraction 1.0 ;
+              :hasWaterHandling 5.0 ;
+              :hasWaterSpeed 5.0 ;
+              :hasWeight 4.0 ;
+              rdfs:label "Steel Driver" .
+
+
+###  http://mariokart8deluxe.owl#Streetle
+:Streetle rdf:type owl:NamedIndividual ,
+                   :Body ;
+          :hasAcceleration 6.0 ;
+          :hasAirHandling 3.0 ;
+          :hasAirSpeed 2.0 ;
+          :hasAntiGravityHandling 2.0 ;
+          :hasAntiGravitySpeed 0.0 ;
+          :hasGroundHandling 4.0 ;
+          :hasGroundSpeed 2.0 ;
+          :hasInvincibility 3.0 ;
+          :hasMiniTurbo 6.0 ;
+          :hasOffRoadTraction 6.0 ;
+          :hasOnRoadTraction 0.0 ;
+          :hasWaterHandling 5.0 ;
+          :hasWaterSpeed 5.0 ;
+          :hasWeight 0.0 ;
+          rdfs:label "Streetle" .
+
+
+###  http://mariokart8deluxe.owl#Sunset_Wilds
+:Sunset_Wilds rdf:type owl:NamedIndividual ,
+                       :Track ;
+              :hasOriginPlatform :GBA ;
+              :hasSlipperiness :LightSlip ;
+              rdfs:label "Sunset Wilds" .
+
+
+###  http://mariokart8deluxe.owl#Sunshine_Airport
+:Sunshine_Airport rdf:type owl:NamedIndividual ,
+                           :Track ;
+                  :hasOriginPlatform :Switch ;
+                  rdfs:label "Sunshine Airport" .
+
+
+###  http://mariokart8deluxe.owl#Super_Bell_Subway
+:Super_Bell_Subway rdf:type owl:NamedIndividual ,
+                            :Track ;
+                   :hasOriginPlatform :Switch ;
+                   rdfs:label "Super Bell Subway" .
+
+
+###  http://mariokart8deluxe.owl#Super_Glider
+:Super_Glider rdf:type owl:NamedIndividual ,
+                       :Glider ;
+              :hasAcceleration 1.0 ;
+              :hasAirHandling 1.0 ;
+              :hasAirSpeed 2.0 ;
+              :hasAntiGravityHandling 1.0 ;
+              :hasAntiGravitySpeed 0.0 ;
+              :hasGroundHandling 1.0 ;
+              :hasGroundSpeed 1.0 ;
+              :hasInvincibility 1.0 ;
+              :hasMiniTurbo 1.0 ;
+              :hasOffRoadTraction 1.0 ;
+              :hasOnRoadTraction 1.0 ;
+              :hasWaterHandling 0.0 ;
+              :hasWaterSpeed 1.0 ;
+              :hasWeight 1.0 ;
+              rdfs:label "Super Glider" .
+
+
+###  http://mariokart8deluxe.owl#Sweet_Sweet_Canyon
+:Sweet_Sweet_Canyon rdf:type owl:NamedIndividual ,
+                             :Track ;
+                    :hasOriginPlatform :Switch ;
+                    rdfs:label "Sweet Sweet Canyon" .
+
+
+###  http://mariokart8deluxe.owl#Switch
+:Switch rdf:type owl:NamedIndividual ,
+                 :GamePlatform ;
+        rdfs:comment "Nintendo Switch" .
+
+
+###  http://mariokart8deluxe.owl#Sydney_Sprint
+:Sydney_Sprint rdf:type owl:NamedIndividual ,
+                        :Track ;
+               :hasOriginPlatform :Mobile ;
+               rdfs:label "Sydney Sprint" .
+
+
+###  http://mariokart8deluxe.owl#Tanooki_Kart
+:Tanooki_Kart rdf:type owl:NamedIndividual ,
+                       :Body ;
+              :hasAcceleration 2.0 ;
+              :hasAirHandling 3.0 ;
+              :hasAirSpeed 3.0 ;
+              :hasAntiGravityHandling 3.0 ;
+              :hasAntiGravitySpeed 3.0 ;
+              :hasGroundHandling 4.0 ;
+              :hasGroundSpeed 3.0 ;
+              :hasInvincibility 4.0 ;
+              :hasMiniTurbo 5.0 ;
+              :hasOffRoadTraction 7.0 ;
+              :hasOnRoadTraction 4.0 ;
+              :hasWaterHandling 4.0 ;
+              :hasWaterSpeed 4.0 ;
+              :hasWeight 3.0 ;
+              rdfs:label "Tanooki Kart" .
+
+
+###  http://mariokart8deluxe.owl#Tanooki_Mario
+:Tanooki_Mario rdf:type owl:NamedIndividual ,
+                        :Driver ;
+               :hasAcceleration 3.0 ;
+               :hasAirHandling 5.0 ;
+               :hasAirSpeed 6.0 ;
+               :hasAntiGravityHandling 5.0 ;
+               :hasAntiGravitySpeed 6.0 ;
+               :hasGroundHandling 5.0 ;
+               :hasGroundSpeed 6.0 ;
+               :hasInvincibility 1.0 ;
+               :hasMiniTurbo 4.0 ;
+               :hasOffRoadTraction 1.0 ;
+               :hasOnRoadTraction 7.0 ;
+               :hasWaterHandling 5.0 ;
+               :hasWaterSpeed 6.0 ;
+               :hasWeight 5.0 ;
+               :isDLC "false"^^xsd:boolean ;
+               rdfs:label "Tanooki Mario" .
+
+
+###  http://mariokart8deluxe.owl#Teddy_Buggy
+:Teddy_Buggy rdf:type owl:NamedIndividual ,
+                      :Body ;
+             :hasAcceleration 5.0 ;
+             :hasAirHandling 4.0 ;
+             :hasAirSpeed 4.0 ;
+             :hasAntiGravityHandling 3.0 ;
+             :hasAntiGravitySpeed 3.0 ;
+             :hasGroundHandling 4.0 ;
+             :hasGroundSpeed 2.0 ;
+             :hasInvincibility 1.0 ;
+             :hasMiniTurbo 6.0 ;
+             :hasOffRoadTraction 3.0 ;
+             :hasOnRoadTraction 4.0 ;
+             :hasWaterHandling 2.0 ;
+             :hasWaterSpeed 2.0 ;
+             :hasWeight 2.0 ;
+             rdfs:label "Teddy Buggy" .
+
+
+###  http://mariokart8deluxe.owl#The_Duke
+:The_Duke rdf:type owl:NamedIndividual ,
+                   :Body ;
+          :hasAcceleration 4.0 ;
+          :hasAirHandling 3.0 ;
+          :hasAirSpeed 3.0 ;
+          :hasAntiGravityHandling 3.0 ;
+          :hasAntiGravitySpeed 3.0 ;
+          :hasGroundHandling 3.0 ;
+          :hasGroundSpeed 3.0 ;
+          :hasInvincibility 3.0 ;
+          :hasMiniTurbo 5.0 ;
+          :hasOffRoadTraction 3.0 ;
+          :hasOnRoadTraction 3.0 ;
+          :hasWaterHandling 2.0 ;
+          :hasWaterSpeed 3.0 ;
+          :hasWeight 2.0 ;
+          rdfs:label "The Duke" .
+
+
+###  http://mariokart8deluxe.owl#The_Prancer
+:The_Prancer rdf:type owl:NamedIndividual ,
+                      :Body ;
+             :hasAcceleration 2.0 ;
+             :hasAirHandling 3.0 ;
+             :hasAirSpeed 3.0 ;
+             :hasAntiGravityHandling 2.0 ;
+             :hasAntiGravitySpeed 3.0 ;
+             :hasGroundHandling 3.0 ;
+             :hasGroundSpeed 4.0 ;
+             :hasInvincibility 5.0 ;
+             :hasMiniTurbo 4.0 ;
+             :hasOffRoadTraction 2.0 ;
+             :hasOnRoadTraction 1.0 ;
+             :hasWaterHandling 3.0 ;
+             :hasWaterSpeed 3.0 ;
+             :hasWeight 1.0 ;
+             rdfs:label "The Prancer" .
+
+
+###  http://mariokart8deluxe.owl#Thwomp_Ruins
+:Thwomp_Ruins rdf:type owl:NamedIndividual ,
+                       :Track ;
+              :hasOriginPlatform :Switch ;
+              rdfs:label "Thwomp Ruins" .
+
+
+###  http://mariokart8deluxe.owl#Tick-Tock_Clock
+:Tick-Tock_Clock rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :DS ;
+                 rdfs:label "Tick-Tock Clock" .
+
+
+###  http://mariokart8deluxe.owl#Tiforce_Tires
+:Tiforce_Tires rdf:type owl:NamedIndividual ,
+                        :Tire ;
+               :hasAcceleration 3.0 ;
+               :hasAirHandling 2.0 ;
+               :hasAirSpeed 1.0 ;
+               :hasAntiGravityHandling 2.0 ;
+               :hasAntiGravitySpeed 2.0 ;
+               :hasGroundHandling 1.0 ;
+               :hasGroundSpeed 3.0 ;
+               :hasInvincibility 6.0 ;
+               :hasMiniTurbo 3.0 ;
+               :hasOffRoadTraction 6.0 ;
+               :hasOnRoadTraction 3.0 ;
+               :hasWaterHandling 1.0 ;
+               :hasWaterSpeed 4.0 ;
+               :hasWeight 3.0 ;
+               rdfs:label "Tiforce Tires" .
+
+
+###  http://mariokart8deluxe.owl#Toad
+:Toad rdf:type owl:NamedIndividual ,
+               :Driver ;
+      :hasAcceleration 4.0 ;
+      :hasAirHandling 7.0 ;
+      :hasAirSpeed 4.0 ;
+      :hasAntiGravityHandling 7.0 ;
+      :hasAntiGravitySpeed 4.0 ;
+      :hasGroundHandling 7.0 ;
+      :hasGroundSpeed 4.0 ;
+      :hasInvincibility 3.0 ;
+      :hasMiniTurbo 4.0 ;
+      :hasOffRoadTraction 4.0 ;
+      :hasOnRoadTraction 3.0 ;
+      :hasWaterHandling 7.0 ;
+      :hasWaterSpeed 4.0 ;
+      :hasWeight 3.0 ;
+      :isDLC "false"^^xsd:boolean ;
+      rdfs:label "Toad" .
+
+
+###  http://mariokart8deluxe.owl#Toad_Circuit
+:Toad_Circuit rdf:type owl:NamedIndividual ,
+                       :Track ;
+              :hasOriginPlatform <http://mariokart8deluxe.owl#3DS> ;
+              rdfs:label "Toad Circuit" .
+
+
+###  http://mariokart8deluxe.owl#Toad_Harbor
+:Toad_Harbor rdf:type owl:NamedIndividual ,
+                      :Track ;
+             :hasOriginPlatform :Switch ;
+             rdfs:label "Toad Harbor" .
+
+
+###  http://mariokart8deluxe.owl#Toadette
+:Toadette rdf:type owl:NamedIndividual ,
+                   :Driver ;
+          :hasAcceleration 5.0 ;
+          :hasAirHandling 7.0 ;
+          :hasAirSpeed 3.0 ;
+          :hasAntiGravityHandling 7.0 ;
+          :hasAntiGravitySpeed 3.0 ;
+          :hasGroundHandling 7.0 ;
+          :hasGroundSpeed 3.0 ;
+          :hasInvincibility 3.0 ;
+          :hasMiniTurbo 4.0 ;
+          :hasOffRoadTraction 2.0 ;
+          :hasOnRoadTraction 4.0 ;
+          :hasWaterHandling 7.0 ;
+          :hasWaterSpeed 3.0 ;
+          :hasWeight 2.0 ;
+          :isDLC "false"^^xsd:boolean ;
+          rdfs:label "Toadette" .
+
+
+###  http://mariokart8deluxe.owl#Tokyo_Blur
+:Tokyo_Blur rdf:type owl:NamedIndividual ,
+                     :Track ;
+            :hasOriginPlatform :Mobile ;
+            rdfs:label "Tokyo Blur" .
+
+
+###  http://mariokart8deluxe.owl#Tri-Speeder
+:Tri-Speeder rdf:type owl:NamedIndividual ,
+                      :Body ;
+             :hasAcceleration 1.0 ;
+             :hasAirHandling 1.0 ;
+             :hasAirSpeed 0.0 ;
+             :hasAntiGravityHandling 1.0 ;
+             :hasAntiGravitySpeed 2.0 ;
+             :hasGroundHandling 1.0 ;
+             :hasGroundSpeed 4.0 ;
+             :hasInvincibility 6.0 ;
+             :hasMiniTurbo 3.0 ;
+             :hasOffRoadTraction 3.0 ;
+             :hasOnRoadTraction 1.0 ;
+             :hasWaterHandling 5.0 ;
+             :hasWaterSpeed 5.0 ;
+             :hasWeight 4.0 ;
+             rdfs:label "Tri-Speeder" .
+
+
+###  http://mariokart8deluxe.owl#Triforce_Cup
+:Triforce_Cup rdf:type owl:NamedIndividual ,
+                       :Cup ;
+              :hasTrack :Hyrule_Circuit ,
+                        :Ice_Ice_Outpost ,
+                        :Rainbow_Road ,
+                        <http://mariokart8deluxe.owl#Wario's_Gold_Mine> ;
+              rdfs:label "Triforce Cup" .
+
+
+###  http://mariokart8deluxe.owl#Turnip_Cup
+:Turnip_Cup rdf:type owl:NamedIndividual ,
+                     :Cup ;
+            :hasTrack :Kalimari_Desert ,
+                      :Mario_Circuit_3 ,
+                      :New_York_Minute ,
+                      :Waluigi_Pinball ;
+            rdfs:label "Turnip Cup" .
+
+
+###  http://mariokart8deluxe.owl#Twisted_Mansion
+:Twisted_Mansion rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :Switch ;
+                 rdfs:label "Twisted Mansion" .
+
+
+###  http://mariokart8deluxe.owl#Vancouver_Velocity
+:Vancouver_Velocity rdf:type owl:NamedIndividual ,
+                             :Track ;
+                    :hasOriginPlatform :Mobile ;
+                    :hasSlipperiness :MediumSlip ;
+                    rdfs:label "Vancouver Velocity" .
+
+
+###  http://mariokart8deluxe.owl#Varmint
+:Varmint rdf:type owl:NamedIndividual ,
+                  :Body ;
+         :hasAcceleration 6.0 ;
+         :hasAirHandling 2.0 ;
+         :hasAirSpeed 1.0 ;
+         :hasAntiGravityHandling 4.0 ;
+         :hasAntiGravitySpeed 1.0 ;
+         :hasGroundHandling 5.0 ;
+         :hasGroundSpeed 2.0 ;
+         :hasInvincibility 2.0 ;
+         :hasMiniTurbo 6.0 ;
+         :hasOffRoadTraction 4.0 ;
+         :hasOnRoadTraction 3.0 ;
+         :hasWaterHandling 4.0 ;
+         :hasWaterSpeed 3.0 ;
+         :hasWeight 1.0 ;
+         rdfs:label "Varmint" .
+
+
+###  http://mariokart8deluxe.owl#W_25_Silver_Arrow
+:W_25_Silver_Arrow rdf:type owl:NamedIndividual ,
+                            :Body ;
+                   :hasAcceleration 5.0 ;
+                   :hasAirHandling 3.0 ;
+                   :hasAirSpeed 3.0 ;
+                   :hasAntiGravityHandling 4.0 ;
+                   :hasAntiGravitySpeed 4.0 ;
+                   :hasGroundHandling 4.0 ;
+                   :hasGroundSpeed 2.0 ;
+                   :hasInvincibility 4.0 ;
+                   :hasMiniTurbo 5.0 ;
+                   :hasOffRoadTraction 5.0 ;
+                   :hasOnRoadTraction 3.0 ;
+                   :hasWaterHandling 3.0 ;
+                   :hasWaterSpeed 2.0 ;
+                   :hasWeight 1.0 ;
+                   rdfs:label "W 25 Silver Arrow" .
+
+
+###  http://mariokart8deluxe.owl#Waddle_Wing
+:Waddle_Wing rdf:type owl:NamedIndividual ,
+                      :Glider ;
+             :hasAcceleration 1.0 ;
+             :hasAirHandling 1.0 ;
+             :hasAirSpeed 2.0 ;
+             :hasAntiGravityHandling 1.0 ;
+             :hasAntiGravitySpeed 0.0 ;
+             :hasGroundHandling 1.0 ;
+             :hasGroundSpeed 1.0 ;
+             :hasInvincibility 1.0 ;
+             :hasMiniTurbo 1.0 ;
+             :hasOffRoadTraction 1.0 ;
+             :hasOnRoadTraction 1.0 ;
+             :hasWaterHandling 0.0 ;
+             :hasWaterSpeed 1.0 ;
+             :hasWeight 1.0 ;
+             rdfs:label "Waddle Wing" .
+
+
+###  http://mariokart8deluxe.owl#Waluigi
+:Waluigi rdf:type owl:NamedIndividual ,
+                  :Driver ;
+         :hasAcceleration 1.0 ;
+         :hasAirHandling 2.0 ;
+         :hasAirSpeed 9.0 ;
+         :hasAntiGravityHandling 2.0 ;
+         :hasAntiGravitySpeed 9.0 ;
+         :hasGroundHandling 2.0 ;
+         :hasGroundSpeed 9.0 ;
+         :hasInvincibility 4.0 ;
+         :hasMiniTurbo 1.0 ;
+         :hasOffRoadTraction 0.0 ;
+         :hasOnRoadTraction 10.0 ;
+         :hasWaterHandling 2.0 ;
+         :hasWaterSpeed 9.0 ;
+         :hasWeight 8.0 ;
+         :isDLC "false"^^xsd:boolean ;
+         rdfs:label "Waluigi" .
+
+
+###  http://mariokart8deluxe.owl#Waluigi_Pinball
+:Waluigi_Pinball rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :DS ;
+                 rdfs:label "Waluigi Pinball" .
+
+
+###  http://mariokart8deluxe.owl#Waluigi_Stadium
+:Waluigi_Stadium rdf:type owl:NamedIndividual ,
+                          :Track ;
+                 :hasOriginPlatform :GCN ;
+                 :hasSlipperiness :LightSlip ;
+                 rdfs:label "Waluigi Stadium" .
+
+
+###  http://mariokart8deluxe.owl#Wario
+:Wario rdf:type owl:NamedIndividual ,
+                :Driver ;
+       :hasAcceleration 0.0 ;
+       :hasAirHandling 1.0 ;
+       :hasAirSpeed 10.0 ;
+       :hasAntiGravityHandling 1.0 ;
+       :hasAntiGravitySpeed 10.0 ;
+       :hasGroundHandling 1.0 ;
+       :hasGroundSpeed 10.0 ;
+       :hasInvincibility 5.0 ;
+       :hasMiniTurbo 0.0 ;
+       :hasOffRoadTraction 1.0 ;
+       :hasOnRoadTraction 5.0 ;
+       :hasWaterHandling 1.0 ;
+       :hasWaterSpeed 10.0 ;
+       :hasWeight 9.0 ;
+       :isDLC "false"^^xsd:boolean ;
+       rdfs:label "Wario" .
+
+
+###  http://mariokart8deluxe.owl#Wario_Stadium
+:Wario_Stadium rdf:type owl:NamedIndividual ,
+                        :Track ;
+               :hasOriginPlatform :DS ;
+               rdfs:label "Wario Stadium" .
+
+
+###  http://mariokart8deluxe.owl#Wario_Wing
+:Wario_Wing rdf:type owl:NamedIndividual ,
+                     :Glider ;
+            :hasAcceleration 1.0 ;
+            :hasAirHandling 1.0 ;
+            :hasAirSpeed 2.0 ;
+            :hasAntiGravityHandling 0.0 ;
+            :hasAntiGravitySpeed 1.0 ;
+            :hasGroundHandling 1.0 ;
+            :hasGroundSpeed 1.0 ;
+            :hasInvincibility 1.0 ;
+            :hasMiniTurbo 1.0 ;
+            :hasOffRoadTraction 0.0 ;
+            :hasOnRoadTraction 2.0 ;
+            :hasWaterHandling 1.0 ;
+            :hasWaterSpeed 0.0 ;
+            :hasWeight 2.0 ;
+            rdfs:label "Wario Wing" .
+
+
+###  http://mariokart8deluxe.owl#Water_Park
+:Water_Park rdf:type owl:NamedIndividual ,
+                     :Track ;
+            :hasOriginPlatform :Switch ,
+                               :Wii ;
+            rdfs:label "Water Park" .
+
+
+###  http://mariokart8deluxe.owl#Wendy_O_Koppa
+:Wendy_O_Koppa rdf:type owl:NamedIndividual ,
+                        :Driver ;
+               :hasAcceleration 5.0 ;
+               :hasAirHandling 7.0 ;
+               :hasAirSpeed 3.0 ;
+               :hasAntiGravityHandling 7.0 ;
+               :hasAntiGravitySpeed 3.0 ;
+               :hasGroundHandling 7.0 ;
+               :hasGroundSpeed 3.0 ;
+               :hasInvincibility 3.0 ;
+               :hasMiniTurbo 4.0 ;
+               :hasOffRoadTraction 2.0 ;
+               :hasOnRoadTraction 4.0 ;
+               :hasWaterHandling 7.0 ;
+               :hasWaterSpeed 3.0 ;
+               :hasWeight 2.0 ;
+               :isDLC "false"^^xsd:boolean ;
+               rdfs:label "Wendy O. Koppa" .
+
+
+###  http://mariokart8deluxe.owl#Wiggler
+:Wiggler rdf:type owl:NamedIndividual ,
+                  :Driver ;
+         :hasAcceleration 1.0 ;
+         :hasAirHandling 2.0 ;
+         :hasAirSpeed 9.0 ;
+         :hasAntiGravityHandling 2.0 ;
+         :hasAntiGravitySpeed 9.0 ;
+         :hasGroundHandling 2.0 ;
+         :hasGroundSpeed 9.0 ;
+         :hasInvincibility 4.0 ;
+         :hasMiniTurbo 1.0 ;
+         :hasOffRoadTraction 0.0 ;
+         :hasOnRoadTraction 10.0 ;
+         :hasWaterHandling 2.0 ;
+         :hasWaterSpeed 9.0 ;
+         :hasWeight 8.0 ;
+         :isDLC "true"^^xsd:boolean ;
+         rdfs:label "Wiggler" .
+
+
+###  http://mariokart8deluxe.owl#Wii
+:Wii rdf:type owl:NamedIndividual ,
+              :GamePlatform ;
+     rdfs:comment "Nintendo Wii" .
+
+
+###  http://mariokart8deluxe.owl#Wild_Wiggler
+:Wild_Wiggler rdf:type owl:NamedIndividual ,
+                       :Body ;
+              :hasAcceleration 5.0 ;
+              :hasAirHandling 3.0 ;
+              :hasAirSpeed 3.0 ;
+              :hasAntiGravityHandling 4.0 ;
+              :hasAntiGravitySpeed 4.0 ;
+              :hasGroundHandling 4.0 ;
+              :hasGroundSpeed 2.0 ;
+              :hasInvincibility 4.0 ;
+              :hasMiniTurbo 5.0 ;
+              :hasOffRoadTraction 5.0 ;
+              :hasOnRoadTraction 3.0 ;
+              :hasWaterHandling 3.0 ;
+              :hasWaterSpeed 2.0 ;
+              :hasWeight 1.0 ;
+              rdfs:label "Wild Wiggler" .
+
+
+###  http://mariokart8deluxe.owl#Wild_Woods
+:Wild_Woods rdf:type owl:NamedIndividual ,
+                     :Track ;
+            :hasOriginPlatform :Switch ;
+            rdfs:label "Wild Woods" .
+
+
+###  http://mariokart8deluxe.owl#Wood_Tires
+:Wood_Tires rdf:type owl:NamedIndividual ,
+                     :Tire ;
+            :hasAcceleration 2.0 ;
+            :hasAirHandling 4.0 ;
+            :hasAirSpeed 2.0 ;
+            :hasAntiGravityHandling 3.0 ;
+            :hasAntiGravitySpeed 4.0 ;
+            :hasGroundHandling 4.0 ;
+            :hasGroundSpeed 3.0 ;
+            :hasInvincibility 5.0 ;
+            :hasMiniTurbo 3.0 ;
+            :hasOffRoadTraction 1.0 ;
+            :hasOnRoadTraction 4.0 ;
+            :hasWaterHandling 4.0 ;
+            :hasWaterSpeed 2.0 ;
+            :hasWeight 2.0 ;
+            rdfs:label "Wood Tires" .
+
+
+###  http://mariokart8deluxe.owl#Yoshi
+:Yoshi rdf:type owl:NamedIndividual ,
+                :Driver ;
+       :hasAcceleration 3.0 ;
+       :hasAirHandling 5.0 ;
+       :hasAirSpeed 6.0 ;
+       :hasAntiGravityHandling 5.0 ;
+       :hasAntiGravitySpeed 6.0 ;
+       :hasGroundHandling 5.0 ;
+       :hasGroundSpeed 6.0 ;
+       :hasInvincibility 1.0 ;
+       :hasMiniTurbo 4.0 ;
+       :hasOffRoadTraction 3.0 ;
+       :hasOnRoadTraction 3.0 ;
+       :hasWaterHandling 5.0 ;
+       :hasWaterSpeed 6.0 ;
+       :hasWeight 4.0 ;
+       :isDLC "false"^^xsd:boolean ;
+       rdfs:label "Yoshi" .
+
+
+###  http://mariokart8deluxe.owl#Yoshi_Bike
+:Yoshi_Bike rdf:type owl:NamedIndividual ,
+                     :Body ;
+            :hasAcceleration 5.0 ;
+            :hasAirHandling 4.0 ;
+            :hasAirSpeed 4.0 ;
+            :hasAntiGravityHandling 3.0 ;
+            :hasAntiGravitySpeed 3.0 ;
+            :hasGroundHandling 4.0 ;
+            :hasGroundSpeed 2.0 ;
+            :hasInvincibility 2.0 ;
+            :hasMiniTurbo 6.0 ;
+            :hasOffRoadTraction 3.0 ;
+            :hasOnRoadTraction 4.0 ;
+            :hasWaterHandling 2.0 ;
+            :hasWaterSpeed 2.0 ;
+            :hasWeight 2.0 ;
+            rdfs:label "Yoshi Bike" .
+
+
+###  http://mariokart8deluxe.owl#Yoshi_Circuit
+:Yoshi_Circuit rdf:type owl:NamedIndividual ,
+                        :Track ;
+               :hasOriginPlatform :GCN ;
+               rdfs:label "Yoshi Circuit" .
+
+
+###  http://mariokart8deluxe.owl#Yoshi_Valley
+:Yoshi_Valley rdf:type owl:NamedIndividual ,
+                       :Track ;
+              :hasOriginPlatform :N64 ;
+              rdfs:label "Yoshi Valley" .
+
+
+###  http://mariokart8deluxe.owl#3DS
+<http://mariokart8deluxe.owl#3DS> rdf:type owl:NamedIndividual ,
+                                           :GamePlatform ;
+                                  rdfs:comment "Nintendo 3DS" .
+
+
+###  http://mariokart8deluxe.owl#300_SL_Roadster
+<http://mariokart8deluxe.owl#300_SL_Roadster> rdf:type owl:NamedIndividual ,
+                                                       :Body ;
+                                              :hasAcceleration 4.0 ;
+                                              :hasAirHandling 3.0 ;
+                                              :hasAirSpeed 3.0 ;
+                                              :hasAntiGravityHandling 3.0 ;
+                                              :hasAntiGravitySpeed 3.0 ;
+                                              :hasGroundHandling 3.0 ;
+                                              :hasGroundSpeed 3.0 ;
+                                              :hasInvincibility 4.0 ;
+                                              :hasMiniTurbo 5.0 ;
+                                              :hasOffRoadTraction 3.0 ;
+                                              :hasOnRoadTraction 3.0 ;
+                                              :hasWaterHandling 2.0 ;
+                                              :hasWaterSpeed 3.0 ;
+                                              :hasWeight 2.0 ;
+                                              rdfs:label "300 SL Roadster" .
+
+
+###  http://mariokart8deluxe.owl#Bowser's_Castle
+<http://mariokart8deluxe.owl#Bowser's_Castle> rdf:type owl:NamedIndividual ,
+                                                       :Track ;
+                                              :hasOriginPlatform :Switch ;
+                                              rdfs:label "Bowser's Castle" .
+
+
+###  http://mariokart8deluxe.owl#Rosalina's_Ice_World
+<http://mariokart8deluxe.owl#Rosalina's_Ice_World> rdf:type owl:NamedIndividual ,
+                                                            :Track ;
+                                                   :hasOriginPlatform <http://mariokart8deluxe.owl#3DS> ;
+                                                   :hasSlipperiness :MediumSlip ;
+                                                   rdfs:label "Rosalina's Ice World" .
+
+
+###  http://mariokart8deluxe.owl#Toad's_Turnpike
+<http://mariokart8deluxe.owl#Toad's_Turnpike> rdf:type owl:NamedIndividual ,
+                                                       :Track ;
+                                              :hasOriginPlatform :N64 ;
+                                              rdfs:label "Toad's Turnpike" .
+
+
+###  http://mariokart8deluxe.owl#Wario's_Gold_Mine
+<http://mariokart8deluxe.owl#Wario's_Gold_Mine> rdf:type owl:NamedIndividual ,
+                                                         :Track ;
+                                                :hasOriginPlatform :Wii ;
+                                                rdfs:label "Wario's Gold Mine" .
+
+
+###  http://mariokart8deluxe.owl#Yoshi's_Island
+<http://mariokart8deluxe.owl#Yoshi's_Island> rdf:type owl:NamedIndividual ,
+                                                      :Track ;
+                                             :hasOriginPlatform :Wii ;
+                                             :hasSlipperiness :MediumSlip ;
+                                             rdfs:label "Yoshi's Island" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
