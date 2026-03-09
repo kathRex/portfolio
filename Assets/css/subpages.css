@@ -1,0 +1,346 @@
+body.project-detail-page .container {
+    width: min(1180px, calc(100% - 3rem));
+}
+
+body.cyber-society-page {
+    --bg-image: url('../Images/background2.jpg');
+}
+
+body.cyber-society-page .cyber-lead-question {
+    text-align: center;
+    font-style: italic;
+}
+
+body.cyber-society-page .cyber-intro-copy {
+    text-align: center;
+}
+
+body.cyber-society-page .cyber-section-title {
+    text-align: center;
+}
+
+body.cyber-society-page .cyber-references {
+    font-size: 0.74rem;
+    line-height: 1.4;
+}
+
+body.cyber-society-page .cyber-essay-card {
+    padding-left: clamp(1.8rem, 4vw, 3.3rem);
+    padding-right: clamp(1.8rem, 4vw, 3.3rem);
+}
+
+body.project-detail-page .project-detail-card {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(320px, 1fr);
+    align-items: start;
+    gap: clamp(1rem, 2.2vw, 1.8rem);
+    transition: none;
+}
+
+body.project-detail-page .project-detail-card:hover,
+body.project-detail-page .project-detail-card:focus-within {
+    background: transparent;
+    box-shadow: none;
+}
+
+body.project-detail-page .project-detail-card:hover .project-media,
+body.project-detail-page .project-detail-card:focus-within .project-media {
+    border-color: #000;
+    filter: brightness(0.9) contrast(0.95) grayscale(0.2);
+}
+
+body.project-detail-page .project-media-panel,
+body.project-detail-page .project-info-panel {
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.26) 100%);
+    padding: clamp(0.9rem, 1.8vw, 1.3rem);
+}
+
+body.project-detail-page .project-media-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+body.project-detail-page .project-info-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: start;
+    gap: 0.85rem;
+}
+
+body.project-detail-page .project-info-panel p,
+body.project-detail-page .project-info-panel li {
+    color: var(--muted);
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
+    line-height: 1.7;
+}
+
+body.project-detail-page .project-meta-list {
+    margin: 0;
+    padding-left: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+body.project-detail-page .project-meta-list strong {
+    color: #d9d1c3;
+    font-weight: 600;
+}
+
+body.project-detail-page .project-meta-sublist {
+    margin: 0.35rem 0 0;
+    padding-left: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+body.project-detail-page .project-carousel {
+    position: relative;
+    border: 1px solid #000;
+    background: #090c07;
+}
+
+body.project-detail-page .carousel-track {
+    position: relative;
+    overflow: hidden;
+}
+
+body.project-detail-page .carousel-slide {
+    width: 100%;
+    height: clamp(300px, 32vw, 430px);
+    object-fit: cover;
+    object-position: center;
+    display: none;
+    filter: brightness(0.9) contrast(0.95) grayscale(0.2);
+    cursor: zoom-in;
+}
+
+body.project-detail-page .carousel-slide.is-active {
+    display: block;
+}
+
+body.project-detail-page .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.15rem;
+    height: 2.15rem;
+    border: 1px solid rgba(215, 176, 106, 0.8);
+    background: rgba(0, 0, 0, 0.55);
+    color: var(--accent);
+    cursor: pointer;
+    z-index: 2;
+}
+
+body.project-detail-page .carousel-control.prev {
+    left: 0.55rem;
+}
+
+body.project-detail-page .carousel-control.next {
+    right: 0.55rem;
+}
+
+body.project-detail-page .carousel-control:hover,
+body.project-detail-page .carousel-control:focus-visible {
+    background: rgba(215, 176, 106, 0.2);
+    color: #fff;
+}
+
+body.project-detail-page .carousel-dots {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+body.project-detail-page .carousel-dot {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 0.62rem;
+    height: 0.62rem;
+    padding: 0;
+    line-height: 1;
+    flex-shrink: 0;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid rgba(215, 176, 106, 0.8);
+    background: rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+}
+
+body.project-detail-page .project-right-media {
+    width: min(100%, 260px);
+    height: auto;
+    border: 0;
+    align-self: center;
+}
+
+body.project-detail-page .carousel-dot.is-active {
+    background: rgba(215, 176, 106, 0.85);
+}
+
+body.project-detail-page .project-concept-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+body.project-detail-page .project-concept-sections p {
+    margin: 0;
+}
+
+body.project-detail-page .project-concept-title {
+    margin: 0.45rem 0 0;
+    color: var(--accent);
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: clamp(1.08rem, 2vw, 1.3rem);
+    line-height: 1.25;
+}
+
+body.project-detail-page .project-concept-sections .project-meta-sublist {
+    margin-top: 0;
+}
+
+body.project-detail-page .project-centered-button {
+    align-self: center;
+}
+
+body.project-detail-page .project-pipeline-list {
+    margin: 0;
+    padding-left: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+body.project-detail-page .project-pipeline-list p {
+    margin: 0.15rem 0 0;
+}
+
+body.project-detail-page .project-pipeline-list strong {
+    color: #d9d1c3;
+    font-weight: 600;
+}
+
+body.team-trash-page .project-right-media {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+body.team-trash-page .team-trash-hero-card {
+    flex-direction: column;
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto clamp(1rem, 2.2vw, 1.8rem);
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.26) 100%);
+    padding: clamp(0.9rem, 1.8vw, 1.3rem);
+}
+
+body.team-trash-page .team-trash-hero-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+body.team-trash-page .team-trash-hero-video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 854 / 480;
+    border: 1px solid #000;
+    cursor: default;
+}
+
+body.team-trash-page .team-trash-summary {
+    text-align: center;
+}
+
+body.team-trash-page .team-trash-character-row {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.team-trash-page .team-trash-character-gif {
+    width: calc(33.33% - 0.4rem);
+    height: auto;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+body.chilled-page .chilled-hero-card {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto clamp(1rem, 2.2vw, 1.8rem);
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.26) 100%);
+    padding: clamp(0.9rem, 1.8vw, 1.3rem);
+}
+
+body.chilled-page .chilled-hero-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    display: block;
+    border: 1px solid #000;
+}
+
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.84);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 1200;
+}
+
+.image-lightbox[hidden] {
+    display: none;
+}
+
+.image-lightbox-image {
+    max-width: min(96vw, 1400px);
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid rgba(215, 176, 106, 0.5);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.image-lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid rgba(215, 176, 106, 0.8);
+    background: rgba(0, 0, 0, 0.55);
+    color: var(--accent);
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    body.project-detail-page .project-detail-card {
+        grid-template-columns: 1fr;
+    }
+
+    body.project-detail-page .carousel-slide {
+        height: clamp(250px, 48vw, 360px);
+    }
+}

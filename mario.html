@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Katharina Rex — Mario Kart Build Optimizer</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/subpages.css">
+</head>
+
+<body class="projects-page project-detail-page">
+    <header class="top-nav">
+        <nav class="nav-center" aria-label="Main navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link is-active" href="projects.html">Portfolio</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container page-main">
+        <section class="section page-intro" aria-labelledby="mario-title">
+            <h1 id="mario-title">Mario Kart Build Optimizer</h1>
+            <p>Ontology-powered tool to compare builds and optimize for playstyle & track conditions.</p>
+        </section>
+
+        <div class="section-separator" aria-hidden="true"><span></span></div>
+
+        <section class="section">
+            <article class="project-card project-detail-card">
+                <div class="project-media-panel">
+                    <div class="project-carousel" data-carousel>
+                        <button class="carousel-control prev" type="button" aria-label="Previous image">‹</button>
+                        <div class="carousel-track">
+                            <img src="Assets/Images/card2Img.jpg" alt="Mario Kart build optimizer interface"
+                                class="project-media carousel-slide is-active">
+                            <img src="Assets/Images/Mario/Calculator.jpg" alt="Mario Kart calculator module overview"
+                                class="project-media carousel-slide">
+                            <img src="Assets/Images/Mario/ParamFilter.jpg" alt="Mario Kart parameter filter interface"
+                                class="project-media carousel-slide">
+                            <img src="Assets/Images/Mario/Playstyle.jpg" alt="Mario Kart playstyle build recommender"
+                                class="project-media carousel-slide">
+                            <img src="Assets/Images/Mario/CupTrack.jpg" alt="Mario Kart cups and tracks explorer"
+                                class="project-media carousel-slide">
+                        </div>
+                        <button class="carousel-control next" type="button" aria-label="Next image">›</button>
+                    </div>
+                    <div class="carousel-dots" role="tablist" aria-label="Mario Kart gallery navigation">
+                        <button class="carousel-dot is-active" type="button" aria-label="Go to image 1"
+                            aria-selected="true"></button>
+                        <button class="carousel-dot" type="button" aria-label="Go to image 2"
+                            aria-selected="false"></button>
+                        <button class="carousel-dot" type="button" aria-label="Go to image 3"
+                            aria-selected="false"></button>
+                        <button class="carousel-dot" type="button" aria-label="Go to image 4"
+                            aria-selected="false"></button>
+                        <button class="carousel-dot" type="button" aria-label="Go to image 5"
+                            aria-selected="false"></button>
+                    </div>
+
+                    <div class="project-concept-sections">
+                        <h4 class="project-concept-title">The Website Purpose</h4>
+                        <p>This website is an interactive Mario Kart 8 Deluxe build-analysis tool that turns ontology
+                            data into practical decision support. It helps players understand how character and
+                            vehicle-part choices affect stats and race behavior.</p>
+
+                        <h4 class="project-concept-title">What It Does</h4>
+                        <p>The main page combines Driver, Body, Tire, and Glider selections and computes total values
+                            for speed, handling, acceleration, mini turbo, traction, and invincibility. It also supports
+                            track-aware grip calculations by integrating slippery track profiles from the ontology.</p>
+                        <ul class="project-meta-sublist">
+                            <li>Combination calculator with live stat bars</li>
+                            <li>Parameter filter to find best component combinations</li>
+                            <li>Playstyle build recommender with suggested presets</li>
+
+                        </ul>
+                        <p> Beyond the calculator, the project includes a Playstyle Builds view that
+                            recommends optimized component combinations for different racing preferences, and a Cups &
+                            Tracks view that lets users browse tracks by cup, filter by original platform, and inspect
+                            slippery-terrain categories.</p>
+                        <h4 class="project-concept-title">Ontology Integration</h4>
+                        <p>The project connects to a SPARQL endpoint and queries structured MK8D ontology classes and
+                            properties in real time. This makes the interface not just a static calculator, but a
+                            semantic-data frontend that explains builds, playstyles, and track conditions through linked
+                            data.</p>
+                    </div>
+                </div>
+                <div class="project-info-panel">
+                    <h4 class="project-concept-title">Project Details</h4>
+                    <ul class="project-meta-list">
+                        <li><strong>Project status:</strong> Completed prototype</li>
+                        <li><strong>Tools & Technologies:</strong> Python, JavaScript, HTML/CSS, Protégé, OWL, SPARQL
+                        </li>
+                        <li>
+                            <strong>Key skills:</strong>
+                            <ul class="project-meta-sublist">
+                                <li>Ontology engineering and semantic modeling</li>
+                                <li>SPARQL query design and data integration</li>
+                                <li>Interactive data visualization and UI logic</li>
+                            </ul>
+                        </li>
+                    </ul>
+                   
+                    
+                    <h4 class="project-concept-title">Pipeline</h4>
+                    <ol class="project-pipeline-list">
+                        <li>
+                            <strong>Knowledge acquisition</strong>
+                            <p>Web scraping to extract drivers, vehicles, parts, tracks, cups, and stats.</p>
+                        </li>
+                        <li>
+                            <strong>Ontology modeling</strong>
+                            <p>Defined core classes + relations + properties in Protégé, then populated with scraped
+                                data.</p>
+                        </li>
+                        <li>
+                            <strong>Query UI</strong>
+                            <p>Website to query builds and compare stats with presets/filters.</p>
+                        </li>
+                    </ol>
+                     <br>
+                    <a class="button-link project-centered-button" href="AKR Mario Kart/marioIndex.html">Preview Mario
+                        Kart Ontology</a><br>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© <span id="year"></span> Katharina Rex</span>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

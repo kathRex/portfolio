@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Katharina Rex — Sound Sword</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/subpages.css">
+</head>
+
+<body class="projects-page project-detail-page sword-page">
+	<header class="top-nav">
+		<nav class="nav-center" aria-label="Main navigation">
+			<a class="nav-link" href="index.html">Home</a>
+			<a class="nav-link is-active" href="projects.html">Portfolio</a>
+			<a class="nav-link" href="contact.html">Contact</a>
+		</nav>
+	</header>
+
+	<main class="container page-main">
+		<section class="section page-intro" aria-labelledby="sword-title">
+			<h1 id="sword-title">Rave Slayer</h1>
+
+		</section>
+
+		<div class="section-separator" aria-hidden="true"><span></span></div>
+
+		<section class="section">
+			<article class="project-card project-detail-card">
+				<div class="project-media-panel">
+					<div class="project-carousel" data-carousel>
+						<button class="carousel-control prev" type="button" aria-label="Previous image">‹</button>
+						<div class="carousel-track">
+							<img src="Assets/Images/swordAnim.gif" alt="Sound Sword micro:bit interaction prototype"
+								class="project-media carousel-slide is-active">
+							<img src="Assets/Images/RaveSlayer/sword1.jpg" alt="Sound Sword project image 1"
+								class="project-media carousel-slide">
+							<img src="Assets/Images/RaveSlayer/sword2.jpg" alt="Sound Sword project image 2"
+								class="project-media carousel-slide">
+							<img src="Assets/Images/RaveSlayer/sword3.jpg" alt="Sound Sword project image 3"
+								class="project-media carousel-slide">
+						</div>
+						<button class="carousel-control next" type="button" aria-label="Next image">›</button>
+					</div>
+					<div class="carousel-dots" role="tablist" aria-label="Sound Sword gallery navigation">
+						<button class="carousel-dot is-active" type="button" aria-label="Go to image 1"
+							aria-selected="true"></button>
+						<button class="carousel-dot" type="button" aria-label="Go to image 2"
+							aria-selected="false"></button>
+						<button class="carousel-dot" type="button" aria-label="Go to image 3"
+							aria-selected="false"></button>
+						<button class="carousel-dot" type="button" aria-label="Go to image 4"
+							aria-selected="false"></button>
+					</div>
+
+					<div class="project-concept-sections">
+						<h4 class="project-concept-title">Motion-Reactive Cosplay Sword</h4>
+						<p>The Rave Slayer is an interactive cosplay prop that generates dynamic sound effects based on
+							real sword movements. Using a Micro:bit controller and its built-in accelerometer, the
+							system detects swings and translates them into synthesized audio in real time.</p>
+						<p>Instead of relying on prerecorded sound files, all audio is generated directly on the
+							microcontroller using waveform synthesis. Different sword movements trigger different sound
+							expressions, creating a responsive audiovisual experience during sword fights or
+							performances.</p>
+
+						<h4 class="project-concept-title">How it Works</h4>
+						<p>The Micro:bit’s accelerometer continuously measures movement along the X, Y, and Z axes. By
+							repeatedly performing sword swings and analyzing the sensor output through a debugging
+							interface, movement thresholds were calibrated for four different swing directions.</p>
+						<p>When the sensor values fall within these calibrated ranges, the program triggers a
+							corresponding sound expression.</p>
+						<p>All sounds are generated using mathematical waveforms (sine waves) rather than audio files.
+							This constraint required designing sound effects directly through parameterized synthesis.
+						</p>
+
+						<h4 class="project-concept-title">Physical Build</h4>
+						<p>The sword itself was handcrafted using EVA foam, shaped and painted to resemble a cosplay
+							prop.</p>
+						<p>The internal electronics include:</p>
+						<ul class="project-meta-sublist">
+							<li>Micro:bit controller</li>
+							<li>Speaker</li>
+							<li>Battery pack and wiring</li>
+						</ul>
+						<p>The controller is attached using Velcro, allowing it to be removed easily for recalibration
+							or further code adjustments.</p>
+					</div>
+				</div>
+				<div class="project-info-panel">
+					<h4 class="project-concept-title">Project Details</h4>
+					<ul class="project-meta-sublist">
+						<li><strong>Project status:</strong> Completed (University Project)</li>
+						<li><strong>Role:</strong> Co-developer (Software &amp; Interaction Design)</li>
+					</ul>
+					
+					<h4 class="project-concept-title">Technical Scope</h4>
+					
+					<ul class="project-meta-sublist">
+						<li>Micro:bit embedded system</li>
+						<li>JavaScript (MakeCode environment)</li>
+						<li>Accelerometer sensor data processing</li>
+						<li>Procedural sound synthesis</li>
+						<li>Physical prototyping with EVA foam</li>
+					</ul>
+
+					<h4 class="project-concept-title">Project Focus</h4>
+					<ul class="project-meta-sublist">
+						<li>Creative coding, physical computing</li>
+						<li>Interactive props for cosplay or performance</li>
+					
+					</ul>
+					<img src="Assets/Images/RaveSlayer/swordBlueprint.jpg" alt="Sound Sword blueprint"
+						class="project-right-media">
+				</div>
+			</article>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<span>© <span id="year"></span> Katharina Rex</span>
+		</div>
+	</footer>
+
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>

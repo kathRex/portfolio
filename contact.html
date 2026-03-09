@@ -20,30 +20,37 @@
 	<main class="container page-main">
 		<section class="section page-intro" aria-labelledby="contact-title">
 			<h1 id="contact-title">Contact</h1>
-			<p>If you'd like to collaborate or discuss a project, I’d love to hear from you.</p>
+			
 		</section>
 
 		<div class="section-separator" aria-hidden="true"><span></span></div>
 
-		<section class="section" aria-label="Contact links">
-			<article class="project-card contact-card">
-				<div class="project-content">
-					<h3>Get in touch</h3>
-					<p class="contact-line"><strong>Email:</strong> <a href="mailto:katharinarex.contact@gmail.com">katharinarex.contact@gmail.com</a></p>
-					<p class="contact-line"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/katharina-rex-282857334/" target="_blank" rel="noopener">katharina-rex-282857334</a></p>
-				</div>
-			</article>
+		<section class="section contact-links-section" aria-label="Contact links">
+			<div class="contact-actions">
+				<a class="button-link contact-action" id="email-link" href="#">Email</a>
+				<a class="button-link contact-action" href="https://www.linkedin.com/in/katharina-rex-282857334/" target="_blank" rel="noopener">LinkedIn</a>
+			</div>
 		</section>
 	</main>
 
 	<footer class="site-footer">
 		<div class="container footer-inner">
 			<span>© <span id="year"></span> Katharina Rex</span>
-			<a href="https://www.linkedin.com/in/katharina-rex-282857334/" target="_blank" rel="noopener">LinkedIn</a>
 		</div>
 	</footer>
 
 	<script src="assets/js/main.js"></script>
+	<script>
+		(() => {
+			const user = ['k', 'a', 't', 'h', 'a', 'r', 'i', 'n', 'a', '.', 'r', 'e', 'x'].join('');
+			const domain = ['g', 'm', 'x', '.', 'n', 'e', 't'].join('');
+			const emailLink = document.getElementById('email-link');
+
+			if (emailLink) {
+				emailLink.href = `mailto:${user}@${domain}`;
+			}
+		})();
+	</script>
 </body>
 
 </html>

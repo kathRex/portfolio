@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Katharina Rex — Team Trash</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/subpages.css">
+</head>
+
+<body class="projects-page project-detail-page team-trash-page">
+    <header class="top-nav">
+        <nav class="nav-center" aria-label="Main navigation">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link is-active" href="projects.html">Portfolio</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container page-main">
+        <section class="section page-intro" aria-labelledby="team-trash-title">
+            <h1 id="team-trash-title">Team Trash</h1>
+            <p><strong>Scavenge. Snack. Survive! </strong><br></p>
+        </section>
+
+        <div class="section-separator" aria-hidden="true"><span></span></div>
+
+        <section class="section">
+            <article class="project-card team-trash-hero-card">
+                <div class="project-carousel" data-carousel>
+                    <div class="carousel-track">
+                        <img src="Assets/Images/TeamTrash/Startscreen.gif" alt="Team Trash start screen"
+                            class="carousel-slide team-trash-hero-image is-active">
+                        <iframe class="carousel-slide team-trash-hero-video"
+                            src="https://www.youtube.com/embed/H-syxpLyk9Y?rel=0"
+                            title="Team Trash gameplay video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                        <button class="carousel-control prev" type="button" aria-label="Previous slide">&#10094;</button>
+                        <button class="carousel-control next" type="button" aria-label="Next slide">&#10095;</button>
+                    </div>
+                    <div class="carousel-dots" role="tablist" aria-label="Team Trash media carousel">
+                        <button type="button" class="carousel-dot is-active" aria-label="Show Team Trash start screen"
+                            aria-selected="true"></button>
+                        <button type="button" class="carousel-dot" aria-label="Show Team Trash gameplay video"
+                            aria-selected="false"></button>
+                    </div>
+                </div>
+            </article>
+            <article class="project-card team-trash-hero-card">
+                <p class="team-trash-summary">Team Trash is a 2D Unity platformer set in a neon-drenched city and its shadowy sewer
+                    system, where players freely switch between a witty raccoon and a semi-aggressive possum on a
+                    chaotic trash-scavenging mission. </p>
+                <a class="button-link project-centered-button" href="Assets/Team%20Trash.rar" download="Team Trash.rar"><strong>DOWNLOAD GAME</strong></a>
+            </article>
+            <article class="project-card project-detail-card">
+                <div class="project-media-panel">
+                    <div class="project-concept-sections">
+                        <h4 class="project-concept-title">Core Systems</h4>
+
+                        <h4 class="project-concept-title">🦝 Character Switching</h4>
+                        <ul class="project-meta-sublist">
+                            <li>Instant switching between raccoon and possum</li>
+                            <li>Shared world state, individual health</li>
+                            <li>Different tactical strengths and playstyles</li>
+                        </ul>
+
+                        <h4 class="project-concept-title">🍕 Resource System: Trash = Ammo = Score</h4>
+                        <ul class="project-meta-sublist">
+                            <li>Collected trash increases highscore</li>
+                            <li>Trash can be thrown as projectiles but reduces score</li>
+                            <li>Health displayed as a pizza wheel (4 slices per character)</li>
+                        </ul>
+                        <p>This creates constant tension between greed and safety.</p>
+
+                        <h4 class="project-concept-title">🌆 Dynamic Threat Zones</h4>
+                        <ul class="project-meta-sublist">
+                            <li><strong>Sewer:</strong> Rats that hop and bite, toxic water, moving and spiked
+                                platforms</li>
+                            <li><strong>City:</strong> Robo-cats that chase players, laser eye attacks, environmental
+                                traps</li>
+                            <li><strong>Boss Encounter:</strong> Giant robo-cat</li>
+                        </ul>
+
+                        <h4 class="project-concept-title">🎭 Special Abilities</h4>
+                        <ul class="project-meta-sublist">
+                            <li><strong>Possum:</strong> Can enter a “Possum Motel”, emerges with possum babies, and
+                                babies function as distraction grenades with narrative consequence if abandoned</li>
+                            <li><strong>Raccoon:</strong> Can find a strawberry power-up, visually gains a strawberry
+                                hat, and unlocks temporary unlimited projectile spam without consuming trash</li>
+                        </ul>
+
+                        <h4 class="project-concept-title">Narrative Outcome System</h4>
+                        <p>The ending screen dynamically changes based on total trash collected, survival of characters,
+                            whether possum abandoned its babies, and the player’s greed-vs-survival balance. </p>
+                        <div class="team-trash-character-row">
+                            <img src="Assets/Images/TeamTrash/possum_idle.gif" alt="Team Trash possum idle animation"
+                                class="team-trash-character-gif">
+                            <img src="Assets/Images/TeamTrash/Pizza.png" alt="Team Trash pizza health icon"
+                                class="team-trash-character-gif">
+                            <img src="Assets/Images/TeamTrash/raccoon_idle.gif" alt="Team Trash raccoon idle animation"
+                                class="team-trash-character-gif">
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info-panel">
+                    <h4 class="project-concept-title">Project Details</h4>
+
+                    <ul class="project-meta-list">
+                        <li><strong>Engine:</strong> Unity (2D)</li>
+                        <li><strong>Language:</strong> C#</li>
+                        <li>
+                            <strong>Architecture:</strong>
+                            <ul class="project-meta-sublist">
+                                <li>Custom player controller</li>
+                                <li>Character state switching system (Possum/Raccoon)</li>
+                                <li>Health &amp; resource tracking system</li>
+                                <li>Enemy AI (patrol / chase / ranged attack)</li>
+                                <li>Animator Controller-driven animation states</li>
+                                <li>Event-triggered environmental hazards</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="project-concept-title">Art &amp; Design</h4>
+                    <ul class="project-meta-list">
+                        <li>All pixel art, sprites, animation frames and UI drawn by me in Aseprite</li>
+                        <li>Multiple tilesets (sewer &amp; city)</li>
+                        <li>Characters, enemies, decals</li>
+                        <li>UI elements and health system visuals</li>
+                        <li>Level design and pacing</li>
+                    </ul>
+                    <img src="Assets/Images/TeamTrash/possumMotel.gif" alt="Team Trash possum motel sequence"
+                        class="project-right-media">
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© <span id="year"></span> Katharina Rex</span>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
