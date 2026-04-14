@@ -9,6 +9,10 @@ lightboxElement.className = "image-lightbox";
 lightboxElement.hidden = true;
 lightboxElement.setAttribute("aria-hidden", "true");
 
+const lightboxCaptionElement = document.createElement("p");
+lightboxCaptionElement.className = "image-lightbox-caption";
+lightboxCaptionElement.textContent = "";
+
 const lightboxImageElement = document.createElement("img");
 lightboxImageElement.className = "image-lightbox-image";
 lightboxImageElement.alt = "";
@@ -19,13 +23,16 @@ lightboxCloseElement.type = "button";
 lightboxCloseElement.setAttribute("aria-label", "Close image preview");
 lightboxCloseElement.textContent = "✕";
 
+lightboxElement.appendChild(lightboxCaptionElement);
 lightboxElement.appendChild(lightboxImageElement);
 lightboxElement.appendChild(lightboxCloseElement);
 document.body.appendChild(lightboxElement);
 
 const openLightbox = (imageElement) => {
+	const caption = imageElement.alt || "Project image preview";
+	lightboxCaptionElement.textContent = caption;
 	lightboxImageElement.src = imageElement.currentSrc || imageElement.src;
-	lightboxImageElement.alt = imageElement.alt || "Project image preview";
+	lightboxImageElement.alt = caption;
 	lightboxElement.hidden = false;
 	lightboxElement.setAttribute("aria-hidden", "false");
 	document.body.style.overflow = "hidden";
