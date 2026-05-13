@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+:root{
+  /* Set this to the real pixel height of lythos.jpg (e.g. 1600px) so the page scrolls only as far as the image height */
+  --bg-height: 1200px; /* <-- replace with actual lythos.jpg height in px */
+  --paper-aspect: 0.75; /* width / height ratio for paper.png (update with actual ratio) */
+  --turquoise: #06424c;
+  --paper-max-width: 420px;
+  --paper-min-width: 260px;
+
+  /* paper padding values used to compute inner content area */
+  --paper-pad-vert: 44px;
+  --paper-pad-horz: 30px;
+}
+
+/* page background: do not repeat, keep centered, fill horizontally but preserve height */
+html, body {
+  /* limit page scroll exactly to the background image height;
+     set --bg-height to the pixel height of lythos.jpg */
+  height: var(--bg-height);
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('/artsyFartsy/artsyAssets/lythos.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  font-family:'Times New Roman', Times, serif;
+  overflow-x: hidden;
+}
+
+/* paper panel on the left with stacked text on top */
+.paper {
+  position: absolute;
+  left: 40px;
+  top: 80px;
+  width: clamp(var(--paper-min-width), 22vw, var(--paper-max-width));
+  /* keep the paper element proportional to the actual image using aspect-ratio (update --paper-aspect) */
+  aspect-ratio: var(--paper-aspect);
+  padding: var(--paper-pad-vert) var(--paper-pad-horz);  /* inner inset so text sits inside the visible paper */
+  box-sizing: border-box;
+  background-image: url('/artsyFartsy/artsyAssets/paper.png');
+  background-repeat: no-repeat;
+  background-size: contain;    /* ensure paper image fits the element while preserving aspect */
+  background-position: center center;
+  z-index: 2;
+  overflow: hidden;            /* STRICT: any overflow will be clipped — NO inner scrollbar */
+  display: block;
+}
+
+/* wrapper inside .paper for text; must fit exactly inside paper visible area */
+.paper__content {
+  /* exact inner area height/width after padding — no scrollbars, clipped to fit */
+  width: 100%;
+  height: calc(100% - (var(--paper-pad-vert) * 2));
+  color: var(--turquoise);
+  font-family: 'Uncial Antiqua', 'Times New Roman', serif;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.15), 0 2px 6px rgba(0,0,0,0.25);
+
+  /* ensure text never creates scroll; overflow is hidden by .paper */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.6rem;
+  /* make long words wrap rather than overflow */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  padding: 0; /* padding already handled on .paper */
+}
+
+/* spacing and sizes for headings and paragraph */
+/* Use responsive clamps so font scales with viewport but stays within the paper bounds.
+   Adjust the clamp min/max values if needed to visually fit your image. */
+.paper__content > * {
+  margin: 0;
+  line-height: 1.15;
+}
+
+/* Titles and paragraph sizing tuned to stay inside the paper box.
+   The user will ensure content length fits; these clamps prevent accidental overflow on smaller viewports. */
+.paper h1 {
+  font-size: clamp(1.2rem, 2.2vw, 1.9rem);
+  margin-bottom: 0.35rem;
+}
+.paper h2 {
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.paper p {
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  line-height: 1.35;
+  margin-bottom: 0;
+}
+
+/* responsive: move paper above content on small screens and scale sensibly */
+@media (max-width: 800px) {
+  .paper {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    aspect-ratio: var(--paper-aspect);
+  }
+}
+
+/* Bubbles: floating soap-bubble effect spawned while scrolling down */
+.bubble {
+  position: fixed;
+  bottom: -220px;                 /* start below viewport */
+  pointer-events: none;
+  will-change: transform, opacity, left;
+  opacity: 0;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+  z-index: 50;
+  transform-origin: center;
+  animation: bubbleRise var(--duration, 4800ms) cubic-bezier(.18,.85,.35,1) forwards;
+}
+
+/* rise from bottom to above viewport and fade out; horizontal drift uses --drift */
+@keyframes bubbleRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(var(--scale,1));
+    opacity: 0;
+  }
+  6% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(calc(-1 * (100vh + 300px))) translateX(var(--drift, 0px)) scale(var(--scale,1));
+    opacity: 0;
+  }
+}
+
+/* small visual tweak for retina/sharpness */
+.bubble img { display: block; width: 100%; height: auto; }
+
+/* optional: reduce spawn rate near top to avoid continuous spawns */
