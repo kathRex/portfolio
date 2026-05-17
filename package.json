@@ -1,4 +1,7 @@
 {
+  "scripts": {
+      "start": "node ./artsyFartsy/artsyAssets/js/server.js"
+  },
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",

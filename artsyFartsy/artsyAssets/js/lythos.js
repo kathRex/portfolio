@@ -71,7 +71,7 @@ window.onload = loadCharacterData;
 //---------------------------------------------------------
 //Render editable fields
 //---------------------------------------------------------
-//elementID: ID of HTML tag | value: DB data | fieldName: DB property name
+//elementID: ID of HTML tag | value: DB data | fieldName: DB property name to write the updated value back
 function renderEditableField(elementID, value, fieldName) {
   //Get the DB data and fill in value
   const displayElement = document.getElementById(elementID);
