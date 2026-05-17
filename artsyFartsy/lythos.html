@@ -1,22 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lythos</title>
-      <link rel="stylesheet" href="/artsyFartsy/artsyAssets/css/lythos.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/artsyFartsy/artsyAssets/css/lythos.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navigation">
+          <li>
+            <a class="nav-links" href="/artsyFartsy/batcave.html">HOME</a>
+          </li>
+          <li>
+            <a class="nav-links" href="/artsyFartsy/batcave.html">LYTHOS</a>
+          </li>
+          <li>
+            <a class="nav-links" href="/artsyFartsy/batcave.html">JOURNAL</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <aside class="paper">
-      <div class="paper__content">
-        <h1>LYTHOS:</h1>
-        <h2>THE COASTAL TRADE CITY</h2>
-        <p>This is where the magic happens (but not today)</p>
-      </div>
-    </aside>
+    <section class="character-select">
+      <img
+        class="char-img"
+        src="/artsyFartsy/artsyAssets/Cavalluccia.jpg"
+        alt="Cavalluccia"
+      />
 
-    <!-- bubble spawner -->
+      <img
+        class="char-img"
+        src="/artsyFartsy/artsyAssets/zess.png"
+        alt="Wick"
+      />
+      <img
+        class="char-img"
+        src="/artsyFartsy/artsyAssets/Wick.png"
+        alt="Wick"
+      />
+    </section>
+    <div class="section-separator" aria-hidden="true"><span></span></div>
+    <main class="main-window">
+      <section class="upper">
+        <div class="base-info">
+          <h1 class="name" id="name">Name</h1>
+
+          <p class="main-info" id="background">Background</p>
+          <p class="main-info" id="species">Species</p>
+          <p class="main-info" id="subclass">Subclass</p>
+          <p class="main-info" id="class">Class</p>
+        </div>
+        <div class="vital-stats">
+          <div class="stat-box">
+            <label>LEVEL</label>
+            <div id="edit-lvl" class="stat-value">0</div>
+            <br />
+          </div>
+          <div class="stat-box">
+            <label>ARMOR CLASS</label>
+            <div id="edit-ac" class="stat-value">0</div>
+            <br />
+          </div>
+          <div class="stat-box">
+            <label>HP</label>
+            <div id="edit-hp" class="stat-value">0 / 0</div>
+            <br />
+          </div>
+          <div class="stat-box">
+            <label>HIT DICE</label>
+            <div id="edit-hitdie" class="stat-value">0</div>
+            <br />
+          </div>
+          <div class="stat-box">
+            <label>CONDITIONS & EFFECTS</label>
+            <div id="edit-conditions" class="stat-value">-</div>
+            <br />
+          </div>
+          <div class="stat-box">
+            <label>SPEED</label>
+            <div id="edit-speed" class="stat-value">0</div>
+          </div>
+        </div>
+      </section>
+      <section class="middle-window">
+        <div class="char-stats">
+          <div class="char-stat-box">
+            <div id="edit-str_mod" class="char-stat-mod">0</div>
+            <label>STR</label>
+            <div id="edit-str" class="char-stat-value">0</div>
+          </div>
+          <div class="char-stat-box">
+            <div id="edit-dex_mod" class="char-stat-mod">0</div>
+            <label>DEX</label>
+            <div id="edit-dex" class="char-stat-value">0</div>
+          </div>
+          <div class="char-stat-box">
+            <div id="edit-con_mod" class="char-stat-mod">0</div>
+            <label>CON</label>
+            <div id="edit-con" class="char-stat-value">0</div>
+          </div>
+          <div class="char-stat-box">
+            <div id="edit-int_mod" class="char-stat-mod">0</div>
+            <label>INT</label>
+            <div id="edit-int" class="char-stat-value">0</div>
+          </div>
+          <div class="char-stat-box">
+            <div id="edit-wis_mod" class="char-stat-mod">0</div>
+            <label>WIS</label>
+            <div id="edit-wis" class="char-stat-value">0</div>
+          </div>
+          <div class="char-stat-box">
+            <div id="edit-cha_mod" class="char-stat-mod">0</div>
+            <label>CHA</label>
+            <div id="edit-cha" class="char-stat-value">0</div>
+          </div>
+        </div>
+        <div class="weapons-cantrips">
+          <h3>Dagger</h3>
+        </div>
+        <div class="class-features">
+          <label>Class Features</label>
+          <ul id="class-features-ul" class="class-features-ul"></ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <button id="login-btn" class="login-btn" aria-label="Login">
+        <img src="/artsyFartsy/artsyAssets/ArrowIcon.png" alt="" />
+      </button>
+    </footer>
+
     <script src="/artsyFartsy/artsyAssets/js/lythos.js"></script>
-</body>
+  </body>
 </html>
+
+<!-- mongodb+srv://rexiisaur:ysm1hrsIslm5@batcave-storage.ita7ys4.mongodb.net/?appName=batcave-storage -->

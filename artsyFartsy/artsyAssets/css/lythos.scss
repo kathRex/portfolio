@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap");
+
+//Reset
+*,
+*::before,
+*after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+// ==========================================
+//VARIABLES
+// ==========================================
+$primary: #f0c68f;
+$accent: #deccb1;
+$secondary: #f7e0c2;
+$frames: rgba(153, 50, 204, 0.603);
+$window: #1a1b20e3;
+// ==========================================
+// Global Body Styles
+// ==========================================
+body {
+  height: 1200px; //bg img height
+
+  background-image: url("/artsyFartsy/artsyAssets/lythos.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  font-family: "Times New Roman", Times, serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+// ==========================================
+// Navigation
+// ==========================================
+nav {
+  background-color: $window;
+  border: 1px solid $primary;
+  border-left: none;
+  border-right: none;
+  padding: 1.1rem;
+  backdrop-filter: blur(0.7px);
+  margin-bottom: 2rem;
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.nav-links {
+  color: $primary;
+  text-shadow: 2px 2px 6px rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 1s ease;
+  transition: font-size 1s ease;
+  &:hover {
+    color: $accent;
+    font-size: 1.3rem;
+  }
+}
+// ==========================================
+// CHARACTER SELECT
+// ==========================================
+.character-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+.char-img {
+  object-fit: cover;
+  border-radius: 50%;
+  max-height: 170px;
+  max-width: auto;
+  border: 1.5px solid $primary;
+  box-shadow: 2px 2px 7px $window;
+  transition: box-shadow 1s ease;
+
+  &:hover {
+    box-shadow: 3px 3px 7px $primary;
+  }
+}
+
+// ==========================================
+// MAIN WINDOW (Character Sheet)
+// ==========================================
+.main-window {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-direction: column;
+  max-width: 75%;
+  margin: 0 auto;
+  background-color: $window;
+  border: 1px solid $primary;
+  border-radius: 10px;
+  color: $primary;
+  backdrop-filter: blur(0.7px);
+}
+
+.upper {
+  // border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+  padding: 1rem;
+}
+.base-info {
+  //border: 1px solid rgb(0, 255, 55);
+  font-size: 1.2rem;
+  .name {
+    padding-bottom: 1rem;
+    color: $secondary;
+  }
+}
+.main-info {
+  padding: 0.4rem 0;
+}
+//Contains all main stats row
+.vital-stats {
+  //border: 1px solid yellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3rem;
+}
+//Each Stat label + value container
+.stat-box {
+  align-items: center;
+  text-align: center;
+  label {
+    font-size: 1.3rem;
+  }
+}
+//Each small editable main stat value box design
+.stat-value {
+  font-size: 1.2rem;
+  color: $secondary;
+  margin-top: 0.7rem;
+  padding: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.062);
+  border: 1px solid $accent;
+  border-radius: 10px;
+}
+
+// ==========================================
+// Middle Window
+// ==========================================
+.middle-window {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 7rem;
+  border-top: 1px solid $primary;
+}
+//All stat boxes column
+.char-stats {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+//Each small box around stat
+.char-stat-box {
+  //border: 1px solid $secondary;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to right, transparent, $frames) 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+}
+//Stat Modificators (STR, DEX, CON, INT, WIS, CHA)
+.char-stat-mod {
+  color: $secondary;
+  padding: 0.4rem 0.7rem;
+  background-color: rgba(255, 255, 255, 0.062);
+  border: 2px solid $primary;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+//Stat Values (STR, DEX, CON, INT, WIS, CHA)
+.char-stat-value {
+  color: $secondary;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+.weapons-cantrips {
+  color: $secondary;
+}
+// ==========================================
+// Responsiveness
+// ==========================================
+@media (max-width: 768px) {
+  .main-window {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  .char-img {
+    max-height: 120px;
+    max-width: auto;
+  }
+  .upper {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem 0;
+  }
+  .vital-stats {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 1rem;
+  }
+  .middle-window {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem;
+  }
+  .char-stats {
+    width: 50%;
+    align-items: stretch;
+  }
+}
+// ==========================================
+// FOOTER
+// ==========================================
+footer {
+  position: fixed;
+  text-align: end;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.login-btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+// ==========================================
+// SECTION SEPARATOR
+// ==========================================
+.section-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 2rem 0;
+
+  //Left Line
+  &::before {
+    content: "";
+    height: 1px;
+    flex: 1;
+    // Fades out to transparent on the far left
+    background: linear-gradient(to right, transparent, rgba($primary, 0.5));
+  }
+  //Right Line
+  &::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    // Fades out to transparent on the far right
+    background: linear-gradient(to left, transparent, rgba($primary, 0.5));
+  }
+  //Diamond in the Center(Rotates a square 45 degrees to make a diamond)
+  span {
+    width: 7px;
+    height: 7px;
+    border: 1px solid $primary;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+}
+// ==========================================
+// BUBBLE SCROLL EFFECT
+// ==========================================
+.bubble {
+  position: fixed;
+  bottom: -220px; // start below viewport
+  pointer-events: none;
+  will-change: transform, opacity, left;
+  opacity: 0;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  z-index: 50;
+  transform-origin: center;
+  animation: bubbleRise var(--duration, 4800ms)
+    cubic-bezier(0.18, 0.85, 0.35, 1) forwards;
+}
+
+.bubble img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+//Rise from bottom to above viewport and fade out
+@keyframes bubbleRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(var(--scale, 1));
+    opacity: 0;
+  }
+  6% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(calc(-1 * (100vh + 300px)))
+      translateX(var(--drift, 0px)) scale(var(--scale, 1)); //horizontal drift uses --drift
+    opacity: 0;
+  }
+}

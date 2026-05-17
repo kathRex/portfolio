@@ -1,37 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 body {
-  background-color: rgb(24, 24, 24);
+  background-image: url("/artsyFartsy/artsyAssets/ornamentBg2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  margin: 0;
-  padding: 0;
   height: 100%;
   overflow: hidden;
   font-family: "UnifrakturMaguntia", serif;
   font-weight: 50;
   color: #f9fff9;
 }
-body header {
+
+header {
   text-align: center;
-  padding-top: 2rem;
+  padding: 4rem;
 }
-body header h1 {
+header .title {
   font-size: 3rem;
   text-shadow: 3px 3px 6px rgb(0, 0, 0);
 }
-body .content {
+
+.content {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 3.2rem;
-  max-height: 400px;
+  margin-top: 1rem;
 }
-body .content nav {
+
+.nav {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  background-image: url("/artsyFartsy/artsyAssets/eyes.gif");
   padding: 3rem;
   margin-right: 3rem;
   border: 1px solid rgba(255, 255, 255, 0.149);
@@ -40,7 +46,7 @@ body .content nav {
   overflow: hidden;
   z-index: 1;
 }
-body .content nav::before {
+.nav::before {
   content: "";
   position: absolute;
   top: 0;
@@ -53,50 +59,86 @@ body .content nav::before {
   background-position: center;
   transition: transform 0.7s ease-out;
 }
-body .content nav:has(a:hover)::before {
+.nav:has(a:hover)::before {
   transform: scale(1.2);
   transition: transform 2.5s ease-in-out;
 }
-body .content nav a {
-  padding: 0.7rem;
-  border-radius: 5px;
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  gap: 3rem;
+}
+
+.nav-link {
   font-size: 1.5rem;
   color: rgba(255, 253, 246, 0.922);
   text-shadow: 3px 3px 6px rgb(0, 0, 0);
   text-decoration: none;
   transition: color 0.5s ease;
 }
-body .content nav a:hover {
+.nav-link:hover {
   color: rgb(255, 126, 126);
 }
-body .content main {
-  background-color: rgba(0, 0, 0, 0.644);
-  padding: 2rem;
-  padding-top: 1rem;
+
+.center-window {
+  background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.149);
+  padding: 3rem;
+  max-width: 50%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  backdrop-filter: blur(1px);
 }
-body .content main .window {
-  display: flex;
-  justify-content: flex-end;
-}
-body .content main .window .alucard {
+.center-window img {
   max-height: 300px;
 }
-body footer {
+
+footer {
   position: fixed;
   text-align: center;
   width: 100%;
   bottom: 0;
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.149);
   background-color: rgba(0, 0, 0, 0.132);
 }
-body footer a {
+footer a {
   color: rgb(255, 126, 126);
   font-weight: bold;
   text-decoration: none;
   transition: color 0.4s ease;
 }
-body footer a:hover {
+footer a:hover {
   color: rgba(255, 253, 246, 0.922);
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    gap: 1.2rem;
+    padding: 0 1rem;
+  }
+  .nav {
+    margin-right: 0;
+    width: 100%;
+    padding: 1.5rem;
+    justify-content: center;
+  }
+  .nav-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .center-window {
+    width: 100%;
+    max-height: 450px;
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=batcave.css.map */
