@@ -3,12 +3,17 @@
 //---------------------------------------------------------
 
 //Import
-const express = require("express"); //Framework for networking
-const mongoose = require("mongoose");
-const cors = require("cors"); //"Cross-Origin Resource Sharing" allow access so it can accept frontend requests
-const path = require("path");
-require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
-const Character = require("./character");
+import express from "express"; //Framework for networking
+import mongoose from "mongoose";
+import cors from "cors"; //"Cross-Origin Resource Sharing" allow access so it can accept frontend requests
+import path from "path";
+import dotenv from "dotenv";
+import { fileURLToPath } from "url";
+import Character from "./character.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 
 //Create server instance
 const app = express();

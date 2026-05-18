@@ -4,7 +4,7 @@
 //Import mongoose into js
 //Built in node.js function, looks into node.modules folder and finds Mongoose library
 //Stores entire library in a variable
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 //mongoose.Schema: access constructor function from library, creating an object
 const characterSchema = new mongoose.Schema({
   name: String,
@@ -151,4 +151,4 @@ const characterSchema = new mongoose.Schema({
 //What I attach to module.exports is what other files receive when they do f.e. require("./character")
 //Compiles Schema into a Model
 //"Character" = Used by Mongoose to find collection in DB
-module.exports = mongoose.model("Character", characterSchema);
+export default mongoose.model("Character", characterSchema);

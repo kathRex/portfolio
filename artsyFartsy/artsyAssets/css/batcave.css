@@ -85,6 +85,8 @@ header .title {
 }
 
 .center-window {
+  display: flex;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.149);
   padding: 3rem;
@@ -138,7 +140,6 @@ footer a:hover {
   }
   .center-window {
     width: 100%;
-    max-height: 450px;
     max-width: 100%;
   }
 }/*# sourceMappingURL=batcave.css.map */

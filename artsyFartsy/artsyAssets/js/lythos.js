@@ -61,6 +61,7 @@ async function loadCharacterData() {
     }
 
     console.log("Data loaded", data);
+    
   } catch (error) {
     console.error("API fetch error", error);
   }
@@ -187,8 +188,8 @@ async function saveFieldUpdate(fieldName, newValue, elementID) {
   let lastY = window.scrollY;
   let lastSpawn = 0;
   const cooldown = 350; // ms between spawn events
-  const minSize = 50; // px
-  const maxSize = 170; // px
+  const minSize = 50; 
+  const maxSize = 170; 
 
   function randInt(min, max) {
     return Math.floor(min + Math.random() * (max - min + 1));

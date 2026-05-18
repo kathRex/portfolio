@@ -3,12 +3,17 @@
 //Runs once to clear the DB and inserts example seed
 //---------------------------------------------------------
 //Import path, mongoose and schema
-const path = require("path");
-const mongoose = require("mongoose");
-const Character = require("./character");
-//Find & import .env in path (__dirname is a variable that knows where current script is sitting)
+import path from "path";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import { fileURLToPath } from "url";
+import Character from "./character.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 //path.resove: Go up two levels from the folder of this script and look for .env file
-require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
+//Find & import .env in path (__dirname is a variable that knows where current script is sitting)
+dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 
 const seedData = async () => {
   try {
