@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katharina Rex</title>
+    <!-- Preconnect-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts request -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/scss/main.css" />
+    <link rel="stylesheet" href="/scss/header-footer.css" />
+    <link rel="stylesheet" href="/scss/project-pages.css" />
+    <link rel="stylesheet" href="/scss/decoration.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navbar">
+          <li class="KR">KR</li>
+          <li><a class="nav-link" href="/index.html">HOME</a></li>
+          <li><a class="nav-link" href="/portfolio.html">PORTFOLIO</a></li>
+          <li><a class="nav-link" href="/contact.html">CONTACT</a></li>
+          <li class="cv-download">
+            DOWNLOAD CV <span class="accent-pink"> ↓</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="project-case">
+      <aside class="project-sidebar">
+        <a href="../portfolio.html" class="back-link"
+          ><span class="accent-pink">← </span> Back to projects</a
+        >
+
+        <p class="section-label">
+          <span class="accent-pink">// </span>
+          <span class="section-title"> Project Overview</span>
+        </p>
+
+        <div class="project-detail-list">
+          <div class="project-detail">
+            <img
+              src="../assets/images/icons/icon_status.webp"
+              alt=""
+              class="detail-icon"
+            />
+            <div>
+              <h3>Status</h3>
+              <p>Completed University Project</p>
+            </div>
+          </div>
+
+          <div class="project-detail">
+            <img
+              src="../assets/images/icons/icon_role.webp"
+              alt=""
+              class="detail-icon"
+            />
+            <div>
+              <h3>Role</h3>
+              <p>
+                Co-Developer: Software Development, Interaction Design, Sensor
+                Calibration, Sound Design Logic
+              </p>
+            </div>
+          </div>
+
+          <div class="project-detail">
+            <img
+              src="../assets/images/icons/icon_techstack.webp"
+              alt=""
+              class="detail-icon"
+            />
+            <div>
+              <h3>Tech Stack / Language</h3>
+              <p>Micro:bit, JavaScript, MakeCode</p>
+            </div>
+          </div>
+          <div class="project-detail">
+            <img
+              src="../assets/images/icons/icon_methodology.webp"
+              alt=""
+              class="detail-icon"
+            />
+            <div>
+              <h3>PROJECT INFORMATION</h3>
+              <ul>
+                <li>Type: Interactive Cosplay Prop</li>
+                <li>Input: Motion / Accelerometer Data</li>
+                <li>Output: Procedural Sound</li>
+                <li>Build: EVA Foam Sword with Embedded Electronics</li>
+                <li>Use Case: Cosplay, Performance, Interactive Props</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-detail">
+            <img
+              src="../assets/images/icons/icon_themes.webp"
+              alt=""
+              class="detail-icon"
+            />
+            <div>
+              <h3>Key Themes</h3>
+              <ul>
+                <li>Physical Computing</li>
+                <li>Motion Interaction</li>
+                <li>Procedural Sound</li>
+                <li>Cosplay Prop Design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tech-tags">
+          <span
+            ><img
+              class="skill-img"
+              src="/assets/images/icons/icon_microbit.webp"
+              alt="Micro:bit Icon"
+            />Micro:bit</span
+          >
+          <span
+            ><img
+              class="skill-img"
+              src="/assets/images/icons/icon_js.webp"
+              alt="JavaScript Icon"
+            />JavaScript</span
+          >
+        </div>
+      </aside>
+
+      <section class="project-content">
+        <section class="project-carousel">
+          <button
+            class="carousel-button carousel-button--left"
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
+
+          <img
+            src="../assets/images/swordAnim.gif"
+            alt="3D Model of the Sound Sword"
+            class="carousel-image is-active"
+          />
+          <img
+            src="../assets/images/raveSlayer/sword.jpg"
+            alt="Sound Sword Prop Image"
+            class="carousel-image"
+          />
+          <img
+            src="../assets/images/raveSlayer/blueprint.jpg"
+            alt="Sound Sword Concept Blueprint Image"
+            class="carousel-image"
+          />
+
+          <button
+            class="carousel-button carousel-button--right"
+            aria-label="Next image"
+          >
+            ›
+          </button>
+        </section>
+
+        <div class="carousel-dots" aria-label="Image carousel navigation"></div>
+
+        <section class="project-hero">
+          <div>
+            <p class="project-type">
+              <span class="accent-pink">// </span>Creative Coding
+            </p>
+            <h1><span class="accent-white">Sound Sword</span></h1>
+            <p class="project-tags">
+              Hardware / Sensor Data / Motion Input / Real-Time Audio
+              <span class="accent-white">· 2023</span>
+            </p>
+          </div>
+        </section>
+
+        <section class="project-description">
+          <p>
+            Sound Sword is a motion-reactive cosplay prop that generates dynamic
+            sound effects based on real sword movements. Using a Micro:bit
+            controller and its built-in accelerometer, the system detects swings
+            and translates them into synthesized audio in real time.
+          </p>
+          <p>
+            All audio is generated directly on the microcontroller using
+            waveform synthesis. Different movement directions trigger different
+            sound expressions and create a responsive interaction between
+            physical performance and sound.
+          </p>
+        </section>
+
+        <section class="project-sections">
+          <article class="text-block">
+            <h2><span class="accent-blue">// </span>Interaction System</h2>
+            <h3>Motion-Reactive Sound Design</h3>
+            <p>
+              The core interaction is based on the Micro:bit’s accelerometer,
+              which continuously measures movement along the X, Y and Z axes. By
+              repeatedly performing sword swings and analyzing the sensor output
+              through a debugging interface, movement thresholds were calibrated
+              for different swing directions. <br />When the sensor values fall
+              within these calibrated ranges, the program triggers a matching
+              sound expression. This allowed the sword to react differently
+              depending on how it was moved, turning physical gestures into
+              audio feedback.
+            </p>
+            <br />
+            <h3>Core Features</h3>
+            <ul>
+              <li>Motion detection through accelerometer data</li>
+              <li>Calibrated thresholds for multiple swing directions</li>
+              <li>Real-time sound response based on sword movement</li>
+              <li>
+                Procedural audio generated directly on the microcontroller
+              </li>
+              <li>
+                Interaction designed for cosplay, performance and playful sword
+                fights
+              </li>
+            </ul>
+          </article>
+
+          <article class="text-block">
+            <h2>
+              <span class="accent-blue">// </span>Technical Implementation
+            </h2>
+            <h3>Embedded System & Physical Build</h3>
+            <p>
+              The physical prop was build by my partner, Estelle Schenker, and
+              combines a handcrafted EVA foam sword with a removable
+              Micro:bit-based electronics setup. The controller, speaker,
+              battery pack and wiring were integrated into the prop while
+              keeping the system accessible for recalibration and further code
+              adjustments. <br />
+              For better performance the project did not use prerecorded sound
+              files and the audio had to be designed through mathematical
+              waveform parameters.
+            </p>
+            <br />
+            <h3>Technical Highlights</h3>
+            <ul>
+              <li>Micro:bit embedded system with accelerometer input</li>
+              <li>JavaScript development in the MakeCode environment</li>
+              <li>Sensor data processing for movement classification</li>
+              <li>EVA foam prop construction and electronics integration</li>
+              <li>Removable controller setup for iteration and testing</li>
+            </ul>
+          </article>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <span>© <span id="year"></span> Katharina Rex</span>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/image-carousel.js"></script>
+  </body>
+</html>

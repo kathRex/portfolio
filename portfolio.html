@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katharina Rex</title>
+    <!-- Preconnect-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts request -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="scss/main.css" />
+    <link rel="stylesheet" href="scss/header-footer.css" />
+    <link rel="stylesheet" href="scss/decoration.css" />
+    <link rel="stylesheet" href="scss/portfolio.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navbar">
+          <li class="KR">KR</li>
+          <li><a class="nav-link" href="index.html">HOME</a></li>
+          <li><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+          <li><a class="nav-link" href="contact.html">CONTACT</a></li>
+          <li class="cv-download">
+            DOWNLOAD CV <span class="accent-pink"> ↓</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="portfolio-page">
+      <section class="portfolio-intro">
+        <p class="hello">// ARCHIV<span class="accent-pink">E</span></p>
+        <h1>SELECTED WORK</h1>
+        <p class="portfolio-text">
+          Selected projects across game development, interaction design and web
+          tooling.
+        </p>
+
+        <div class="project-list">
+          <button
+            type="button"
+            data-project-key="projects/complicity.html"
+            class="project-row is-active"
+          >
+            <span class="project-number">01</span>
+
+            <span class="project-info">
+              <strong>Complicity</strong>
+              <small
+                >A game-based study of how role perspective shapes awareness and
+                understanding of exploitative design practices.
+              </small>
+            </span>
+
+            <span class="project-year">2026</span>
+            <span class="project-type">UX / Game Study</span>
+            <span class="project-arrow">›</span>
+          </button>
+
+          <button
+            type="button"
+            data-project-key="projects/mariokart.html"
+            class="project-row"
+          >
+            <span class="project-number">02</span>
+
+            <span class="project-info">
+              <strong>Mario Kart Build Optimizer</strong>
+              <small
+                >Ontology-powered tool for build decisions and track condition
+                analysis in Mario Kart 8 Deluxe.</small
+              >
+            </span>
+
+            <span class="project-year">2025</span>
+            <span class="project-type">Data / Tools</span>
+            <span class="project-arrow">›</span>
+          </button>
+
+          <button
+            type="button"
+            data-project-key="projects/teamtrash.html"
+            class="project-row"
+          >
+            <span class="project-number">03</span>
+
+            <span class="project-info">
+              <strong>Team Trash</strong>
+              <small
+                >2D Unity jump &amp; run with switchable raccoon and possum
+                characters.</small
+              >
+            </span>
+
+            <span class="project-year">2025</span>
+            <span class="project-type">Game / Design</span>
+            <span class="project-arrow">›</span>
+          </button>
+
+          <button
+            type="button"
+            data-project-key="projects/chilled.html"
+            class="project-row"
+          >
+            <span class="project-number">04</span>
+
+            <span class="project-info">
+              <strong>Chilled to the Bone</strong>
+              <small
+                >Story-driven VR horror prototype with environmental narrative
+                and world exploration.</small
+              >
+            </span>
+
+            <span class="project-year">2024</span>
+            <span class="project-type">Immersive VR</span>
+            <span class="project-arrow">›</span>
+          </button>
+
+          <button
+            type="button"
+            data-project-key="projects/soundsword.html"
+            class="project-row"
+          >
+            <span class="project-number">05</span>
+
+            <span class="project-info">
+              <strong>Sound Sword</strong>
+              <small
+                >Interactive micro:bit sword that detects acceleration and plays
+                different sounds based on how the device is swung.</small
+              >
+            </span>
+
+            <span class="project-year">2023</span>
+            <span class="project-type">Motion Input</span>
+            <span class="project-arrow">›</span>
+          </button>
+        </div>
+      </section>
+
+      <aside class="project-preview">
+        <div class="preview-frame">
+          <div class="preview-header">
+            <p><span class="accent-pink">// </span> Preview</p>
+            <p>01 / 06</p>
+          </div>
+
+          <img
+            src="assets/images/complicity.jpg"
+            alt="Complicity project preview"
+          />
+
+          <h2>Complicity</h2>
+
+          <p class="preview-meta">
+            UX / Game / Research <span class="accent-white">· 2026</span>
+          </p>
+
+          <p class="preview-description">
+            A game-based UX study examining how role perspective shapes users’
+            awareness and understanding of dark patterns.
+          </p>
+
+          <div class="tech-tags">
+            <span>
+              <img
+                class="skill-img"
+                src="assets/images/icons/icon_unity.webp"
+                alt="Unity Icon"
+              />Unity</span
+            >
+            <span
+              ><img
+                class="skill-img"
+                src="assets/images/icons/icon_c.webp"
+                alt="C# Icon"
+              />C#</span
+            >
+            <span
+              ><img
+                class="skill-img"
+                src="assets/images/icons/icon_figma.webp"
+                alt="Figma Icon"
+              />Figma</span
+            >
+            <span
+              ><img
+                class="skill-img"
+                src="assets/images/icons/icon_blender.webp"
+                alt="Blender Icon"
+              />Blender</span
+            >
+          </div>
+
+          <a href="projects/complicity.html" class="project-button">
+            View Project →
+          </a>
+        </div>
+      </aside>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <span>© <span id="year"></span> Katharina Rex</span>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

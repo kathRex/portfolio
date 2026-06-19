@@ -1,78 +1,218 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Katharina Rex — Home</title>
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
-
-<body class="home-page">
-    <header class="top-nav">
-        <nav class="nav-center" aria-label="Main navigation">
-            <a class="nav-link is-active" href="index.html">Home</a>
-            <a class="nav-link" href="projects.html">Portfolio</a>
-            <a class="nav-link" href="contact.html">Contact</a>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katharina Rex</title>
+    <!-- Preconnect-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts request -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="scss/main.css" />
+    <link rel="stylesheet" href="scss/header-footer.css" />
+    <link rel="stylesheet" href="scss/home.css" />
+    <link rel="stylesheet" href="scss/decoration.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navbar">
+          <li class="KR">KR</li>
+          <li><a class="nav-link" href="index.html">HOME</a></li>
+          <li><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+          <li><a class="nav-link" href="contact.html">CONTACT</a></li>
+          <li class="cv-download">
+            DOWNLOAD CV <span class="accent-pink"> ↓</span>
+          </li>
+        </ul>
+      </nav>
     </header>
-
-    <main class="home-main">
-        <section class="container home-name" aria-label="Name heading">
-            <h1>KATHARINA REX</h1>
-        </section>
-        <section class="section container" id="about" aria-labelledby="about-title">
-            <h2 id="about-title">Digital Media Graduate<br>Interactive Systems, Web Dev & Games</h1>
-            <p class="home-about-copy">
-                I design and build interactive digital experiences, focusing on clean interfaces and intuitive user flows.
-            </p>
-        </section>
-
-        <div class="section-separator" aria-hidden="true"><span></span></div>
-
-        <div class="section-label" aria-hidden="true"><span>FEATURED PROJECTS</span></div>
-
-        <section class="section container" id="featured-projects" aria-labelledby="projects-title">
-            <h2 id="projects-title" class="visually-hidden">Featured Projects</h2>
-
-            <div class="projects-grid">
-
-                <article class="project-card">
-                    <a href="complicity.html" class="project-card-link" aria-label="Open Complicity project page">
-                        <img src="assets/images/card1Img.jpg" alt="Complicity project preview" class="project-media">
-                    </a>
-                    <div class="project-content">
-                        <h3>Complicity (Bachelor Thesis)</h3>
-                        <p>A game-based UX study examining how role perspective shapes users’ awareness and understanding of dark patterns.
-                        </p>
-
-                    </div>
-                </article>
-
-
-                <article class="project-card">
-                    <a href="teamTrash.html" class="project-card-link" aria-label="Open Team Trash project page">
-                        <img src="assets/images/teamTrash/Startscreen.gif" alt="Team Trash start screen"
-                            class="project-media">
-                    </a>
-                    <div class="project-content">
-                        <h3><a href="teamTrash.html" class="project-card-link">Team Trash</a></h3>
-                        <p>2D Unity jump &amp; run where players switch between raccoon and possum to survive and
-                            scavenge.</p>
-
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <span>© <span id="year"></span> Katharina Rex</span>
+    <main>
+      <section class="hero-banner">
+        <div class="hero-left">
+          <p>// HELL<span class="accent-pink">0</span> !</p>
+          <h1 class="name">KATHARINA<br />REX</h1>
+          <h3 class="role">
+            <span class="accent-pink">DIGITAL MEDIA GRADUATE</span><br />
+            JUNIOR WEB DEVELOPER
+          </h3>
+          <p class="description">
+            I build interactive web experiences <br />and digital products that
+            are intuitive, <br />accessible and user-focused.
+          </p>
+          <div class="hero-buttons">
+            <button class="projects-btn">
+              <a href="portfolio.html">VIEW PROJECTS →</a>
+            </button>
+            <button class="contact-btn">
+              <a href="contact.html">GET IN TOUCH →</a>
+            </button>
+          </div>
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
-</body>
+        <div class="hero-right">
+          <img
+            class="hero-portrait"
+            src="assets/images/portrait.webp"
+            alt="portrait"
+          />
+          <div class="base-info">
+            <p>
+              BASED IN<br />
+              <span class="accent-pink">BELIGUM</span>
+            </p>
+            <p>
+              EDUCATION<br />
+              <span class="accent-blue">DIGITAL MEDIA B.Sc.</span>
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <section class="skill-section">
+        <p class="section-title">
+          <span class="accent-pink">/ </span>TECH STACK
+        </p>
+        <div class="skills">
+          <div class="skill">
+            <img
+              class="skill-img"
+              src="assets/images/icons/icon_c.webp"
+              alt="C# Icon"
+            />
+            <p>C#</p>
+          </div>
+          <div class="skill">
+            <img
+              class="skill-img"
+              src="assets/images/icons/icon_html.webp"
+              alt="HTML 5 Icon"
+            />
+            <p>HTML5</p>
+          </div>
+          <div class="skill">
+            <img
+              class="skill-img"
+              src="assets/images/icons/icon_css.webp"
+              alt="CSS Icon"
+            />
+            <p>CSS</p>
+          </div>
+          <div class="skill">
+            <img
+              class="skill-img"
+              src="assets/images/icons/icon_js.webp"
+              alt="JS Icon"
+            />
+            <p>JavaScript</p>
+          </div>
+          <div class="skill">
+            <img
+              class="skill-img"
+              src="assets/images/icons/icon_unity.webp"
+              alt="Unity Icon"
+            />
+            <p>Unity</p>
+          </div>
+          <div class="skill">
+            <img
+              class="skill-img"
+              src="assets/images/icons/icon_git.webp"
+              alt="Git Icon"
+            />
+            <p>Git</p>
+          </div>
+          <div class="skill">
+            <img
+              class="skill-img"
+              src="assets/images/icons/icon_figma.webp"
+              alt="Figma Icon"
+            />
+            <p>Figma</p>
+          </div>
+          <div class="skill">
+            <img
+              class="skill-img"
+              src="assets/images/icons/icon_blender.webp"
+              alt="Blender Icon"
+            />
+            <p>Blender</p>
+          </div>
+        </div>
+      </section>
+      <section class="featured-projects-tab">
+        <p class="section-title">
+          <span class="accent-pink">/ </span>FEATURED PROJECTS
+        </p>
+        <div class="featured-projects">
+          <a href="projects/complicity.html" class="project-card">
+            <img
+              class="project-card-img"
+              src="assets/images/card1Img.jpg"
+              alt="Complicity Image"
+            />
+            <div class="project-card-right">
+              <h4>Complicity (Bachelor Thesis)</h4>
+              <p>
+                A game-based UX study examining how role perspective shapes
+                users' awareness and understanding of dark patterns.
+              </p>
+              <div class="project-related-skills">
+                <p class="project-skill">Unity</p>
+                <p class="project-skill">C#</p>
+                <p class="project-skill">Figma</p>
+              </div>
+            </div>
+          </a>
+          <a href="projects/mariokart.html" class="project-card">
+            <img
+              class="project-card-img"
+              src="assets/images/card2Img.jpg"
+              alt="Mario Kart Build Optimizer Image"
+            />
+            <div class="project-card-right">
+              <h4>Mario Kart Build Optimizer</h4>
+              <p>
+                Ontology-powered comparison tool for build decisions and track
+                condition analysis.
+              </p>
+              <div class="project-related-skills">
+                <p class="project-skill">Python</p>
+                <p class="project-skill">Protégé</p>
+                <p class="project-skill">OWL/SPARQL</p>
+              </div>
+            </div>
+          </a>
+          <a href="projects/chilled.html" class="project-card">
+            <img
+              class="project-card-img"
+              src="assets/images/card3Img.jpg"
+              alt="Chilled to the Bone Image"
+            />
+            <div class="project-card-right">
+              <h4>Chilled to the Bone</h4>
+              <p>
+                Story-driven VR horror prototype with environmental narrative
+                and world exploration.
+              </p>
+              <div class="project-related-skills">
+                <p class="project-skill">UE5</p>
+                <p class="project-skill">VR</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="placeholder"></section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <span>© <span id="year"></span> Katharina Rex</span>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>

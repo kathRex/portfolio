@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.accent-pink {
+  color: #d43d85;
+}
+
+.accent-blue {
+  color: #53bdc1;
+}
+
+.accent-white {
+  color: #f0f1f0;
+}
+
+.section-title {
+  color: #f0f1f0;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: ellipsis;
+}
+
+.default-text {
+  color: #8a8c8e;
+}
+
+h4 {
+  color: #f0f1f0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: medium;
+}/*# sourceMappingURL=decoration.css.map */

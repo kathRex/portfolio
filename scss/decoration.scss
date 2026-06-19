@@ -1,0 +1,27 @@
+@use "variables" as v;
+@use "reset";
+
+//Text accent
+.accent-pink {
+  color: v.$accent-primary;
+}
+.accent-blue {
+  color: v.$accent-alt;
+}
+.accent-white {
+  color: v.$text-secondary;
+}
+.section-title {
+  color: v.$text-secondary;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: ellipsis;
+}
+.default-text {
+  color: v.$text-primary;
+}
+h4 {
+  color: v.$text-secondary;
+  font-family: v.$font-mono;
+  font-size: medium;
+}

@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+nav {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.0392156863);
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0.2rem 0rem;
+  list-style: none;
+  gap: 3rem;
+  color: #f0f1f0;
+}
+.navbar .KR {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.5rem;
+  padding-right: 3rem;
+}
+.navbar .nav-link {
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+  text-decoration: none;
+  color: #f0f1f0;
+}
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -1.1rem;
+  left: 0;
+  width: 100%;
+  height: 0.2em;
+  background-color: #f0f1f0;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+.navbar .nav-link:hover::after,
+.navbar .nav-link:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+.navbar .cv-download {
+  margin-left: auto;
+  padding-right: 15rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.navbar .cv-download:hover {
+  font-weight: 700;
+  font-size: 1.01rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.0392156863);
+}
+
+.footer-content {
+  padding: 1rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .KR {
+    font-size: 2rem;
+    padding-right: 1rem;
+  }
+  .cv-download {
+    margin-left: 0;
+    padding-right: 0;
+    width: 100%;
+    text-align: left;
+  }
+  .footer-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .navbar {
+    gap: 0.75rem;
+  }
+  .KR {
+    font-size: 1.8rem;
+    padding-right: 0.5rem;
+  }
+  .nav-link {
+    font-size: 0.95rem;
+  }
+  .cv-download {
+    font-size: 0.95rem;
+  }
+  .footer-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}/*# sourceMappingURL=header-footer.css.map */

@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 5rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  padding-bottom: 23.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.0392156863);
+}
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/images/grid-design.png");
+  background-size: 900px auto;
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+.contact > * {
+  position: relative;
+  z-index: 1;
+}
+
+.headline {
+  font-family: "Space Grotesk", sans-serif;
+  color: #f0f1f0;
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 1;
+}
+
+@property --hov {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: true;
+}
+.contact-link-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.contact-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  --border-width: 4px;
+  --scan-height: 45%;
+  --blur-part: 0.25;
+  --hov: 0;
+  --scan-start: calc(
+    var(--hov) * (100% + var(--scan-height)) - var(--scan-height)
+  );
+  border: solid var(--border-width) transparent;
+  border-radius: 3px;
+  background: linear-gradient(#0a0e10, #0a0e10) padding-box, linear-gradient(rgba(255, 255, 255, 0.0392156863), rgba(255, 255, 255, 0.0392156863)) border-box, linear-gradient(to bottom, transparent var(--scan-start), #d43d85 calc(var(--scan-start) + var(--blur-part) * var(--scan-height)) calc(var(--scan-start) + (1 - var(--blur-part)) * var(--scan-height)), transparent calc(var(--scan-start) + var(--scan-height))) border-box;
+  background-blend-mode: normal, normal, screen;
+  transition: --hov 0.65s ease-out;
+}
+
+.contact-card:hover,
+.contact-card:focus-visible {
+  --hov: 1;
+}
+
+.contact-card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .contact {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .contact-link-container {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=contact.css.map */

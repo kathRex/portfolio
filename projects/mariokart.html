@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katharina Rex</title>
+    <!-- Preconnect-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts request -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/scss/main.css" />
+    <link rel="stylesheet" href="/scss/header-footer.css" />
+    <link rel="stylesheet" href="/scss/project-pages.css" />
+    <link rel="stylesheet" href="/scss/decoration.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navbar">
+          <li class="KR">KR</li>
+          <li><a class="nav-link" href="/index.html">HOME</a></li>
+          <li><a class="nav-link" href="/portfolio.html">PORTFOLIO</a></li>
+          <li><a class="nav-link" href="/contact.html">CONTACT</a></li>
+          <li class="cv-download">
+            DOWNLOAD CV <span class="accent-pink"> ↓</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="project-case">
+      <aside class="project-sidebar">
+        <a href="../portfolio.html" class="back-link"
+          ><span class="accent-pink">← </span> Back to projects</a
+        >
+
+        <p class="section-label">
+          <span class="accent-pink">// </span>
+          <span class="section-title"> Project Overview</span>
+        </p>
+
+        <div class="project-detail-list">
+          <div class="project-detail">
+            <img
+              src="../assets/images/icons/icon_status.webp"
+              alt=""
+              class="detail-icon"
+            />
+            <div>
+              <h3>Status</h3>
+              <p>Completed</p>
+            </div>
+          </div>
+
+          <div class="project-detail">
+            <img
+              src="../assets/images/icons/icon_role.webp"
+              alt=""
+              class="detail-icon"
+            />
+            <div>
+              <h3>Role</h3>
+              <p>Data Acquisition, Ontology Design & Frontend Development</p>
+            </div>
+          </div>
+
+          <div class="project-detail">
+            <img
+              src="../assets/images/icons/icon_techstack.webp"
+              alt=""
+              class="detail-icon"
+            />
+            <div>
+              <h3>Tech Stack / Language</h3>
+              <p>Python, JavaScript, HTML/CSS, Protégé, OWL, SPARQL</p>
+            </div>
+          </div>
+
+          <div class="project-detail">
+            <img
+              src="../assets/images/icons/icon_themes.webp"
+              alt=""
+              class="detail-icon"
+            />
+            <div>
+              <h3>Key Themes</h3>
+              <ul>
+                <li>Mario Kart</li>
+                <li>Web Scraping</li>
+                <li>Ontology Modeling</li>
+                <li>Query UI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tech-tags">
+          <span
+            ><img
+              class="skill-img"
+              src="/assets/images/icons/icon_python.webp"
+              alt="Python Icon"
+            />Python</span
+          >
+
+          <span
+            ><img
+              class="skill-img"
+              src="/assets/images/icons/icon_protege.webp"
+              alt="Protégé Icon"
+            />Protégé</span
+          >
+          <span
+            ><img
+              class="skill-img"
+              src="/assets/images/icons/icon_sparql.webp"
+              alt="SPARQL Icon"
+            />OWL/SPARQL</span
+          >
+        </div>
+      </aside>
+
+      <section class="project-content">
+        <section class="project-carousel">
+          <button
+            class="carousel-button carousel-button--left"
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
+
+          <img
+            src="../assets/images/mario/combination_calculator1.jpg"
+            alt="Screenshot from the Ontology Websites Combination Calculator 1"
+            class="carousel-image is-active"
+          />
+          <img
+            src="../assets/images/mario/combination_calculator2.jpg"
+            alt="Screenshot from the Ontology Websites Combination Calculator 2"
+            class="carousel-image is-active"
+          />
+          <img
+            src="../assets/images/mario/build_recommender.jpg"
+            alt="Screenshot from the Ontology Websites Playstyle Build Recommender"
+            class="carousel-image is-active"
+          />
+          <img
+            src="../assets/images/mario/tracks.jpg"
+            alt="Screenshot from the Ontology Websites Tracks within a Cup List"
+            class="carousel-image is-active"
+          />
+
+          <button
+            class="carousel-button carousel-button--right"
+            aria-label="Next image"
+          >
+            ›
+          </button>
+        </section>
+
+        <div class="carousel-dots" aria-label="Image carousel navigation"></div>
+
+        <section class="project-hero">
+          <div>
+            <p class="project-type">
+              <span class="accent-pink">// </span>Actionable Knowledge
+              Representation
+            </p>
+            <h1>
+              <span class="accent-white"
+                >Mario Kart -<br />
+                Build Optimizer</span
+              >
+            </h1>
+            <p class="project-tags">
+              Data / Tools / Ontology / Web-development
+              <span class="accent-white">· 2025</span>
+            </p>
+          </div>
+          <a href="../marioKart/marioIndex.html" class="thesis-button" download>
+            → View Mario Kart Ontoligy
+          </a>
+        </section>
+
+        <section class="project-description">
+          <p>
+            <span class="accent-white">Mario Kart 8 Deluxe</span> contains a
+            large number of characters, vehicle bodies, tires and gliders, each
+            contributing differently to a build’s overall performance. The game
+            shows some of these statistics, but understanding how individual
+            components interact and how they influence racing behavior can be
+            difficult, especially when comparing hundreds of possible
+            combinations. <br />
+            This project addresses that challenge through an interactive
+            build-analysis tool powered by ontology-driven data. Instead of
+            presenting raw values alone, the website helps players explore
+            vehicle builds, compare performance characteristics and identify
+            configurations that match their preferred playstyle. The project
+            demonstrates how ontology data can be transformed into a
+            user-friendly application to explore and compare possible
+            combinations, which could be especially useful for competitive
+            players.
+          </p>
+        </section>
+
+        <section class="project-sections">
+          <article class="text-block">
+            <h2>
+              <span class="accent-blue">// </span>Technical Implementation
+            </h2>
+            <h3>Semantic Data Pipeline</h3>
+            <p>
+              The application is built around our custom Mario Kart 8 Deluxe
+              ontology that models drivers, vehicle parts, tracks, cups and
+              gameplay statistics as interconnected knowledge structures.
+            </p>
+            <ul>
+              <li>Data collected through web scraping</li>
+              <li>Ontology modeling and knowledge representation in Protégé</li>
+              <li>
+                Custom classes, properties and relationships for game entities
+              </li>
+              <li>
+                SPARQL queries used to retrieve and combine data dynamically
+              </li>
+              <li>
+                Real-time communication between frontend and ontology endpoint
+                (TriplyDB)
+              </li>
+            </ul>
+            <p>
+              The website acts as a semantic-data frontend and transforms
+              ontology queries into interactive user-facing features.
+            </p>
+          </article>
+
+          <article class="text-block">
+            <h2>
+              <span class="accent-blue">// </span>Features / Functionality
+            </h2>
+            <h3>Build Analysis & Decision Support</h3>
+            <p>
+              The website provides multiple tools for exploring and optimizing
+              Mario Kart 8 Deluxe builds:
+            </p>
+            <ul>
+              <li>
+                Live build calculator with visualized performance statistics
+              </li>
+              <li>Comparison of drivers, vehicle bodies, tires and gliders</li>
+              <li>
+                Track-aware grip calculations based on slippery terrain
+                categories
+              </li>
+              <li>
+                Build filtering to explore high-performing combinations in the
+                playstyle recommender
+              </li>
+
+              <li>
+                Track and cup browser with filtering by game origin and
+                characteristics
+              </li>
+            </ul>
+            <p>
+              The result is a tool that combines data exploration, optimization
+              and semantic search within a single interface.
+            </p>
+          </article>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <span>© <span id="year"></span> Katharina Rex</span>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/image-carousel.js"></script>
+  </body>
+</html>

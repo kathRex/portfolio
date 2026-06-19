@@ -1,57 +1,66 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katharina Rex</title>
+    <!-- Preconnect-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts request -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="scss/main.css" />
+    <link rel="stylesheet" href="scss/header-footer.css" />
+    <link rel="stylesheet" href="scss/contact.css" />
+    <link rel="stylesheet" href="scss/decoration.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navbar">
+          <li class="KR">KR</li>
+          <li><a class="nav-link" href="index.html">HOME</a></li>
+          <li><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+          <li><a class="nav-link" href="contact.html">CONTACT</a></li>
+          <li class="cv-download">
+            DOWNLOAD CV <span class="accent-pink"> ↓</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="contact">
+        <p class="hello">// <span class="accent-pink">CONTACT</span></p>
+        <h1 class="headline">LET'S CONNECT</h1>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Katharina Rex — Contact</title>
-	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="assets/css/main.css">
-</head>
+        <p class="description">
+          I'm always open to new opportunities, collaborations <br />and
+          exciting projects. Feel free to reach out!
+        </p>
 
-<body class="contact-page">
-	<header class="top-nav">
-		<nav class="nav-center" aria-label="Main navigation">
-			<a class="nav-link" href="index.html">Home</a>
-			<a class="nav-link" href="projects.html">Portfolio</a>
-			<a class="nav-link is-active" href="contact.html">Contact</a>
-		</nav>
-	</header>
-
-	<main class="container page-main">
-		<section class="section page-intro" aria-labelledby="contact-title">
-			<h1 id="contact-title">Contact</h1>
-			
-		</section>
-
-		<div class="section-separator" aria-hidden="true"><span></span></div>
-
-		<section class="section contact-links-section" aria-label="Contact links">
-			<div class="contact-actions">
-				<a class="button-link contact-action" id="email-link" href="#">Email</a>
-				<a class="button-link contact-action" href="https://www.linkedin.com/in/katharina-rex-282857334/" target="_blank" rel="noopener">LinkedIn</a>
-			</div>
-		</section>
-	</main>
-
-	<footer class="site-footer">
-		<div class="container footer-inner">
-			<span>© <span id="year"></span> Katharina Rex</span>
-		</div>
-	</footer>
-
-	<script src="assets/js/main.js"></script>
-	<script>
-		(() => {
-			const user = ['k', 'a', 't', 'h', 'a', 'r', 'i', 'n', 'a', '.', 'r', 'e', 'x'].join('');
-			const domain = ['g', 'm', 'x', '.', 'n', 'e', 't'].join('');
-			const emailLink = document.getElementById('email-link');
-
-			if (emailLink) {
-				emailLink.href = `mailto:${user}@${domain}`;
-			}
-		})();
-	</script>
-</body>
-
+        <div class="contact-link-container">
+          <a
+            href="https://www.linkedin.com/in/katharina-rex-282857334/"
+            class="contact-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>LinkedIn</h3>
+          </a>
+          <a href="mailto:kat.rex.dev@gmail.com" class="contact-card">
+            <h3>Email</h3>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <span>© <span id="year"></span> Katharina Rex</span>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>

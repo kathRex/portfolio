@@ -1,0 +1,344 @@
+@use "variables" as v;
+@use "reset";
+
+@property --hov {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: true;
+}
+
+.portfolio-page {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 0.9fr 1.25fr;
+  gap: 4rem;
+  min-height: calc(100vh - 80px);
+  padding: 6rem clamp(2rem, 6vw, 7rem);
+  display: grid;
+  grid-template-columns: minmax(420px, 0.9fr) minmax(520px, 1.25fr);
+  gap: clamp(3rem, 6vw, 6rem);
+  border-bottom: 1px solid v.$border-color;
+  background-color: v.$bg;
+  color: v.$text-primary;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/images/grid-design.png");
+    background-size: 900px auto;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.portfolio-intro h1 {
+  font-family: v.$font-heading;
+  color: v.$text-secondary;
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 1;
+}
+
+.portfolio-text {
+  max-width: 34rem;
+  margin-top: 1.5rem;
+  color: v.$text-secondary;
+  line-height: 1.7;
+}
+//---------------------------------------
+//PROJECT LIST
+//---------------------------------------
+.project-list {
+  margin-top: 3rem;
+  border-top: 1px solid v.$border-color;
+  background-color: v.$bg;
+}
+
+.project-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4rem 1fr auto auto 1rem;
+  gap: 1.5rem;
+  align-items: center;
+
+  padding: 1.4rem 0;
+  border-bottom: 1px solid v.$border-color;
+
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: v.$text-primary;
+  cursor: pointer;
+
+  transition:
+    padding-left 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: v.$accent-primary;
+    opacity: 0;
+    box-shadow: 0 0 18px v.$accent-primary;
+    transition: opacity 0.25s ease;
+  }
+
+  &:hover,
+  &.is-active {
+    padding-left: 1rem;
+    border-color: rgba(v.$accent-primary, 0.8);
+    background: linear-gradient(
+      90deg,
+      rgba(v.$accent-primary, 0.12),
+      transparent 55%
+    );
+
+    &::before {
+      opacity: 1;
+    }
+
+    .project-number,
+    .project-type,
+    .project-arrow {
+      color: v.$accent-primary;
+    }
+  }
+}
+
+.project-number {
+  font-family: v.$font-mono;
+  font-size: 1.3rem;
+  color: v.$text-secondary;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  strong {
+    font-family: v.$font-mono;
+    font-size: 1.05rem;
+  }
+
+  small {
+    max-width: 24rem;
+    color: v.$text-secondary;
+    line-height: 1.5;
+  }
+}
+
+.project-year,
+.project-type,
+.project-arrow {
+  font-family: v.$font-mono;
+  color: v.$text-secondary;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.project-type {
+  color: v.$accent-alt;
+}
+//---------------------------------------
+//RIGHT PANEL
+//---------------------------------------
+.project-preview {
+  position: sticky;
+  top: 6rem;
+  align-self: start;
+}
+
+.preview-frame {
+  position: relative;
+  padding: 2rem;
+  border: 1px solid v.$border-color;
+  background: v.$bg;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-color: v.$text-secondary;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+
+  &::after {
+    right: -1px;
+    bottom: -1px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+  }
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-family: v.$font-mono;
+  color: v.$text-secondary;
+  text-transform: uppercase;
+}
+
+.preview-frame img {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  opacity: 0.9;
+  filter: contrast(1.05) saturate(0.5);
+}
+
+.preview-frame h2 {
+  margin: 1.5rem 0 0.5rem;
+  font-family: v.$font-heading;
+  color: v.$text-secondary;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-weight: 400;
+}
+
+.preview-meta {
+  color: v.$accent-primary;
+  font-family: v.$font-mono;
+  text-transform: uppercase;
+}
+
+.preview-description {
+  max-width: 46rem;
+  color: v.$text-primary;
+  line-height: 1.7;
+  padding: 1rem 0 1rem 0;
+  border-bottom: 1px solid v.$border-color;
+}
+//---------------------------------------
+//TECH TAGS
+//---------------------------------------
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid v.$text-primary;
+    border-radius: 2px;
+    white-space: nowrap;
+    color: v.$text-secondary;
+  }
+
+  .skill-img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+  }
+}
+
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 2rem;
+  padding: 0.9rem 2rem;
+  color: v.$accent-primary;
+  font-family: v.$font-mono;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+
+  --border-width: 4px;
+  --scan-height: 45%;
+  --blur-part: 0.25;
+
+  --hov: 0;
+  --scan-start: calc(
+    var(--hov) * (100% + var(--scan-height)) - var(--scan-height)
+  );
+
+  border: solid var(--border-width) transparent;
+  border-radius: 3px;
+
+  background:
+    linear-gradient(v.$bg, v.$bg) padding-box,
+    linear-gradient(v.$border-color, v.$border-color) border-box,
+    linear-gradient(
+        to bottom,
+        transparent var(--scan-start),
+        v.$accent-primary
+          calc(var(--scan-start) + var(--blur-part) * var(--scan-height))
+          calc(var(--scan-start) + (1 - var(--blur-part)) * var(--scan-height)),
+        transparent calc(var(--scan-start) + var(--scan-height))
+      )
+      border-box;
+
+  background-blend-mode: normal, normal, screen;
+  transition: --hov 0.65s ease-out;
+}
+
+.project-button:hover,
+.project-button:focus-visible {
+  --hov: 1;
+}
+//---------------------------------------
+//RESONSIVENES
+//---------------------------------------
+@media (max-width: 1100px) {
+  .portfolio-page {
+    grid-template-columns: 1fr;
+  }
+
+  .project-preview {
+    position: static;
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-page {
+    padding: 4rem 1.25rem;
+  }
+
+  .project-row {
+    grid-template-columns: 3rem 1fr 1rem;
+  }
+
+  .project-year,
+  .project-type {
+    display: none;
+  }
+
+  .portfolio-intro h1 {
+    font-size: clamp(2.8rem, 14vw, 4rem);
+  }
+}
