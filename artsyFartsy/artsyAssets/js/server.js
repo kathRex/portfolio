@@ -6,14 +6,15 @@
 import express from "express"; //Framework for networking
 import mongoose from "mongoose";
 import cors from "cors"; //"Cross-Origin Resource Sharing" allow access so it can accept frontend requests
-import path from "path";
-import dotenv from "dotenv";
+import path from "path"; //module to work with file paths
+import dotenv from "dotenv"; //allows to load evviroment variables from .env file into process.env
 import { fileURLToPath } from "url";
+
 import Character from "./character.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-dotenv.config({ path: path.resolve(__dirname, "../../.env") });
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+dotenv.config({ path: path.resolve(dirname, "../../.env") });
 
 //Create server instance
 const app = express();

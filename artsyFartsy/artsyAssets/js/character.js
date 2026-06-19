@@ -148,7 +148,5 @@ const characterSchema = new mongoose.Schema({
     pp: Number,
   },
 });
-//What I attach to module.exports is what other files receive when they do f.e. require("./character")
-//Compiles Schema into a Model
-//"Character" = Used by Mongoose to find collection in DB
+//Exporting the model (name of model, schema to use)
 export default mongoose.model("Character", characterSchema);
