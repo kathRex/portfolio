@@ -237,6 +237,12 @@
   padding: 1rem 0 1rem 0;
   border-bottom: 1px solid v.$border-color;
 }
+.preview-frame img.teamTrash {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
 //---------------------------------------
 //TECH TAGS
 //---------------------------------------

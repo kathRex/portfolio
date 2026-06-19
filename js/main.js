@@ -49,6 +49,7 @@ const projectData = {
     title: "TEAM TRASH",
     image: "assets/images/teamTrash/Startscreen.gif",
     alt: "Team Trash project preview",
+    className: "teamTrash",
     meta: "Game / 2D / Platformer / Interaction Design / Pixel Art",
     year: "2025",
     description:
@@ -107,6 +108,7 @@ function updatePreview(projectKey, index, total) {
   previewIndex.textContent = `${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
   previewImage.src = project.image;
   previewImage.alt = project.alt;
+  previewImage.className = project.className || "";
   previewTitle.textContent = project.title;
   previewMeta.innerHTML = `${project.meta} <span class="accent-white">· ${project.year}</span>`;
   previewDescription.textContent = project.description;

@@ -167,6 +167,38 @@
   }
 }
 
+.aseprite-animations {
+  display: inline;
+  padding-bottom: 1rem;
+  width: 5rem;
+  height: auto;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+.aseprite-img {
+  display: inline;
+  padding-bottom: 1rem;
+  padding-inline: 0.3rem;
+  width: 3rem;
+  height: auto;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+.aseprite-motel {
+  display: inline;
+
+  padding-inline: 0.3rem;
+  width: 15rem;
+  height: auto;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
 //---------------------------------------
 //MAIN CONTENT
 //---------------------------------------
@@ -211,6 +243,13 @@
   transition: opacity 0.35s ease;
   z-index: 1;
   pointer-events: none;
+}
+
+.teamTrash {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 .carousel-image.is-active {
@@ -420,9 +459,8 @@
 }
 
 .decorative-img {
-  margin-top: 1.3rem;
-  margin-left: 6rem;
-  width: 300px;
+  padding: 0 1rem 0 0;
+  width: 40rem;
   height: auto;
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
