@@ -27,9 +27,23 @@ const projectData = {
       { name: "C#", icon: "assets/images/icons/icon_c.webp" },
       { name: "Figma", icon: "assets/images/icons/icon_figma.webp" },
       { name: "Blender", icon: "assets/images/icons/icon_blender.webp" },
+      { name: "Photoshop", icon: "assets/images/icons/icon_ps.webp" },
     ],
     buttonLink: "projects/complicity.html",
   },
+
+  "projects/3d.html": {
+    title: "3D -SHOWCASE",
+    image: "assets/images/3d/homeoffice.png",
+    alt: "3D projects preview",
+    meta: "3D / Design",
+    year: "2022-2026",
+    description:
+      "Collection of 3D models and digital assets created for game development and interactive media.",
+    tags: [{ name: "Blender", icon: "assets/images/icons/icon_blender.webp" }],
+    buttonLink: "projects/3d.html",
+  },
+
   "projects/mariokart.html": {
     title: "BUILD OPTIMIZER",
     image: "assets/images/marioImg.png",
@@ -76,6 +90,7 @@ const projectData = {
     ],
     buttonLink: "projects/chilled.html",
   },
+
   "projects/soundsword.html": {
     title: "SOUND SWORD",
     image: "assets/images/swordAnim.gif",

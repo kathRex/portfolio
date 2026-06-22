@@ -249,10 +249,6 @@ select {
   image-rendering: crisp-edges;
 }
 
-.carousel-image.is-active {
-  opacity: 0.9;
-}
-
 .carousel-button {
   position: absolute;
   top: 50%;
