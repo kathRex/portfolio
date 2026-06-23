@@ -105,6 +105,18 @@ const projectData = {
     ],
     buttonLink: "projects/soundsword.html",
   },
+
+  "projects/hair.html": {
+    title: "HAIR",
+    image: "assets/images/hair/hair (18).jpg",
+    alt: "Hair project preview",
+    meta: "HAIR DESIGN / COLOR / STYLING / CLIENT WORK",
+    year: "2016 - 2026",
+    description:
+      "Before transitioning into Digital Media, I worked as a professional hairdresser and earned the German Master Craftsman qualification (Friseurmeister). During this time I specialized in haircutting, coloring and styling while working closely with clients to develop individual solutions tailored to their needs and preferences. Hair design combines creativity, technical precision and communication. Many of the skills I developed in the salon, including problem solving, attention to detail and user-focused thinking, continue to influence my work in digital design and development today.",
+    tags: [],
+    buttonLink: "projects/hair.html",
+  },
 };
 
 function renderTechTags(tags) {

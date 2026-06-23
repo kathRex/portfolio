@@ -115,6 +115,16 @@
   transform: translateY(-0.35rem);
   border-color: rgba(v.$accent-primary, 0.45);
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
+
+  .hair-card-body {
+    background-color: rgba(11, 6, 19, 0.677);
+  }
+
+  .hair-card-body h3,
+  .hair-card-body p {
+    color: v.$text-secondary;
+    opacity: 1;
+  }
 }
 
 .showcase-image {
@@ -126,10 +136,27 @@
   display: block;
 }
 
+.hair-image {
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  object-fit: cover;
+  display: block;
+}
+
 .showcase-card-body {
   display: grid;
   gap: 0.8rem;
   padding: 1.5rem;
+}
+
+.hair-card-body {
+  background-color: transparent;
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.7rem 1.5rem 0.5rem 1.5rem;
+  transition: background-color 0.25s ease;
 }
 
 .showcase-card h2 {
@@ -143,16 +170,25 @@
   align-items: center;
   gap: 0.8rem;
 }
-
-.card-meta {
-  display: inline-flex;
+.showcase-card h3 {
+  margin: 0;
+  color: v.$text-secondary;
+  font-family: v.$font-heading;
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
-  color: v.$accent-primary;
-  font-family: v.$font-mono;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  gap: 0.8rem;
+}
+
+.hair-card-body h3 {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.hair-card-body p {
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 
 .card-dot {
@@ -168,6 +204,10 @@
   color: v.$text-primary;
   line-height: 1.7;
   font-size: 0.95rem;
+}
+
+.hair-card-body p {
+  color: v.$text-secondary;
 }
 
 @media (max-width: 1080px) {
@@ -199,5 +239,60 @@
 
   .showcase-image {
     height: 14rem;
+  }
+  .hair-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Additional responsive tweaks for smaller devices */
+@media (max-width: 1150px) {
+  .project-case {
+    grid-template-columns: 1fr;
+  }
+
+  .project-sidebar {
+    position: static;
+    min-height: auto;
+    padding: 1.2rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-case::before {
+    background-size: 600px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-case {
+    padding: 1rem 0.9rem;
+  }
+
+  .showcase-grid {
+    gap: 1rem;
+  }
+
+  .showcase-card {
+    aspect-ratio: auto;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  }
+
+  .showcase-image {
+    height: 10rem;
+    object-position: center top;
+  }
+  .hair-image {
+    height: 10rem;
+    object-position: center top;
+  }
+  .showcase-card-body {
+    padding: 1rem;
+  }
+
+  .showcase-card h2 {
+    font-size: 1.1rem;
   }
 }
